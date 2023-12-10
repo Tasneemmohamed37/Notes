@@ -1,0 +1,38 @@
+
+			- Readme.md -> md : Markdown
+	[ repo ]
+			- $ git init 									// Initialized empty Git repository in current dirc
+			
+	[ Status ]
+			- $ git status                                  // get untracked files and commits
+			- $ git status -s								//Short Status
+
+	[ Stagging Area ]
+			- $ git add *.txt                               // tracking all txt files (adding them to stage area)
+			- $ git add .                             		// tracking all files (adding them to stage area)
+			- $ git ls-files                                // get the files in the stagging area
+			
+	[ Reset ]
+			- $ git reset head fileName.exe				    // delete specifice file from staging area
+			- $ git reset --hard head~3               		// delete last 3 commits from the head 
+			- $ git reset                             		// delete all stagged files
+
+	[ Commit ]
+			- $ git commit -m "MSG"              		    // add files in staging area to local repo
+			- $ git commit -a -m "message"            		// Skip the Stagging Area but not Recommended  "-a : all modified files" 
+			
+	[ Branches ]
+			- $ git branch                					// get current local branch
+			- $ git switch brnachName 						// go to specifice branch
+			- $ git checkout  brnachName 				    // go to specifice branch
+			- $ git switch -c branchName					// create new branch
+			- $ git branch -m NewName                 		// rename branch
+			- $ git branch -a                   			// to get All branches remote and local 
+			
+	[ Remote ]
+			- $ git remote -v 								// get current remote branch
+			- $ git branch -r                   			// to get remote branches
+			
+	[ Push ]
+			- $ git push origin master						// push commit files to remote
+			
