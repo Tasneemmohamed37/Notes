@@ -1,0 +1,82 @@
+--------------- [ Day 1]
+- object is physical representation of class 
+
+------------------------------------------------------
+principles:
+
+1- encapsulation => related data and functionality in class and 
+					hide data form any thing out this class [black box] 
+					controll accessability using getter , setter to apply validation
+
+2- inhiretence => 
+
+3- polymerphism =>
+
+guidelines:
+
+- abstraction => شكل مجرد للاوبجكت بعيد عن اي تفاصيل 
+			  => implementationبعمل كلاس بشكل معين لبيزنيز لوجيك معين ولو احتاجت نفس الكلاس ل بيزنيز لوجيك تاني اقدر اغير ال 
+
+---------------------------------------------------------
+Access Modefiers :
+
+	- protected : access only throw child scope
+-----------------------------------------------
+
+
+SOLID principles :
+
+S => single responsipility
+
+O => open for extention , closed for modification 
+
+L => liscov Substitution  --> subTypes must be substitution for base types
+
+I => interface Segregation --> interface should focuse on specific client requirment 
+
+D => dependency inversion --> high level moduls shouldnt depend on low level module , both should depend on abstraction
+
+--------------- [ Day 2]
+
+- code [instructions || functions ] => load only one time in program in 
+
+- to use local var you must first initialize it "give value to it "
+
+- value type => struct - enum - int - float..
+
+- reference type => class
+
+- $car c = new car()  => car c : create reference  | new car() : create obj in heap 
+
+- stack => - local var "var initialize in function"
+
+- heap [dynamic alocation] => - 
+
+- New => initialize member vars [value type by defualt value and reference type by null]
+
+- passing parameter by value => parameter value after execute function still the same
+
+- passing parameter by reference => any change occure to this parameter still after execute function 
+
+- to controll member vars during create obj => ctor 
+- to controll member vars after create obj => prop || getter , setter
+
+- ctor used for => controll obj creation
+				=> initialize members
+				
+--------------- [ Day 3]
+
+- relations => associoation [use - no dependency between objs - shourt time rel - rel start and end inside func , befor and after execute this function two obj has no rel between them]
+			=> aggregation [contain - no dependency between objs - obj2 ref access among class - more taller rel - rel throw class by use ref from obj2 no create this]
+			=> composition [cosist of - dependency on other obj - long rel - creation obj2 occure inside obj1]
+			=> inhiretence [is a - ]
+			
+- in case of inhiretence CLR generate obj form parent class with reference call "Base"	
+
+- in case of inhiretence cant use ctor chaining
+
+--------------- [ Day 4 ]
+
+- in case of hide inhireted members , still can access them using base.member_name but only in child scope
+
+- 

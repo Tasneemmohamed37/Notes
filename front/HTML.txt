@@ -1,0 +1,59 @@
+library 	-> only one lang "JQuery"
+
+framework 	-> more than one lang "bootstrap"
+
+ES6 		-> convert from UI to fron end dev
+
+jquery 		-> js library
+
+React : library VS Angular :framework
+
+bootstrap : component base  VS tailwind : utilites
+
+--------------- [ Session 1 Html ] -------------------------
+
+- .htm == .html 	 	--> "in past extention max 3 char"
+	
+- alt + shift + f 	 	--> format
+	
+- loren100 			 	-->  100 words random
+	
+- path auto complete 	--> ./
+
+- tages 				-> 1. nested <></>
+						   2. self close | empty </>  "cant add any thing inside it ....if you want clickable img <a><img></a> "
+
+- <img alt=""> alt used for  ->1. SEO
+							 ->2. screen reader for blindes
+							 ->3. alternative case
+
+- img with two attribute src -> first one will display , if first one not work alt will display
+
+- use tag <description> with table good for SEO
+
+- search??[dl list | colspan | rowspan]
+
+
+--------------- [ Session 2 Html ] -------------------------
+
+- docType -> work standard mode not quirks mode 
+
+- win + . -> emojies
+
+- diffrance between input with type submit and button in form? button css more easily - input submit must send data 
+
+- link lable with input -> lable for + input id
+
+- name attribute -> like var to locate form data
+
+- https://uiverse.io/ -> website to practice
+
+- https://caniuse.com/ -> website to check browsers support
+
+- pattern inside input date -> 2024-02-12
+
+- disapled attribute -> not send data to backend
+
+- datalist -> like drop down list with search [ datalist with id + input list="datalist_id"]
+
+- first option in drop down list => selected disapled

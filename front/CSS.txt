@@ -1,0 +1,67 @@
+---------------- [ Session 01]
+
+- style -> inline
+		-> internal [inside head tag]
+		-> external [inside head tag add link tag]
+		
+		
+- role set -> selector 			[h1]
+		   -> declaration block [{}]
+		   -> propertiy 		[color]
+		   -> value 			[red]
+		
+- priority => inline 
+			  id_name  
+			  class_name  
+			  tag_name
+
+
+
+- select elements in css -> tag_name
+						 -> .class_name
+						 -> #id_name
+						 
+- selector1 selector2 -> access selector2 which inside selector1
+- selector1selector2  -> access selector1 which take class or id = selector2
+
+- space -> inside the first selector
+- without space -> the same selector 
+
+- don`t use fixed hight to avoid over flow  => prefer to use minimum hight so on case of no content the div still appear 
+- width don`t use pixel prefer use precentage
+
+- cicle => width == hight & redius = 50%
+
+
+------------------------------------- [ Session 02 ]
+
+- box model => contain [width , hight > pading > border > margin]
+
+- margin-left : auto  => take all space from left so make div at right
+
+- ceneter div => margin-left : auto , margin-right : auto
+			  =>
+			  =>
+
+- display block by defualt => h - p - div 
+						   => prob : can`t display them in same line
+						   => good in : can give width , hight , pading ,margin
+						   
+- display inline by defualt => a - span
+
+- only one can give hight => first section "home" with minimum-hight
+
+- by defualt inline-block take white space so must`nt use total width "100%" ==> trik :: write div like that </div><div>
+
+- to avoid white space in display-inline-block prefer use ==> float 
+
+- float prob => rest of elements also floated     --solve--> seperate with div clear:both  [must after floated elements direct no after thiere parent]
+			 => over flow parent hiegt equal zero --solve--> parent overflow :auto  
+
+- text decoration => we can use it for sale price
+
+- font family => use 3 options in case of any one not found in server but refer to istall the used font 
+
+- back-ground img => size : cover && position : ceneter ceneter
+
+-- search -> back-ground size : cover Vs contain
