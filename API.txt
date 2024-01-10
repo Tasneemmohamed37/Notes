@@ -1,0 +1,39 @@
+----------------------- [session 01 ] --------------------
+
+------------ [ 1.1 ]
+- miniaml APIs -> end points without controller
+- in API handel routing in each controller unLike mvc handel it once in program file
+- appsetting -> include setting per invironment [dev | test | staging | production]
+- restful API -> can execute endPoint only with [controller name + verb]
+- middelware app.Mapontroller() -> work like [app.useRouting "match request to endPoints" + app.useEndPoints "execute matching endPoint"]
+
+------------ [ 1.3 ]
+- graphQL -> minimize the number of requests and responses.
+
+
+------------ [ 1.4 ]
+- Union Arch -> 1. Domain layer [domain models - all Interfaces] 
+					also name as core layer becouse it contain all project but not implemented
+			 -> 2. Repository layer [repos - DbContext - fluentAPI - ]	
+			 -> 3. Service layer 
+			 -> 4. Persentation layer 
+
+------------ [ 1.5 ]
+- rel between product & category is 1:M but in case we make one nav prop in product only this rel will be 1:1 so must use fluentAPI
+			 
+------------ [ 1.6 ]
+- packages -> sql   :repo layer [context] 
+		   -> tools : PL [connection string]
+		   
+
+- references -> API -> repo
+			 -> repo -> core
+			 -> 
+			 
+- to apply fluentAPI using class -> class:IentityTypeConfiguration
+								 -> override onModelCreating then apply configuration from assembly to apply all classes [ REFLECTION ]
+
+------------ [ 1.7 ]
+update database using obj from dbContext => 1. every time run project apply all migrations which wasnt apply
+										 => 2. 
+

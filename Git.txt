@@ -1,0 +1,70 @@
+	
+			- Readme.md 			--> md : Markdown
+			- Exit (End)			--> Q
+			- touch FileName.ext  	--> create new file
+			- ls 					--> get files in the current directory 
+			- ls -a					--> get files in the current directory include hidding files
+			
+	[ repo ]
+			- $ git init 									// Initialized empty Git repository in current dirc include folder [.git] contain file history 
+			
+	[ Status ]
+			- $ git status                                  // get untracked files and commits
+			- $ git status -s								//Short Status
+
+	[ Stagging Area ]
+			- $ git add *.txt                               // tracking all txt files (adding them to stage area)
+			- $ git add .                             		// tracking all files (adding them to stage area)
+			- $ git ls-files                                // get the files in the stagging area
+			
+	[ Reset ]
+			- $ git reset head fileName.exe	== $ git restore --staged fileName.exe			    // delete specifice file from staging area
+			- $ git reset --hard COMMIT_ID             											// delete all commits befor this 
+			- $ git reset                             											// delete all stagged files
+			
+	[ Clean ]
+			- $ git clean -n		    					// get list of files to delete 
+			- $ git clean -f                    			// delete all files in command  $ git clean -n	
+			
+
+	[ Commit ]
+			- $ git commit -m "MSG"              		    // add files in staging area to local repo
+			- $ git commit -a -m "message"            		// Skip the Stagging Area but not Recommended  "-a : all modified files" 
+			
+	[ Branches ]
+			- $ git branch                										// get local branchs "but at least one must have commits"
+			- $ git branch -c branchName == $ git branch brnachName				// create new branch 
+			- $ git checkout brnachName ==  $ git switch brnachName				// go to specifice branch
+			- $ git checkout -b branchName 										// go to specifice branch "if not found create it then go"
+			- $ git branch -d branchName										// delete branch with SAVE DELETE "will prevent delete If branch have edits not merged"
+			- $ git branch -D branchName										// FORCE delete branch
+			- $ git branch -M NewName                 							// rename branch
+			- $ git branch -a                   								// to get All branches remote and local 
+			
+	[ Remote ]
+			- $ git remote -v 								// get current remote branch
+			- $ git branch -r                   			// to get remote branches
+			- $ git remote add origin URL					// add remote
+			
+	[ Push ]
+			- $ git push origin master						// push commit files to remote
+			- $ git push origin master --force				// any why push commit files to remote , used after reset...
+			- $ git push -u origin master					// pull first then push commit files to remote
+			
+	[ clone ]
+			- $ git clone URL 	
+			
+	[ pull ]
+			- $ git pull 									// fetch + merge 
+			
+	[ configuration ]
+			- $ git config -l 										// get all configurations
+			- $ git config --global user.name 						// get current user name
+			- $ git config --global user.name "Tasneem Muhammad" 	//set user name USING DOUBLE QUETES BECOUSE IT MAY CONTAIN SPACE
+			- $ git config --global unset user.name 				// remove current user name
+			- $ gir config --global alias."alias" command           // git command alias name like --> alias.st status 
+	
+	[ Ignore ]
+			- $ touch .gitignore									// create file no name just extension and should in the root of project 
+			- $ code .gitignore										// open file in VS code and write on it what you want to ignore 
+			

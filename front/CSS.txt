@@ -1,0 +1,105 @@
+---------------- [ Session 01]
+
+- style -> inline
+		-> internal [inside head tag]
+		-> external [inside head tag add link tag]
+		
+		
+- role set -> selector 			[h1]
+		   -> declaration block [{}]
+		   -> propertiy 		[color]
+		   -> value 			[red]
+		
+- priority => inline 
+			  [internal & external are the same but depend which write at last]
+			  id_name  
+			  class_name  
+			  tag_name
+
+
+
+- select elements in css -> * universal
+						 -> tag_name
+						 -> .class_name
+						 -> #id_name
+						 
+- H2 .class => space mean inside this element 
+- H2.class => without space mean element it self
+
+- space -> inside the first selector
+- without space -> the same selector 
+
+- don`t use fixed hight to avoid over flow  => prefer to use minimum hight so on case of no content the div still appear 
+- width don`t use pixel prefer use precentage
+
+- cicle => width == hight & redius = 50%
+
+
+- Pseudo element :: => عنصر مش حقيقي  use to Style part of element, can do same result with span and style it
+ 
+- Pseudo class : => style all element but in specific mood, like hover
+ 
+
+- Inline style pros => fast / reduce number of requests
+
+- Inline style cons => waste time/ repeat code /limited  cant use Pseudo 
+
+- To give two classes for same element - > class = "1 2"
+
+- Class, id name case sensitave 
+
+- Specificity => (Id, class, element) 
+
+-Cascade تتابع  => In case of same specifity, Last Selector overwritte and work
+
+------------------------------------- [ Session 02 ]
+
+- box model => contain [width , hight > pading > border > margin]
+
+- width Auto => based on the element display type
+- width Fit Contenet => على قد المحتوي
+
+- propertiy-block => display this propertiy on top & button
+- propertiy-inline => display this propertiy on right & left
+
+- margin can take negative value but pading can`t
+
+- margin-left : auto  => take all space from left so make div at right
+
+- ceneter div horizental افقي => margin-left : auto , margin-right : auto === margin-inline : auto
+			  =>
+			  =>
+
+- margin collapsing => The top and bottom margins of blocks are sometimes combined (collapsed) into a single margin whose size is the largest of the individual margins
+					   problem happen when 1. two elements  Adjacent siblings
+										   2. No content separating parent and descendants.
+										   
+		   => solve it seperate them using 1. content
+										   2. border transparent شفاف
+										   3. pading-top 
+
+- problem => element's border and padding are added to the element's specified width/height
+  solve   => *{box-sizing : border-box} 
+
+- display block by defualt => h - p - div 
+						   => prob : can`t display them in same line
+						   => good in : can give width , hight , pading ,margin
+						   
+- display inline by defualt => a - span
+
+- only one can give hight => first section "home" with minimum-hight
+
+- by defualt inline-block take white space so must`nt use total width "100%" ==> trik :: write div like that </div><div>
+
+- to avoid white space in display-inline-block prefer use ==> float 
+
+- float prob => rest of elements also floated     --solve--> seperate with div clear:both  [must after floated elements direct no after thiere parent]
+			 => over flow parent hiegt equal zero --solve--> parent overflow :auto  
+
+- text decoration => we can use it for sale price
+
+- font family => use 3 options in case of any one not found in server but refer to istall the used font 
+
+- back-ground img => size : cover && position : ceneter ceneter
+
+-- search -> back-ground size : cover Vs contain
