@@ -1,4 +1,4 @@
----------------- [ Session 01]
+------------------------------- [ Session 01] -------------------------------------------------------
 
 - style -> inline
 		-> internal [inside head tag]
@@ -52,7 +52,10 @@
 
 -Cascade تتابع  => In case of same specifity, Last Selector overwritte and work
 
-------------------------------------- [ Session 02 ]
+
+
+
+------------------------------------- [ Session 02 ] ---------------------------------------------
 
 - box model => contain [width , hight > pading > border > margin]
 
@@ -67,39 +70,60 @@
 - margin-left : auto  => take all space from left so make div at right
 
 - ceneter div horizental افقي => margin-left : auto , margin-right : auto === margin-inline : auto
-			  =>
-			  =>
+							  =>
+							  =>
 
 - margin collapsing => The top and bottom margins of blocks are sometimes combined (collapsed) into a single margin whose size is the largest of the individual margins
 					   problem happen when 1. two elements  Adjacent siblings
 										   2. No content separating parent and descendants.
 										   
-		   => solve it seperate them using 1. content
-										   2. border transparent شفاف
-										   3. pading-top 
+					=> solve it seperate them using 1. content
+													2. border transparent شفاف
+													3. pading-top 
+													4. parent overflow: auto     **best practice**
 
 - problem => element's border and padding are added to the element's specified width/height
-  solve   => *{box-sizing : border-box} 
+  solve   => *{box-sizing : border-box} , back-ground clip : content-box
 
-- display block by defualt => h - p - div 
-						   => prob : can`t display them in same line
-						   => good in : can give width , hight , pading ,margin
-						   
-- display inline by defualt => a - span
 
-- only one can give hight => first section "home" with minimum-hight
+- html elements => inline -> a - span
+				=> block  -> h - p - div  [good in : can give width , hight , pading ,margin]
+				=> inline-block -> button
+				=> replaced element "empty tags + iframe"-> img - input
+				=> non-replaced element -> a - p - h - div - span - button
+				=> inline replaced => img - iframe [can give width hight]
 
-- by defualt inline-block take white space so must`nt use total width "100%" ==> trik :: write div like that </div><div>
+- best practice not give hight only one can give hight => first section "home" with minimum-hight
 
-- to avoid white space in display-inline-block prefer use ==> float 
 
-- float prob => rest of elements also floated     --solve--> seperate with div clear:both  [must after floated elements direct no after thiere parent]
-			 => over flow parent hiegt equal zero --solve--> parent overflow :auto  
 
-- text decoration => we can use it for sale price
+----------------[ to make elements inside each other ]
+
+	1- inline-block prob => take white space so must`nt use total width "100%" --solve--> write div like that </div><div>
+
+	2- float prob => rest of elements also floated     --solve--> seperate with div clear:both  [must after floated elements direct no after thiere parent]
+				  => over flow parent hiegt equal zero --solve--> parent overflow :auto  
+													   --solve--> give parent display: flow-root         **best practice
+
+
+- text decoration :   text-decoration: line-through => we can use it for sale price
 
 - font family => use 3 options in case of any one not found in server but refer to istall the used font 
 
 - back-ground img => size : cover && position : ceneter ceneter
 
 -- search -> back-ground size : cover Vs contain
+
+
+
+------------------------------------- [ Session 03 ] ---------------------------------------------
+
+- Image Sprites =>  reduce the number of server requests and save bandwidth can do this using back-ground position 
+
+- back-ground attatchment fixed
+
+- hide element => parent display none [مبتحجزش مكانها]
+			   => visibility hidden [حاجزه مكانها ]
+			   => opacity 0 [can interact with element]
+
+- search -> image maps??
