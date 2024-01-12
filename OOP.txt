@@ -8,7 +8,7 @@ principles:
 					hide data form any thing out this class [black box] 
 					controll accessability using getter , setter to apply validation
 
-2- inhiretence => 
+2- inhiretence => كلاس بيكتسب جميع الصفات والافعال من كلاس تاني وبيزود عليها حاجات خاصه بيه خلته نوع جديد مميز
 
 3- polymerphism =>
 
@@ -35,6 +35,10 @@ L => liscov Substitution  --> subTypes must be substitution for base types
 I => interface Segregation --> interface should focuse on specific client requirment 
 
 D => dependency inversion --> high level moduls shouldnt depend on low level module , both should depend on abstraction
+
+---------------------------
+- can`t create obj from => abstract class
+						=> class with private ctor [singleton design pattern??]
 
 --------------- [ Day 2]
 
@@ -79,4 +83,9 @@ D => dependency inversion --> high level moduls shouldnt depend on low level mod
 
 - in case of hide inhireted members , still can access them using base.member_name but only in child scope
 
-- 
+- abstract class => can`t create obj from it [ مقدرش اوصفه زي الانيمال ز الكرياتشر] becouse its not fully implemented class 
+				 => can contain abstract and non-abstract methods
+				 => 
+				 
+				 
+- abstract methods by defualt vertial => so childs can override and implemented it
