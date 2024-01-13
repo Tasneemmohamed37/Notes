@@ -2,7 +2,9 @@
 
 - object is physical representation of class 
 
-- obj1 == obj2 [result false --> becouse it compare the address of two reference , if you want compare valuse use opereator overloading]
+- obj1 == obj2 [compare the address of two reference like function equals in class obj , if you want compare valuse use opereator overloading]
+
+- if you want tot create obj from class [abstract || static || private ctor]
 
 ----------------------------
 principles:
@@ -11,9 +13,10 @@ principles:
 					hide data form any thing out this class [black box] 
 					controll accessability using getter , setter to apply validation
 
-2- inhiretence => كلاس بيكتسب جميع الصفات والافعال من كلاس تاني وبيزود عليها حاجات خاصه بيه خلته نوع جديد مميز
+2- inhiretence => "is a relationship" كلاس بيكتسب جميع الصفات والافعال من كلاس تاني
+					وبيزود عليها حاجات خاصه بيه خلته نوع جديد مميز
 
-3- polymerphism =>
+3- polymerphism => [overload , override , pass parameter function or any child of this parameter]
 
 guidelines:
 
@@ -56,7 +59,7 @@ D => dependency inversion --> high level moduls shouldnt depend on low level mod
 
 - $car c = new car()  => car c : create reference  | new car() : create obj in heap 
 
-- stack => - local var "var initialize in function"
+- stack => function local var "var initialize in function" , function input parameter 
 
 - heap [dynamic alocation] => - 
 
@@ -131,3 +134,17 @@ D => dependency inversion --> high level moduls shouldnt depend on low level mod
 	
 - opereator overloading -> must (== & !=)(++ & --) [لانه ك لوجيك  الاثنين عكس بعض فمينفعش  واحده فيهم تشتغل علي ريفرينس والثانيه تشتغل علي الداتا اللي في الكلاس دا ] 
 						-> can overload implicit - explicite casting [public static implicit opereator complex(int x)]
+						
+						
+------------------------------------------- [ Day 6 ] -----------------------------------------------
+
+
+-dynamic binding => مش بنعرف الاوبجكت اللي احنا شغالين معاه غير في الرن تايم
+				 => ببساطه فانكشن بتاخد باراميتر من كلاس معين والكلاس دا له اولاد ف احنا مش عارفين 
+					اللي هينفذ الفانكشن هيبعت البيرنت ولا اي اتشايلد فيهم
+
+-----[class object]
+
+- parent for all classes
+
+- unSave casting solution => cast using keyword 'AS' --> in case cant cast the reference be null so can check it first then complete emplmentation 
