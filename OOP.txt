@@ -1,7 +1,10 @@
---------------- [ Day 1]
+--------------- [ Day 1] ----------------------------
+
 - object is physical representation of class 
 
-------------------------------------------------------
+- obj1 == obj2 [result false --> becouse it compare the address of two reference , if you want compare valuse use opereator overloading]
+
+----------------------------
 principles:
 
 1- encapsulation => related data and functionality in class and 
@@ -17,11 +20,11 @@ guidelines:
 - abstraction => شكل مجرد للاوبجكت بعيد عن اي تفاصيل 
 			  => implementationبعمل كلاس بشكل معين لبيزنيز لوجيك معين ولو احتاجت نفس الكلاس ل بيزنيز لوجيك تاني اقدر اغير ال 
 
----------------------------------------------------------
+---------------------------
 Access Modefiers :
 
 	- protected : access only throw child scope
------------------------------------------------
+---------------------------
 
 
 SOLID principles :
@@ -40,7 +43,8 @@ D => dependency inversion --> high level moduls shouldnt depend on low level mod
 - can`t create obj from => abstract class
 						=> class with private ctor [singleton design pattern??]
 
---------------- [ Day 2]
+--------------- [ Day 2] ----------------------------
+
 
 - code [instructions || functions ] => load only one time in program in 
 
@@ -68,7 +72,8 @@ D => dependency inversion --> high level moduls shouldnt depend on low level mod
 - ctor used for => controll obj creation
 				=> initialize members
 				
---------------- [ Day 3]
+--------------- [ Day 3] ----------------------------
+
 
 - relations => associoation [use - no dependency between objs - shourt time rel - rel start and end inside func , befor and after execute this function two obj has no rel between them]
 			=> aggregation [contain - no dependency between objs - obj2 ref access among class - more taller rel - rel throw class by use ref from obj2 no create this]
@@ -79,7 +84,11 @@ D => dependency inversion --> high level moduls shouldnt depend on low level mod
 
 - in case of inhiretence cant use ctor chaining
 
---------------- [ Day 4 ]
+--------------- [ Day 4 ] ----------------------------
+
+- this => hidden input parameter passed to non static functions when call it 
+
+- base => hidden object in child class use to access parent memebers
 
 - in case of hide inhireted members , still can access them using base.member_name but only in child scope
 
@@ -89,3 +98,36 @@ D => dependency inversion --> high level moduls shouldnt depend on low level mod
 				 
 				 
 - abstract methods by defualt vertial => so childs can override and implemented it
+
+
+---------------------------- [ Day 5 ] ----------------------------
+
+----------- [ static ]
+
+- any static by defualt public
+
+- instance function => فانكشن نتيجتها بتختلف بناء علي الاوبجكت اللي بيعملها كول
+
+- static function => نتيجتها ثابته علي كل الاوبجكتس
+					لان في الامبليمنتيشن بتاعها مش بعتمد علي اي ميمبر فاريبال جوا الكلاس اللي هي فيه
+				  => must be **public**
+				  => static function using class name
+				  => work with only static members [becouse there is no keyword this inside it & static load first in memory
+													ف لما تنفذها انت مش متاكد انه فيه اوبجكتس اتكريتت في الميموري ولا لسه  ]
+				  => can`t be vertial or override it [ لان الاصل في الاوفرريد اني بعمل اوبجكت من الكلاس واشاور عليه بريفيرينس من البيرنت ودا مش متاح هنا] 
+				  => can overload it
+				  => child class inhirete it 
+				  => used in opereator overload [ opereator for user defind classes ]
+
+
+
+- static members => حاجه مش ريليتد لكل اوبجكت طالع من الكلاس دا لكن هي معلومه تخص الكلاس نفسه 
+				 => ex: count objects created from this class
+				 => in memory load only once along application -> load in heap 
+				 
+				 
+-  علي مستوي الميموري بيحصل لود للاستاتيك ميمبرز الاول وبعدها لما نكريت اوبجكت بيحصل لود لل نن استاتيك ميمبرز 
+	عشان كدا نقدر من جوا النن ستاتيك نعمل كول لل ستاتيك لانها بنسبه 100% موجودين في الميموري لكن العكس مش بنقدر
+	
+- opereator overloading -> must (== & !=)(++ & --) [لانه ك لوجيك  الاثنين عكس بعض فمينفعش  واحده فيهم تشتغل علي ريفرينس والثانيه تشتغل علي الداتا اللي في الكلاس دا ] 
+						-> can overload implicit - explicite casting [public static implicit opereator complex(int x)]
