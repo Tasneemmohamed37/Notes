@@ -2,6 +2,8 @@
 
 - object is physical representation of class 
 
+- class is logical representation 
+
 - obj1 == obj2 [compare the address of two reference like function equals in class obj , if you want compare valuse use opereator overloading]
 
 - if you want tot create obj from class [abstract || static || private ctor]
@@ -26,7 +28,7 @@ guidelines:
 ---------------------------
 Access Modefiers :
 
-	- protected : access only throw child scope
+	- protected : access only throw child class scope
 ---------------------------
 
 
@@ -148,3 +150,72 @@ D => dependency inversion --> high level moduls shouldnt depend on low level mod
 - parent for all classes
 
 - unSave casting solution => cast using keyword 'AS' --> in case cant cast the reference be null so can check it first then complete emplmentation 
+
+- 	نفس فكره اوفررايد ال == و != يفضل نعمل اوفرريد لل
+		equals , gethashcode [عباره عن كود بيتعمله جينيريت بناء علي الجوريزم معين ]
+		ف لو الفانكشن ايكوالز بتقارن بناء علي ال id 
+		نخلي ال جيت هاش كود تشتغل علي ال id only
+		
+- function equals => compare two references
+
+- function gethashcode => based on specific algorithm generate code for objects 
+
+- function getType => return obj meta data 
+				   => used in reflection [object run time reverse engeneering ] [محتاجين نعرف شويه معلومات عن كلاس ابوجكت معين في الرن تايم]
+				   
+				   
+- memberWiseClone => تاخد نسخه طبق الاصل من البيانات حتي البرايقت وتضيفها الي اوبجكت جديد
+				  => protected ? 1. security , cant clone any object from class unless you used it inside class 
+								 2. singleton
+								 3. shalow copy "copy values bu if it was ref type will copy ref " [big prob in case of any relations when copy reference types --> solve by :: after copy give initialize reference types with new values]
+								 
+
+
+------------------------------------------------------- [ Day 7 ] -------------------------------------
+
+- string => hard to validate it
+
+- enum => set of const values [by defualt int , can long || shourt] 
+	   => value type
+	   => all posible values for specific var , collected in one block
+	   => var can concate more than one value from enum using or " | " ==> big prob , not sure concate will generate new number 
+																	   ==> solve it , each const in enum must when conver his value to binary must contain only one digit "1"
+																	   ==> to check if value contain specific color => use 'and' if new value equal this color then it contain it
+																	   ==> when concate refer to use attribute "[flag]" befor enum declaration so when display new values display concated const names
+																	   
+
+- struct => value type
+		 => store in stack
+		 => using 'new keyword + ctor' to initialize struct variables with defualt values 
+		 => int x = new int(); ==> this statment used to initialize x using parameterless ctor by defualt value "zero"
+		 => must initialize struc befor use if -> complex c = new complex() ياما تعتمد علي الباراميترليس كونستراكتور
+											   -> complex c ;  c.real=1 ; c.imagin = 1 ; ياما تعمل انشياليز بايدك
+											   ->complex c = new complex(1,1)ياما تعتمد علي باراميتر كونستراكتور لكن بشوط يكون بياشياليز كل القيم 
+											   -> لاكن متقدرش تدخل جوا الاستراكت وتانشياليز القيم بايدك عكس الكلاس كان عادي
+
+			  
+- class => keyword new create obj from class in heap based on calling ctor and return location of this obj               VS      	- struct => initialize obj in stack based on calling ctor
+		=> can initialize members inside class "give defualt value"                                                       			         => can`t
+		=> parameter ctor can initialize only one member only 																				 => parameter ctor must initialize all members
+		    لان في الكلاس قبل ما تعمل كول للكونستراكتور كدا كدا نيو كيورد كانت كريتت الاوبجكت وعملت انشياليز للفاريبولز			
+		=> if you make parameter ctor , compiler no long generate parameterless ctor  "ليه كدا و الاجابه في النقطع الجايه"                    => at all cases compiler generate parameterless ctor 
+		=> ctor : بنستخدمه عشام نتحكم في ازاي نعمل ابوجكت من الكلاس عشان كدا لو انت عملت باراميتر كونستراكتور									"لانه كدا كدا كريشن الاستراكت مش معتد علي الانستراكتور يعني بيه او من غيره هيحصله كريشن"
+				الكومبيلر مش هيعمل باراميترليس كونستراكتور عشان يساعدك تحقق اللوجيك انه معدش هيعمل اوبجكت من الكلاس 
+				دا غير لما يطبق الكونستراكتورز بتاعتك فقطط 
+		=> complex c ; في حاله الكلاس فقط بيحجز مكان في الاستاك لرفيرينس من النوع كومبليكس 													 =>  بيحجز في الاستاك الفاريابول دا 
+		=> can create parameterless ctor in class 																							 => can`t
+		=> inhiretance avaialbe																											     => not avaialbe [but how can struct inhirete from object?!]
+																																			  في حاجات مسموح للكومبايلر يعملها لكن الديفلوبرز لا زي كدا + انه ايه فايده الوراثه وانت فاليو تايب
+																																				مش ريفيرنس يعني مش هتقدر تعمل اوفررايد وبوليمرفيزم بشكل عام
+		=> can use ' == ' to compare to classes based of reference equals or not 															 => can`t becouse it`s value type [but why int can use it??! boxing] but can use opereator overloading or override function equals
+		=> no boxing & unboxing??!!
+		
+		
+- shalow copy => two references for same obj
+- deep copy => copy values of this obj
+
+- boxing 'save casting' -> convert from value type to reference type
+ليه بنستخدم حاجة زي كدا و نفترض عندنا فانكشن زي اسكوالز اللي كلنا بنورثها من كلاس اوبجكيت دي في كل الحالات مستنيه باراميتر من النوع اوبجكت 
+ ليه اخد الفاليو تايب اللي هو مثلا حاجة انتيجر واعمل اوبجكت جواه القيمه دي واخد عنوان الاوبجكت اباصيه للفانكشن؟؟
+ ليه ماخدش عنوان الفاليو تايب دا علي طول اباصيه للفانكشن
+لاني هنا عملت باسنج باراميتر باي فاليو تايب يعني بعد تنفيذ الفانكشن وموت الاوبجكت دا تظل قيمه الفاليو تايب كما هي 
