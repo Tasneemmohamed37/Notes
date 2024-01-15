@@ -34,10 +34,6 @@
 
 - cicle => width == hight & redius = 50%
 
-
-- Pseudo element :: => عنصر مش حقيقي  use to Style part of element, can do same result with span and style it
- 
-- Pseudo class : => style all element but in specific mood, like hover
  
 
 - Inline style pros => fast / reduce number of requests
@@ -118,12 +114,87 @@
 
 ------------------------------------- [ Session 03 ] ---------------------------------------------
 
-- Image Sprites =>  reduce the number of server requests and save bandwidth can do this using back-ground position 
+----------- [ color ]
 
-- back-ground attatchment fixed
+-rgb( , ,) => function take color amount as a parameter ( 0 : 255 || peresentage % )
+-rgba( , , ,) => 'a' for alpa [0 : 1] نسبه الشفافية
+- white (255,255,255) , black (0,0,0) , gray(x,x,x) x represent same number
+
+- back-ground attatchment => fixed لما اجي اعمل سكرول الصورة ثابته في البيرنت بتاعها 
+
+
+---------------- [ position ]
+
+- defualt static 
+
+- طيب ليه منستخدمش مارجن ونحرك العنصر؟ لان المارجن علي المسافات الفاضية بس وكمان ميقدرش يطلع برا البيرنت بتاعة
+
+- position relative => يتحرك بالنسبة لمكانه الاصلي
+					=> محافظ علي الفلو بتاعه بمعني لما بيتحرك محدش بيجي مكانة
+
+
+- position abslute => width by defualt fit content [can give width 100% || left:0 ; right:0 ]
+				   => بيسيب مكانه وبيطير
+				   => بيتحرك بالنسبة لاقرب بيرنت له واخد بوزيشن غير الاستاتيك ولو ملقاش يتحرك بناء علي الفيو بورت
+				   => if ele take custmized width -> top VS button -> top 
+												  -> left VS right -> depend on page dirction or lang 'left if en' 
+				   => else -> الدفاية فرشت والاربعه بيتطبقو وبياخد مساحة البيرنت بتاعة كامله 
+
+
+- position fixed => width by defualt fit content [can give width 100% || left:0 ; right:0 ]
+				 => بيسيب مكانة وبيطير
+				 => في كل الاحوال يتحرك بالنسبة للفيو بورت 
+				 
+- position stiky => mix between abslute & fixed 
+				 => يتحرك بالنسبة للفيو بورت لكن اول ما السكرول يجي عندة يثبت 
+				 
+
+
+- margin -> بحط سبيس حوالين العنصر
+- position '3D' -> بحرك العنصر نفسة 
+- float '2D' -> بجيب العناصر جمب بعض
+
+------------------------- [ z index ]
+
+- z index => controll order of element`s layers take attribute position "اعلي عنصر هو اللي يظهر الاول"
+		  => defualt value auto -> like zero but not cause stack context "يظهرو علي حسب ترتيبهم "
+		  => ممكن تكون بالسالب كداهينزل تحت الفيو بورت 
+
+------------------------- [ Pseudo ]
+
+- Pseudo element::  => عنصر مش حقيقي  use to Style part of element, can do same result with span and style it
+					=> used with opening closing tag or nested tag "p ✔ | input ❌"
+					=> by defualt display inline
+					=> first line , first letter -> work only with elements display block
+					=> befor , after -> must contain attribute content
+									 -> will be element childs 
+					=> selection -> only work with attributes 'color , background-color , outline , cursor'
+ 
+- Pseudo class: => style all element but in specific mood, like hover
+
+
+------------------------- [ transition ]
+
+- transition : duration => detect time to transition
+
+- transition timing function -> linear  سرعه ثابته
+							 -> ease-in بطئ وبعدين يسرع 
+							 -> ease-out سريع وبعدين يبطأ
+							 -> ease 'defualt'
+							 -> cubic bezier : custmiz timing function 
+
+
+---------------------------- [ notes ]
+- Image Sprites =>  reduce the number of server requests and save bandwidth can do this using back-ground position 
 
 - hide element => parent display none [مبتحجزش مكانها]
 			   => visibility hidden [حاجزه مكانها ]
 			   => opacity 0 [can interact with element]
 
 - search -> image maps??
+		 -> back-ground linear-grider??
+
+
+
+------------------------------------- [ Session 04 ] ---------------------------------------------
+
