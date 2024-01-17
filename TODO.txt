@@ -1,5 +1,4 @@
 - Unit Testing
 - big data git course
-- oop revision 
 - API with onion arch
 - signalR

@@ -98,8 +98,8 @@
 	1- inline-block prob => take white space so must`nt use total width "100%" --solve--> write div like that </div><div>
 
 	2- float prob => rest of elements also floated     --solve--> seperate with div clear:both  [must after floated elements direct no after thiere parent]
-				  => over flow parent hiegt equal zero --solve--> parent overflow :auto  
-													   --solve--> give parent display: flow-root         **best practice
+				  => over flow parent hiegt equal zero --solve by BFC--> parent overflow :auto  
+													   --solve by BFC--> give parent display: flow-root         **best practice
 
 
 - text decoration :   text-decoration: line-through => we can use it for sale price
@@ -166,7 +166,7 @@
 					=> used with opening closing tag or nested tag "p ✔ | input ❌"
 					=> by defualt display inline
 					=> first line , first letter -> work only with elements display block
-					=> befor , after -> must contain attribute content
+					=> befor , after -> must contain attribute content and can make it dynamic using attribute [content : attr(name)]
 									 -> will be element childs 
 					=> selection -> only work with attributes 'color , background-color , outline , cursor'
  
@@ -175,8 +175,9 @@
 
 ------------------------- [ transition ]
 
-- transition : duration => detect time to transition
-
+- transition : duration => detect time to transition -> لو ضفته للعنصر نفسة يبقي وانا داخل بس
+													 -> لو ضيفته للبيرنت يبقي وانا داخل ووانا خارج
+													 
 - transition timing function -> linear  سرعه ثابته
 							 -> ease-in بطئ وبعدين يسرع 
 							 -> ease-out سريع وبعدين يبطأ
@@ -187,9 +188,6 @@
 ---------------------------- [ notes ]
 - Image Sprites =>  reduce the number of server requests and save bandwidth can do this using back-ground position 
 
-- hide element => parent display none [مبتحجزش مكانها]
-			   => visibility hidden [حاجزه مكانها ]
-			   => opacity 0 [can interact with element]
 
 - search -> image maps??
 		 -> back-ground linear-grider??
@@ -198,3 +196,35 @@
 
 ------------------------------------- [ Session 04 ] ---------------------------------------------
 
+--------------- [overflow ]
+
+- $overflow : hidden -> used when hover image make it larger and hide overflow
+
+- $overflow : auto -> solve float problem [insted of din with classs clear fix]
+				   -> solve it becouse it cause block formating context BFC [بتحاوط العناصر اللي عامله فلوت ببلوك وكدا تكون بتمنع العدوي]
+				
+
+-------------- [ transform ]
+
+- $transform : rotate(degree) => rotate element with specific degree -> + مع عقارب الساعة
+																	 -> - عكس عقارب الساعة 
+
+- $transform-origin : top left 
+
+- $transform : scale(2) -> تكبر بمعدل الضعف
+						-> بنستخدمها مع الصورة لما بنعمل هوفر تكبر والاوفر فلو بيكون هيدن
+						
+-$transform : translate(px , px) -> ميزتها لو اخدت نسبة مئوية هيحسب النسبة دي من العرض
+
+- $transform-skew : انحراف
+
+--------------- [ hide element]
+
+- hide element => parent display none [مبتحجزش مكانها]
+			   => visibility hidden [حاجزه مكانها ] -> used in form validation
+			   => opacity 0 [can interact with element] [اقدر اعمل عليها transition]
+			   
+--------------- [ font properties ]
+- add font family -> font awesome select font and copy link then add it in html file befor close head tag
+
+-- to make element in center compare to parent -> left : 50% [يبدأ من نص العنصر بالظبط ] && transform : translate-x (-50%) [يتحرك في المحور اكس بالسالب مقدار نص عرضة]
