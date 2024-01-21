@@ -228,3 +228,77 @@
 - add font family -> font awesome select font and copy link then add it in html file befor close head tag
 
 -- to make element in center compare to parent -> left : 50% [يبدأ من نص العنصر بالظبط ] && transform : translate-x (-50%) [يتحرك في المحور اكس بالسالب مقدار نص عرضة]
+
+
+------------------------------------------------------------ [ Session 5 ] --------------------------------------------------------
+
+---------- [ Revision ]
+
+- .container>.item.item-$*6 => will make div with class container and insid it 6 divs with class"item item-1:6"
+
+- most of website start as navbar , to do this use container div for all sections [width: 85% , margin-inline : auto]
+
+- incase want p come in specific word and ttake new line -> br
+														 -> max-width
+														 
+- box-shadow -> can adjast it from inspect from two cubics 
+
+- by defualt there is white space below inline element "like img" --solve--> display : block
+
+- ancor not inherit color from parent --solve--> color: inherit 
+
+
+---------- [ flexbox ]
+
+- flexbox 1D layout -> بستخدمة عشان اجيب العناصر تحت بعض او جمب بعض 
+
+- parent display: flex 
+
+- Definitions  => flex container -> parent
+			   => flex items -> childs
+			   => main axis -> horizental line  العناصر بتترص علي حذاه
+			   => cross axis -> virtical line | 
+			   => main size -> flex item width "defualt" or height "in case switch two axises"
+			   => cross size -> flex item height "defualt" or width "in case of switch two axises"
+			   => start main -> left if page direction 'ltr'
+			   => end main -> right if page direction 'ltr'
+			   
+
+-------- [ Parent Properties]
+- flex-direction => change main axis direction
+				 => by defualt row -> main axis horizental and if direction 'ltr' start main will be left 
+				 => row-reverse -> main axis horizental and start main will be right
+				 => column -> main axis virtical | and start top 
+				 => column-reverse -> main axis vertical | and start bottom 
+
+- flex-wrap => by defualt 'no wrap' -> all flex items be same row even if they take custmized width 
+			=> wrap -> يحط العناصر جمب بعض واول ما الايتميز تقفل عرض 100% ينزل سطر جديد
+			=> wrap-reverse ->  هيطلع سطر جديد 
+			
+- flex-flow => defualt 'row no wrap' -> shourt hand for flex direction and wrap  
+
+- align-items => تحدد مكان العنصر علي الكروس اكسيس 
+			  => use when have only one line of items
+			  => defualt 'stretch' -> full cross axis
+			  => flex-start -> start cross 
+			  => flex-end 
+			  => flex-center 
+
+- justify-content => تحرك العناصر علي المين اكسيس
+				  => defualt 'flex-start'
+				  => space between
+				  => space arround -> 1 [] 1 1 [] 1
+				  => space evenly -> 1 [] 1 [] 1    قسمة العدل 
+
+
+- align-content => تحدد مكان العنصر علي الكروس اكسيس 
+				=> use it when use flex-wrap and have multiple lines of items  
+				=> defualt 'normal'
+				=> space between
+				=> space arround
+				=> space evenly
+
+
+---------------- [ Gap Prop ]
+
+-
