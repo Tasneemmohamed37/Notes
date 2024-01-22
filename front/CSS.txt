@@ -251,6 +251,9 @@
 ---------- [ flexbox ]
 
 - flexbox 1D layout -> بستخدمة عشان اجيب العناصر تحت بعض او جمب بعض 
+					-> بقدر اعمل بيه حاجات مبعرفش اعملها بال فلوت 
+					زي اني اسنتر العنصر بالطول 
+					او اخلي العناصر اللي في نفس الصف العرض يتقسم عليهم بالتساوي
 
 - parent display: flex 
 
@@ -277,28 +280,57 @@
 			
 - flex-flow => defualt 'row no wrap' -> shourt hand for flex direction and wrap  
 
-- align-items => تحدد مكان العنصر علي الكروس اكسيس 
+- align-items => تحدد مكان البيرنت علي الكروس اكسيس 
 			  => use when have only one line of items
 			  => defualt 'stretch' -> full cross axis
 			  => flex-start -> start cross 
 			  => flex-end 
 			  => flex-center 
 
-- justify-content => تحرك العناصر علي المين اكسيس
-				  => defualt 'flex-start'
-				  => space between
-				  => space arround -> 1 [] 1 1 [] 1
-				  => space evenly -> 1 [] 1 [] 1    قسمة العدل 
 
-
-- align-content => تحدد مكان العنصر علي الكروس اكسيس 
+- align-content => تحدد مكان البيرنت علي الكروس اكسيس 
 				=> use it when use flex-wrap and have multiple lines of items  
 				=> defualt 'normal'
 				=> space between
 				=> space arround
 				=> space evenly
 
+- justify-content => تحرك البيرنت علي المين اكسيس
+				  => defualt 'flex-start'
+				  => flex-end
+				  => flex-ceneter
+				  => space between
+				  => space arround -> 1 [] 1 1 [] 1
+				  => space evenly -> 1 [] 1 [] 1    قسمة العدل 
 
----------------- [ Gap Prop ]
 
--
+- gap => شبه المارجن كدا بتبقي مسافه من كل نواحي العنصر وبتكون قسمة العدل
+	  => shourt hand prop for [column-gap & row-gap]
+
+
+----------------- [ child properties ]
+
+- order => by defualt 'zero' -> display order depend on html order
+		=> بيرتب العناصر من اصغر رقم الي اكبر رقم 
+	
+- align-self => تحدد مكان ال التشايلد دا علي الكروس اكسيس
+			 => flex-start -> start cross 
+			 => flex-end 
+			 => flex-center 
+	  
+- flex-grow =>  تحدد النسبة اللي الاسبيس الزيادة تتوزع بيها علي المين اكسيس
+			=> 1 -> معناه خد كل الاسبيس الزيادة واديهم للعنصر دا 
+			=> defualt 'zero' -> العنصر ياخد العرض بالغة فقططط
+			
+
+- flex-shrink => defualt '1'
+			  => النسبه اللي هيصغر بيها العنصر في حالة ان البيرنت ميكفيش انه ياخد الويدث الاصلي بتاعة
+			  
+
+- flex-basis (px) => item main size 
+
+- flex => shourt hand prob for [ grow - shrink - basis ]
+
+
+*** NOTE!! => to center div vertical and horizental [ justify-content : flex-center && align-items : flex-center]
+		   => props start with 'align' keyword work on cross access
