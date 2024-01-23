@@ -334,3 +334,22 @@
 
 *** NOTE!! => to center div vertical and horizental [ justify-content : flex-center && align-items : flex-center]
 		   => props start with 'align' keyword work on cross access
+		   
+		   
+
+---------------------------------------------------------------- [ Session 6 ] ---------------------------------
+
+---------- [ responsive web design 'RWD' ]
+
+- Media query => like condition 
+			  => @ media and take 2 parameter -> media type [screen , print]
+											  -> media feature [min-width , max-width]
+											  
+
+- breakpoint -> النقطة اللي بتغير عندها شكل الديزاين
+			 -> 0 : 576 -> Xsmall phone
+			 -> 576 : 768 -> small 
+			 
+- recommended to use min-width but order it from smaller to larger to avoid uncorrect overwrite  && make media file last file linked
+
+- html from desktop / css mobile first []
