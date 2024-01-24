@@ -1,0 +1,3 @@
+
+--------------------------------- [ Day 1 ] --------------------
+- out keyword => use to pass value by ref & compiler will not reject if not initialize it 
