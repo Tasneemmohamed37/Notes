@@ -353,3 +353,98 @@
 - recommended to use min-width but order it from smaller to larger to avoid uncorrect overwrite  && make media file last file linked
 
 - html from desktop / css mobile first []
+
+
+---------------------------------------------------------------- [ Session 7 ] ---------------------------------
+
+------ [ grid ]
+
+- parent -> display : grid
+
+- Definitions => grid idea 
+			  => column grid line [ start from left border with positive number from 1 , also can start from right with negative number -1]
+			  => row grid line [ start from top border with positive numer...]
+			  => grid line numbers = n + 1 [عدد الاعمدة او عدد الصفوف زائد واحد] 
+			  => grid container -> parent
+			  => grid items -> childes
+			  =>  grid cell -> space between two wrows or two columns [ بس لازم جمب بعض بالظبط]
+			  => grid area -> space between two wrows or two columns 
+			  => grid track -> complete row , or complete column
+			  
+- fr => fraction [كل المساحة الباقية]
+			  
+- parent prop => grid-templete-columns : repeat(4 , 1fr) -> will generare 4 columns with equal widths but can`t name all this
+			  => grid-templete-rows : [row-1-start]50px [row-2-start  row-1-end]1fr 1fr 50px -> decide rows number and width and names
+			  => gap === grid line width
+			  => grid-auto-rows -> controll implicit grid rows 
+			  => grid-auto-columns
+			  
+			  => justify-items -> work on x-axis for all childs
+			  => align-items -> work on y-axis for all childs
+			  => place-items -> y-axis x-axis for all childs
+
+			  
+- by defualt each cell contain one grid item 
+
+- use div tool -> inspect /click grid keyword on html code/ layout / show columns name 
+
+- childs prop => grid-column : grid line numbers start/ grid line numbers grid line numbers end [عادي ياخد الرقم الموجب او السالب او حتي الاسم ]
+			  => grid-row : grid line numbers start / grid line numbers end
+			  => grid-area -> row-start / column-start / row-end /column-end 
+			  
+			  => justify-self -> work on x axis
+			  => align-self -> word on y axis
+			  => place-self -> y-axis x-axis
+			  => order -> by defualt 'zero' -> display order depend on html order
+					   -> بيرتب العناصر من اصغر رقم الي اكبر رقم لكن طبعا مش هيشتغل لو كان العنصر محددين مكانه
+			  
+- span 2 => معناه هاخد عمودين او صفين 
+
+--------------- [ grid responsive ]
+
+- parent : grid-templete-columns : repeat(4 , minmax(200px,1fr)) ->  اربع اعمده وميضغروش ابدا عن متين لكن لو فيه مساحة زيادة يكبرو عادي 
+
+- - parent : grid-templete-columns : repeat(auto fill , minmax(200px,1fr)) -> هياخد الويدز يقسمة علي المين ويدز ويطلعلك عدد الاعمدة 
+
+- - parent : grid-templete-columns : repeat(auto fit , minmax(200px,1fr)) -> زيادة انه بعد ما يعمل الاعمدة الفاضي منهم هيحصله كولابس ومساحتة تتوزع بالتساوي علي باقي الاعمدة
+
+
+- امتي يزود عدد الاعمدة امبلسيتلي ؟؟؟ => لو خرجت عنصر من الجريد
+
+-------- [ grid templete area ]
+
+- هي طريقة تانيه بشتغل بيها بدل ال [ grid-templete-columns , grid-column ....]
+
+- parent => display : grid
+		 => grid-templete-area : "one one two tow"
+								 "one one three four"
+								 "five six seven seven"
+								 كدا هيعمل تلت صفوف و اربع اعمدة
+							--> for each child class name -> grid-area: area name 'ex : seven'
+		 => justify-content
+		 => align-content
+		 => place-content
+							
+- responsive -> make new custimized grid-templete-area
+
+
+---------------------------------------------------------------- [ Session 8 ] ---------------------------------
+
+------------- [ compinator ]
+
+- space ==>  .parent .child =>  mean insid parent
+
+-  > ==> .parent > .child  => to access direct child only 
+
+- + ==> div + h2 => h2 which direct sis to div  قبلها علي طول ومش بينهم حاجة
+
+- ~ ==> div ~ h2 => h2 sepiling to div ,even if between them any other siplings  
+
+------------- [ attribute selector ]
+
+- img[alt] => select all img take attribute 'alt'
+
+- img[src $= 'jpg'] => imgs src end with jpg
+
+- img[]
+
