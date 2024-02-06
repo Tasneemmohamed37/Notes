@@ -448,4 +448,34 @@
 
 - img[]
 
-test
+
+----------------------
+
+- gradient => linear-gradient -> background-image(direction , colors  start-percentage end-percentage)
+		   => redial-gradient -> تدرج الالوان بيكون بشكل دائري 
+		   => conic-gradient -> تدرج الالوان مع عقارب الساعة 
+		   
+- common used for ** background-image : linear-gradient(rgba (0,0,0,.5)) , url()
+
+------------- [ animation ]
+
+- @keyframes animation-name {
+								from { transform : rotate (0deg) }
+								to { transform : rotate (360deg) }
+							}
+							
+- then go to item => animation-name : animation-name
+				  => animation-duration : 400ms
+				  => animation-iteration-count : infinite
+				  => animation-timing-function : linear
+				  
+- monospace => font family all alphapitic chars take same width 
+
+---------------- [ CSS framework ]
+
+- framework => contract with specific structure 
+
+- libriry => one lang 
+
+- utitity classes VS inline style => specifity
+								  => reuseability

@@ -1,0 +1,10 @@
+
+- is CSS framework contain utilities classes and components
+
+----------------------- [ week 6 , session 2 ] ------------------------
+
+- colors end with subtle affected with dark mood
+
+- directions -> s 'start' , e 'end' -> based on language 
+
+- p-md-4 => pading in mediam screens and larger by 4 spacer 

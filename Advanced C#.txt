@@ -1,3 +1,29 @@
 
 --------------------------------- [ Day 1 ] --------------------
 - out keyword => use to pass value by ref & compiler will not reject if not initialize it 
+
+----------------------------- [ Day 2 ] -------------------
+
+- Enum "enumuration" => list of const vars [ int - long - shourt ]
+					 => value type
+					 => can 'or' enum values like colors ex , but must curfull when assigine values ,refer to use '2, 4, 8, 16, 32....' 
+
+- Stack include => local vars and parameters
+				
+- Heap include => objs with all vars inside it
+
+
+----------------------------- [ Day 3 ] ------------------
+
+- sealed class => cant inherite from it , so cant use virtual functions inside it 
+
+- sealed override functions => breack override serise بمعني محدش بعدي يعمل اوفرريد
+
+- object class functions => toString => get namespace.class_name 
+						 => Equals
+						 => getType -> used in reflection "in run time has obj want to know info about it"
+						 => getHashCode -> code generate based on obj data used specefic algo
+						 
+						 
+- Array => always ref type 
+		=> 
