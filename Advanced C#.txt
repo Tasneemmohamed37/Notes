@@ -26,4 +26,25 @@
 						 
 						 
 - Array => always ref type 
-		=> 
+		=> 2D arr.length == 1D.lenth*2D.length
+		=> arr.getLength(0) -> 1D.length == rows 
+		=> jagged array -> array of arrayes
+		=> once created never change size 
+		
+- string => is ref type but when passing it to function as a parameter , after execute function , it will never change [emutable data type]
+		 => but if passing it and add 'ref' keyword before parameter ,  after execute function , it will change by create new obj so refere to use stringBuilder
+		 
+
+--------------------------------- [ Day 4 ] --------------------------
+
+- operator overloading -> must be static functions 
+
+- generics => بنأخر تعريف الداتا تايب اللي احنا بنشتغل عليه لغاية ما نستخدم الكلاس 
+		   => <T> where T : class 
+		   => <T> where T : new () -> if you want to create obj in generic class can use it to make sure that all classes must contain parameter less ctor 
+		   
+- indexer => special type of prop has square pracetes to pass parameter , and has no name only write 'this' keyword
+
+------------------------------------ [ Day 5 ] ------------------------
+
+-
