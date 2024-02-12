@@ -11,6 +11,10 @@
 
 -------------------------- [ week 7 , session 1] ---------------------------
 
+- grid sys contain of => container
+					  => row
+					  => column
+
 - offset-2 => space from left عشان كدا لو عايزين نعمل سبيس فاضية بنروح للديف اللي بعد الاسبيس ونديله الكلاس دا 
 
 - g-1:5 => guffer-x & guffer-y -> padding inline & padding block

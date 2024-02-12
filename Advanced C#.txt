@@ -47,4 +47,46 @@
 
 ------------------------------------ [ Day 5 ] ------------------------
 
--
+- nested class => defind class inside class -> inner class cant access private members of otter class 
+											-> but when create obj from otter class inside inner , can access private members
+
+- can`t use forEach with list of user defind data type 'collection from class' -> must implement IEnumrable -> which have function 'get enumrator' return IEnumrator which have 3 func -> current
+																																													   -> moveNext
+																																													   -> reset
+
+- ICollection => used with countable collections 
+
+------------------------------- [ Day 6 ] ------------------------
+
+- delegete => pointer to function 
+
+- delegete is abstract class so must make your own class and implement it وعشان كمان يكون مجبر يحدد السجنيتشر بتاع الفانكشن اللي هيتعامل معاها
+								   1 => delegete bool myDelegete (int num) كدا الكومبيلر عملي كلاس بيورث من دليجيت ودي السجنيتشر بتاعه 
+								   2 => display(list<int> mylist , myDelegete del) كدا الفانكشن دسبلاي مستنيه اي فانكشن ملتزمه بنفس سيجنيتشر ماي دلجيت
+								   3 => myDelegete oddDel = new delegete(isOdd) || myDelegete oddDel = isOdd كدا عملنا اوبجكت من ماي ديلجيت ودا هيكون بوينتر لفانكشن اوود
+										step 3 is optional , if you not make it compiler will make obj from myDelegete and ref it to passed function in step 4
+								   4 => display(list , oddDel)
+								   
+- obj from delegete have => method -> function name
+						 => target -> obj from delegete
+
+- can use with delegete annonumase function , then compiler will generate annonumase class 'nested class' have this function with random name 
+
+- also can use labmda expression [display(list, n => n%2!=0)]
+
+- predefinde delegetes , can use them instead of create your own delegete => action -> return void
+																		  => func -> must return
+																		  => predicate -> parameter generic , return bool
+																		  
+- multicast delegete => allow delegete to pointer to list of functions and invoke all this , and return only last function
+
+---------- [ events ]
+
+- event => action happen in publisher then notify subscriber 
+
+- prob => publisher must contain list of subscribers which will contain deff classes , data type of this list will be ???
+- solve => subscribers implement specific interface -> prop : will force subscribers with function signeture and name 
+		=> make delegete in publisher class , and make it multicast with all subscribers functions
+		
+- prob => if there is no subscribers or the delegete equals to null , will get exeption
+- solve => make it special type of event by use keyword 'event' before delegete , this will pevent to use any operator with this delegete instead of [+= , -=]  
