@@ -1,0 +1,75 @@
+
+- is CSS framework contain utilities classes and components
+
+- link style file after bootstrap file to overwrite it
+
+- can use exetention 'intellisense for css class names' to auto complete classes in style files like bootstrap and your own style  
+
+----------------------- [ week 6 , session 2 ] ------------------------
+
+- colors end with subtle affected with dark mood
+
+- directions -> s 'start' , e 'end' -> based on language 
+
+- bootstrap supports six responsive breakpoints [sm - md - lg - xl - xxl]
+
+- p-md-4 => pading in mediam screens and larger by 4 spacer 
+
+- grid sys contain of => container
+					  => row
+					  => column
+
+- container -> responsive width 
+- container-fluid -> width 100%
+
+- Rows are wrappers for columns which has horizontal padding (called a gutter) , This padding is then counteracted on the rows so Bootstrap uses negative margin on row
+
+- g-1:5 => guffer-x & guffer-y -> padding inline & padding block
+
+- container => which sets a `max-width` at each responsive breakpoint
+- container-{breakpoint} =>  which is `width: 100%` until the specified breakpoint
+- container-fluid =>  which is `width: 100%` at all breakpoints
+
+-------------------------- [ week 7 , session 1] ---------------------------
+
+- offset-2 => space from left عشان كدا لو عايزين نعمل سبيس فاضية بنروح للديف اللي بعد الاسبيس ونديله الكلاس دا 
+
+- xs screen has no class name so when want to apply any thing to this screen use -> col-6 col-s-12 col-md-4 .....
+
+- col-md-4 => from md screen each card take 4col and from smaller screens width 100%
+
+- col-auto => widthfit content
+
+- col =>  يشوف الحاجات اللي واخده ارقام ويطرح من ال 12 والباقي يتقسم علي اللي واخد كول فقط 		
+			بيشتغل عن طريق flex-grow 1 
+			
+- row-col-6 => give to parent which take class row , will make 6 divs in same row بقوله عايز كام ايتيم يجيي جمب بعض 
+
+----------- [ semintic tags ]
+
+- عناصر لها معني 
+
+- header , nav , footer ,artical ,section , aside , main
+
+- pre -> tag used to save space inside it 
+
+------------ [ media tags ]
+
+- video -> has boolean attribute 'controll' if found will display video setting inside it 
+
+- mime type -> for tag source give attribute 'type:' 
+
+-------------------------- [ week 7 , session 2] ---------------------------
+
+- web accessability 'A11Y' can apply it use -> alt attribute in img tag
+										    -> semintic tags
+											-> subtitle with video useing track attribute
+											-> contrast ratio must be greater than 4.5
+											-> use role attribute
+											-> for form use lable for and attribute 'aria-lable' like placeholder , screen reader will read it
+											-> with checkbox use attribute 'aria-checked'
+											
+- ancor have attribute 'tab index' when tab on website controll focus ancor order -> will ignore negative values 
+																				  -> display positave from 1 to larger then finally zero
+																				  ==> prefer to use ancor before nav with href to main section , so client first tab will skip nav ancors
+

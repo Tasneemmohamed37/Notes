@@ -471,6 +471,8 @@
 				  
 - monospace => font family all alphapitic chars take same width 
 
+- can use website 'animate.css' to help 
+
 ---------------- [ CSS framework ]
 
 - framework => contract with specific structure 
