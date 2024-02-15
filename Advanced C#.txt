@@ -90,3 +90,14 @@
 		
 - prob => if there is no subscribers or the delegete equals to null , will get exeption
 - solve => make it special type of event by use keyword 'event' before delegete , this will pevent to use any operator with this delegete instead of [+= , -=]  
+
+------------------------------- [ Day 7 ] ------------------------
+
+- prob -> subscriber can use same function with different publishers so want to know sender
+- solve -> publisher deleget return obj with sender inf & subscriber cast this obj 
+
+- prob -> if publisher want to expand evend to send more data , all subscribers must edit there functions
+- solve -> publisher send data from specific data type 'class EventArgs' so when add new prop ,not cuase prob in subscribers functions 
+			كدا القديم شغال عادي ولو انت ك سبسكرايبر حابب يوصلك التعديلات الجديدة ادخل عدل في الكود بتاعك 
+			
+- EventArgs => كلاس فاضي مفيهوش اي معلومة مفيدة فقط هيوصل للسبسكرايبرز ان الايفينت حصل
