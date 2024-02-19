@@ -1,0 +1,29 @@
+------------------------- [ Session 1 , Week 8.1 ] ----------------
+
+- we use JS for -> Interaction
+				-> validation
+				-> feching APIs
+				
+- where write JS -> inline
+				 -> internal -> inside script tag , before body tag closed
+				 -> external -> script tag with 'src' attribute , before body tag closed
+				 
+- or can write tag script in head without any probrems by use attribute [defer || async]
+
+- select element with js => document.getElementById("")
+
+- to get input => window.prompt("msg to show")
+
+- variables => use keywork var to declare this var then equal to intialize it [ $ var x = 1 ;]
+
+- can use [$ , _ ] from special chars to vars name , but as name of convential use camelCase
+
+- variables are case sensetive
+
+- js is loosly type programming lang & dynamic lang 
+
+- data types => primitave -> string , number , undefinde , null , bool , bigInt , symbol
+			 => non primitave -> object 
+			 
+-values => truthy 
+		=> falsy  -> empty string / NaN / zero / false / null / undefinde
