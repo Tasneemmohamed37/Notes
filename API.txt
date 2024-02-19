@@ -34,6 +34,18 @@
 								 -> override onModelCreating then apply configuration from assembly to apply all classes [ REFLECTION ]
 
 ------------ [ 1.7 ]
-update database using obj from dbContext => 1. every time run project apply all migrations which wasnt apply
-										 => 2. 
+update database using obj from dbContext => 1. every time run project apply all migrations which wasn`t apply
+										 => 2. use this context obj in data seeding
+										 => steps -> in program class after builder.build create obj from dbcontext  by Ask Explicitly [ create scope - services - context obj - migrateAsnc]
 
+----------- [ 1.8 ]
+- data seeding -> read json files then desrialize 'convert from json' to list of this data type then add it to DB finally save changes
+
+----------- [ 1.9 ]
+- find => search local first if not found then search remote
+
+----------- [ 1.11 ]
+- by defualt nav prop not load , can load it using one of 3 approaches -> explicite [ .load ]
+																	   -> eager loading [ Include ]
+																	   -> lazy load [ proxies package ]
+					
