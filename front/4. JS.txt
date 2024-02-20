@@ -12,7 +12,7 @@
 
 - select element with js => document.getElementById("")
 
-- to get input => window.prompt("msg to show")
+- to get input => window.prompt("msg to show") --> always return string 
 
 - variables => use keywork var to declare this var then equal to intialize it [ $ var x = 1 ;]
 
@@ -20,10 +20,50 @@
 
 - variables are case sensetive
 
-- js is loosly type programming lang & dynamic lang 
+- js is loosly type programming lang & dynamic lang 'بعرف فاريبول انت مثلا وبعدها اخليه سترنج عادي وهكذا'
 
 - data types => primitave -> string , number , undefinde , null , bool , bigInt , symbol
 			 => non primitave -> object 
 			 
 -values => truthy 
 		=> falsy  -> empty string / NaN / zero / false / null / undefinde
+		
+- undefinde -> var declare and not initialized
+- null -> no value
+		
+------------------------- [ Session 2 , Week 8.2 ] ----------------
+
+- Explicite casting => dt(var) -> $ number(string) -> NaN
+							   -> $ number("15") -> 15
+							   -> $ number("15test") -> NaN
+							   -> $ number("") -> zero
+							   -> $ number(true) -> 1 
+							   -> $ number(undefinde) -> NaN
+							   -> $ number(null) -> 0
+							   -> $string (any thing) -> 'any thing'
+							   
+							   
+- operators => unary 'operator work only one value' -> $ +("15") -> 15
+													-> $ -("15") -> -15
+													-> $ ++
+													-> $ --
+													-> $ typeof NaN -> number
+			=> arthmatic operator -> [ + | - | * | / | % ] -> all them cause implicite conversion exepte '+' becouse it also use in concatenate strings
+			=> assignment operators -> [ = | += | -= | *= ]
+			=> comparision operators -> [ > | < | >= | <= | == | === ]
+			=> logical operators -> [ && , || , !]
+			
+- operators periority => 
+
+- typeof typeof bool -> string
+
+- == -> compare values 
+- === -> compare data type and value
+
+- $ var x = 'test'
+  $ console.log(!!x) ==> true 
+  
+- NaN == NaN -> false 
+
+
+							
