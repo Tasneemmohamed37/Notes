@@ -15,8 +15,8 @@
 - Union Arch -> 1. Domain layer [domain models - all Interfaces] 
 					also name as core layer becouse it contain all project but not implemented
 			 -> 2. Repository layer [repos - DbContext - fluentAPI - ]	
-			 -> 3. Service layer 
-			 -> 4. Persentation layer 
+			 -> 3. Service layer [ payment service - cashing service - order service - auth service]
+			 -> 4. Persentation layer [ controlles - DTOs ]
 
 ------------ [ 1.5 ]
 - rel between product & category is 1:M but in case we make one nav prop in product only this rel will be 1:1 so must use fluentAPI
@@ -48,4 +48,13 @@ update database using obj from dbContext => 1. every time run project apply all 
 - by defualt nav prop not load , can load it using one of 3 approaches -> explicite [ .load ]
 																	   -> eager loading [ Include ]
 																	   -> lazy load [ proxies package ]
-					
+
+
+---------------------------------------------------- [ Session 02 ] --------------------------------------------
+
+--------- [ 2.1 ]
+
+- specification design pattern => used to build dynamic queries 
+							   => من غيرة كان عندنا مشكلة وهي في الجينيرك ريبو لما كان نحتاج نعمل انكلود للنافجيشن بروبرتي كنا بنضطر نشتغل ب مسكن ونعمل اكتر من كونديشن للتايب اللي هنشتغل عليه 
+							   => steps -> 1. detecte query components [ex : entry point '$ _dbContext.set<T>' / where condition / list of includes ]
+										-> 2. interface include prop signiture for each query component
