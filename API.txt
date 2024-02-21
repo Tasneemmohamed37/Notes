@@ -56,5 +56,17 @@ update database using obj from dbContext => 1. every time run project apply all 
 
 - specification design pattern => used to build dynamic queries 
 							   => من غيرة كان عندنا مشكلة وهي في الجينيرك ريبو لما كان نحتاج نعمل انكلود للنافجيشن بروبرتي كنا بنضطر نشتغل ب مسكن ونعمل اكتر من كونديشن للتايب اللي هنشتغل عليه 
-							   => steps -> 1. detecte query components [ex : entry point '$ _dbContext.set<T>' / where condition / list of includes ]
-										-> 2. interface include prop signiture for each query component
+							   => steps -> 1. detecte query components [ex : inputQuery '$ _dbContext.set<T>' / where condition / list of includes ]
+										-> 2. ISpecification interface include prop signiture for each query component
+										-> 3. baseSpecification class implement this interface and contain auto prop 
+										-> 4. specificationEvaluator class include function build query by take as a parameter [inputQuery , ISpecification ]
+										-> 5. generic repo work with function which build query 
+										-> 6. for each entity with includes make class inhirate from baseSpecification , condition 2 ctors one with criteria and other without 
+										-> 7. in controllers create obj from class in step 6 to create spec 
+										
+										
+- aggregate =>  accumirate over sequence
+			=> ex : $ string[] names = ["tasneem" , "mohamed" , "elhussiny"]
+					$ string msg = 'hello'
+					$ msg = names.aggregate(msg , (str1 , str2) => $"{str1} {str2}" );
+					result ==> hello tasneem mohamed elhussiny
