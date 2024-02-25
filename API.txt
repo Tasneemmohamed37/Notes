@@ -95,3 +95,11 @@ update database using obj from dbContext => 1. every time run project apply all 
 
 - want to make error response standered for all error types -> 1. add folder errors in api layer then add class 'apiResponse' دا اللي هيكون جواه شكل الاوبجكت اللي احنا عايزين نعمله ريتيرن في حاله حصل ايرور
 															-> 2. in endPoints check if there is error create obj from apiResponse and pass error code to it 
+															
+----------- [ 2.8 ]
+
+- validation error handling -> ex : occur when endPoint take int parameter and pass to it string كدا فعليا طلبنا ايند بوينت مش موجودة لكن بنلاقي ريسبونس باد ريكوست 
+							-> there is defualt configuration generate this response 
+							-> 1. create class apiValidationErrorResponse : apiResponse(400) [becouse validation error type of bad request error]
+							-> 2. in program class before app.build configure apiBehaviorOptions
+							
