@@ -70,3 +70,28 @@ update database using obj from dbContext => 1. every time run project apply all 
 					$ string msg = 'hello'
 					$ msg = names.aggregate(msg , (str1 , str2) => $"{str1} {str2}" );
 					result ==> hello tasneem mohamed elhussiny
+					
+---------- [ 2.4 ]
+
+- prob -> retreved data contain nested obj [data of product include data of nav props] , and want make it flat 
+- solve -> DTO [data to obj] in api layer 
+		-> auto mapper package in api layer
+		-> in controller ctor inject Imapper
+		-> in program file allow DI for auto mapper  $ builder.Services.AddAutoMapper(typeof(mappingProfiles)); [work transiant becouse for sure in one request need to map only one time ]
+		-> class mappingProfiles which include map for all profiles in his ctor and inhirate from profile class 
+		-> in end point map [ $ _autoMapper.Map<S,D>(S data)]
+		
+
+----------- [ 2.5 ]
+
+- resolve pic url -> inside helpers folder add class productPicUrlResolve which inhirate form class 'Ivalue resolver<S,D,SMemberDataType>'
+				  -> inside appSetting add baseUrl
+				  -> in class mappingProfiles add for product map [ $ForMember(d => d.PictureURL , O => O.MapFrom<productPictureUrlResolve>())]
+				  -> in program class use middelware '$ app.useStaticFiles'
+				  
+------------ [ 2.7 ]
+
+- null coalescing operator '??'  => x = y ?? 4 [incase y iis null then x will equal to 4]
+
+- want to make error response standered for all error types -> 1. add folder errors in api layer then add class 'apiResponse' دا اللي هيكون جواه شكل الاوبجكت اللي احنا عايزين نعمله ريتيرن في حاله حصل ايرور
+															-> 2. in endPoints check if there is error create obj from apiResponse and pass error code to it 

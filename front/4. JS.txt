@@ -65,5 +65,29 @@
   
 - NaN == NaN -> false 
 
+------------------------- [ Session 3 , Week 9.1 ] ----------------
 
-							
+- while loop prefer to used in case not know iteration numbers 
+
+- if you want random number from 1 to 6 => math.trunc(math.random()*7) -> math.trunc() بتشيل الكسر 
+																	   -> math.random() رقم عشوائي من الزيرو للواحد 
+																	   
+- function fName(){}
+
+- when call or invoke function and pass parameter to it , it call argument => function fName(parameter)
+																		   => fName(argument)
+																		   
+- ex => function calcSum(x,y){console.log(x+y)}
+		console.log(calcSum(5,6)) ==> 11 , undefinde
+		
+- in JS can declate more than one var with same name and call based on scope ==> this not work in ES6
+
+- scope => local -> var inside func  ممكن نعتبره برايفيت
+		=> global
+		
+- function types => declaretion function تبدأ بكلمه فانكشن  -> occure hoisting so can use it in line before line of function body
+		         => expression function -> var x = function(){} -> if you call var in line before line of function will get error 
+				 => IIFE 'imiddiatly invoke function expression' -> self invoke function ->> (function(){})()
+				 
+- hoisting => JS compile code by collect all declard vars first , then execute code line by line
+		   => ex : console.log(x) ; x=10; --> undefinde 
