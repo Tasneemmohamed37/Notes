@@ -76,10 +76,10 @@ update database using obj from dbContext => 1. every time run project apply all 
 - prob -> retreved data contain nested obj [data of product include data of nav props] , and want make it flat 
 - solve -> DTO [data to obj] in api layer 
 		-> auto mapper package in api layer
-		-> in controller ctor inject Imapper
-		-> in program file allow DI for auto mapper  $ builder.Services.AddAutoMapper(typeof(mappingProfiles)); [work transiant becouse for sure in one request need to map only one time ]
 		-> class mappingProfiles which include map for all profiles in his ctor and inhirate from profile class 
-		-> in end point map [ $ _autoMapper.Map<S,D>(S data)]
+		-> in program file allow DI for auto mapper  $ builder.Services.AddAutoMapper(typeof(mappingProfiles)); [work transiant becouse for sure in one request need to map only one time ]
+		-> in controller ctor inject Imapper and in end point map [ $ _autoMapper.Map<S,D>(S data)]
+		
 		
 
 ----------- [ 2.5 ]
@@ -102,4 +102,11 @@ update database using obj from dbContext => 1. every time run project apply all 
 							-> there is defualt configuration generate this response 
 							-> 1. create class apiValidationErrorResponse : apiResponse(400) [becouse validation error type of bad request error]
 							-> 2. in program class before app.build configure apiBehaviorOptions
-							
+
+----------- [ 2.9 ]
+
+- handel server error -> errors like exeptions 
+				      -> target -> when exeption occur response with object include [ status code - message - exeption details in case development mood]
+					  -> 1. in folder errors add class 'apiExeptionResponse' which inhirate form apiResponse
+					  -> 2. add folder middelwares in api layer add class 'exeptionMiddleware' which a custom middelware and include function 'invokeAsync'
+					  -> 3. in program class add this middelware as first one 
