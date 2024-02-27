@@ -110,3 +110,17 @@ update database using obj from dbContext => 1. every time run project apply all 
 					  -> 1. in folder errors add class 'apiExeptionResponse' which inhirate form apiResponse
 					  -> 2. add folder middelwares in api layer add class 'exeptionMiddleware' which a custom middelware and include function 'invokeAsync'
 					  -> 3. in program class add this middelware as first one 
+					  
+
+---------------------------------------------------- [ Session 03 ] --------------------------------------------
+
+---------- [ 3.1 ]
+
+- handle not found end point -> target to redirect to specific end point 
+							 -> 1. add errorController which has Route("errors/{statusCode}") and include error end point 
+							 -> 2. in program class before redirection middelware use $app.UseStatusCodePagesWithReExecute("errors/{0}"); // rexecute will generate response by one request only 
+							 
+----------- [ 3.2 ]
+
+- want to improve swagger documentation so each endPoint show response obj structure -> for each endPoint use attribute $ [ProducesResponseType(typeof(ProductToReturnDto), StatusCodes.Status200OK)]
+																														$ [ProducesResponseType(typeof(ApiResponse), StatusCodes.Status404NotFound)]
