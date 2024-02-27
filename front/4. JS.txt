@@ -91,3 +91,38 @@
 				 
 - hoisting => JS compile code by collect all declard vars first , then execute code line by line
 		   => ex : console.log(x) ; x=10; --> undefinde 
+		   
+------------------------- [ Session 4 , Week 9.2 ] ----------------
+
+- obj -> container for collection of props & methods 
+	  -> non primitave data type - reference data type
+	  -> $ var x = {key: value ,}
+	  
+- to access obj prop -> dot notation $person.son.name
+					 -> praket notation $person["son"]["name"]
+					 
+- in case prop is number can access it only use praket notation
+
+- expression -> حاجة في الاخر تتفك لفاليو واحدة
+
+- add prop to obj -> person.address = "maddii"
+				  -> person.eat = function(){}
+				  
+-  remove prop from obj -> delete person.address
+
+- method -> func inside obj 
+
+- window is base obj for all objs
+
+- array[] -> container for different dt 
+		  -> $arr.Push() add element to end of array and return new lenght 
+		  -> $arr.unShift() add element to start of array and return new lenght 
+		  -> $arr.pop() remove element from end of array and return deleted element
+		  -> $arr.Shift() remove element from start of array and return deleted element
+		  -> splice -> add -> arr.splice(startIndex , 0 , element)
+					-> remove -> arr.splice(startIndex , deletedCount) return deleted elements
+					-> update -> arr.splice(startIndex , 1 , newElement)
+		  -> slice (startIndex , endIndex'not icluded') تاخد جزء من الاراري ومبتعدلش عليها 
+		  -> sort ترتب ابجدي حتي لو كانوا ارقام
+		  -> icludes('elementToFind',startIndex) -> return bool
+		  -> indexOf('element') -> return first match , if not found return  -1 
