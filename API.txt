@@ -124,3 +124,29 @@ update database using obj from dbContext => 1. every time run project apply all 
 
 - want to improve swagger documentation so each endPoint show response obj structure -> for each endPoint use attribute $ [ProducesResponseType(typeof(ProductToReturnDto), StatusCodes.Status200OK)]
 																														$ [ProducesResponseType(typeof(ApiResponse), StatusCodes.Status404NotFound)]
+																														
+
+---------- [ 3.3 ]			
+
+- extention method -> function parameter prefix with this keyword بحيث اللي بيعملها كول هيكون هو الباراميتر 
+																											
+- want to clean up program class ->  by collect all DI code in function and make it extention for services and in class program '$build.service.applicationServices'
+							     -> 1. add folder extentions in api layer and add class 'applicationServicesExtention'  
+								 -> 2. inside this class add function 'applicationServices' which take as a parameter (this IServiceCollection) and cut DI services from program then paste it here
+								 -> 3. in class program $ builder.Services.ApplicationServices();
+
+
+------------ [ 3.5 ]
+
+- IQuerable -> best performance in case of filtretion [ filter in db then bring data ]
+- IEnumrable -> parent interface for all collections best performance in case of read only & Iteration
+- ICollection -> handle insert , update , delete on data
+- IReadOnlyList -> best performance in case of casing & readable random access without filtretion or Iteration or insert , update ,delete
+
+
+				 
+------------ [ 3.7 ]
+
+- want to apply filtretion on products -> 1. in getAll product endPoint pass parameters [ sortType , typeId , brandId ]
+									   -> 2. edit class 'ProductWithTypeAndBrandSpecifications' make it chain to base ctor which take criteria as a parameter
+									   -> 3.
