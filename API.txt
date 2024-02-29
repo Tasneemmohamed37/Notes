@@ -144,9 +144,17 @@ update database using obj from dbContext => 1. every time run project apply all 
 - IReadOnlyList -> best performance in case of casing & readable random access without filtretion or Iteration or insert , update ,delete
 
 
-				 
+------------ [ 3.6 ]
+
+- want to apply sort products -> 1. in interface 'ISpecification' add prop signiture for orderBy & orderByDes
+							  -> 2. in class 'BaseSpecification' add 2 functions 'addOrderBy' & 'addOrderByDesc'
+							  -> 3. in ctor of class 'ProductWithTypeAndBrandSpecifications' check if sort not null then swich it 
+							  -> 4. in class 'SpecificationEvaluator' check orderBy & orderByDes if not null then order
+							  -> 5. in getAll product endPoint pass parameter string 'sort'
+							  
+							  
 ------------ [ 3.7 ]
 
-- want to apply filtretion on products -> 1. in getAll product endPoint pass parameters [ sortType , typeId , brandId ]
-									   -> 2. edit class 'ProductWithTypeAndBrandSpecifications' make it chain to base ctor which take criteria as a parameter
-									   -> 3.
+- want to apply filtretion on products -> 1. edit class 'ProductWithTypeAndBrandSpecifications' make it chain to base ctor which take criteria as a parameter
+									   -> 2. in getAll product endPoint pass parameters [ sortType , typeId , brandId ]
+									    
