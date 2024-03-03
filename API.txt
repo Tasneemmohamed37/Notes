@@ -148,13 +148,30 @@ update database using obj from dbContext => 1. every time run project apply all 
 
 - want to apply sort products -> 1. in interface 'ISpecification' add prop signiture for orderBy & orderByDes
 							  -> 2. in class 'BaseSpecification' add 2 functions 'addOrderBy' & 'addOrderByDesc'
-							  -> 3. in ctor of class 'ProductWithTypeAndBrandSpecifications' check if sort not null then swich it 
+							  -> 3. in ctor of class 'ProductWithTypeAndBrandSpecifications' check if sort not null then swich it and call these functions
 							  -> 4. in class 'SpecificationEvaluator' check orderBy & orderByDes if not null then order
 							  -> 5. in getAll product endPoint pass parameter string 'sort'
 							  
 							  
 ------------ [ 3.7 ]
 
-- want to apply filtretion on products -> 1. edit class 'ProductWithTypeAndBrandSpecifications' make it chain to base ctor which take criteria as a parameter
-									   -> 2. in getAll product endPoint pass parameters [ sortType , typeId , brandId ]
+- want to apply filtretion on products -> 1. in core layer , folder specification add class 'productSpecParams' which include [sortType , typeId , brandId]
+									   -> 2. edit class 'ProductWithTypeAndBrandSpecifications' make it chain to base ctor which take criteria as a parameter and pass as a parameter 'productSpecParams'
+									   -> 3. in getAll product endPoint pass as a parameter '$[fromQuery]productSpecParams' // use fromQuery becouse obj by defualt send in body but this end point is get so not have body 
 									    
+------------ [ 3.8 ]
+
+- apply pagination -> 1. in class 'productSpecParams' add prop 'pageIndex' & full prop 'pageSize' // to apply validation on it 
+				   -> 2. in interface 'ISpecification' add prop signiture for take & skip & isPaginationEnabled
+				   -> 3. in class 'BaseSpecification' add function 'applyPagination'
+				   -> 4. in ctor of class 'ProductWithTypeAndBrandSpecifications' ctor call this function [$ApplyPagination(specParams.PageSize*(specParams.PageIndex - 1), specParams.PageSize); ]
+				   -> 5. in class 'SpecificationEvaluator' check if spec.isPaginationEnabled then skip & take
+				   
+				   
+------------ [ 3.9 ]
+
+- Create Standard pagination Response -> 1. in api layer in folder helpers add class 'Pagination' which include [pageIndex , pageSize , data , count of total products based on filtretion spec]
+									  -> 2. in 'IGenericRepository' add method 'GetCountWithSpecAsync' to get count
+									  -> 3. in class 'GenericRepository' impliment this method 
+									  -> 4. in core layer in folder specifications add class 'ProductWithFilterationForCountSpecification' [make this class becouse if use class 'ProductWithTypeAndBrandSpecifications' will iclude & sort & take & skip .. but we only want to count]
+									  -> 5. in getAll product endPoint edit return type to [$ Pagination<ProductToReturnDto>]
