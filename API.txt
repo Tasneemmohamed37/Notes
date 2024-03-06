@@ -175,3 +175,13 @@ update database using obj from dbContext => 1. every time run project apply all 
 									  -> 3. in class 'GenericRepository' impliment this method 
 									  -> 4. in core layer in folder specifications add class 'ProductWithFilterationForCountSpecification' [make this class becouse if use class 'ProductWithTypeAndBrandSpecifications' will iclude & sort & take & skip .. but we only want to count]
 									  -> 5. in getAll product endPoint edit return type to [$ Pagination<ProductToReturnDto>]
+									  
+
+------------ [ 3.10 ]
+
+- want to store cart items in DB when client checkout , but before it ?? can use -> local storage , if use different browser will not find data & back end can`t access this data to use it in marketing
+																				 
+- Redis [ in memory DB ] => store data in RAM with expire date so best performance
+						 => flexible data structure , has variety on key-Value data structure , not just string but also list , set , JSON....
+						 => problem , redis not support on windows so want to use linux subSys
+						 => run it using Cmd '$redis-server.exe'
