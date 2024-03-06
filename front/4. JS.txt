@@ -126,3 +126,36 @@
 		  -> sort ترتب ابجدي حتي لو كانوا ارقام
 		  -> icludes('elementToFind',startIndex) -> return bool
 		  -> indexOf('element') -> return first match , if not found return  -1 
+		  
+------------------------- [ Session 5 , Week 10.1 ] ----------------
+
+- innerHTML => don`t used with empty tags , use insted of it [element.value]
+
+- local storage => file in client hard , each browser has separete file
+				=> to add any thing to local storage [ $localStorage.setItem(key, value)] and both key, value are string
+				=> $localStorage.getItem(key) -> key has value ? value : null
+				=> commonly used for -> store user prefers like dark mood or ligth
+									 -> store form data to easly edit it before submit by add func and call it in input use attribute [ $onInput(func()) ]
+
+- session storage => save data untill browser tab opened 
+				  
+- problem value of key in localStorage must be string -> can solve it useing [$ JSON.stringify()]
+
+- to make input retrive only img use attribute [$ accept="image/*"] & to make it retrive more than photo or file use attribute [ $multiple]
+
+
+
+------------------------- [ Session 6 , Week 10.2 ] ---------------
+- string built-in functions => split  -> convert string to array based on specific seperators 
+							=> slice (startIndex , endIndex 'not included')
+							=> include -> return bool 
+							
+- RegEx -> can use 'RegEx vis' website ti understand specific regex
+		-> can use 'RegEx 101' website to test 
+		-> can use 'iHateRegEx' website to get regex 
+		-> $/[a-Z]/ -> one lowerCase char from a to z 
+		-> $/[A-Z]{3,5}/ -> 3 or 4 or 5 upperCaseChar char from a to z 
+		-> $/{0,}/ -> from 0 to infinity
+		-> $/([1-7][0-9]|80)/ -> number from 10 to 80
+		-> $/^(\+2)?01[0125][0-9]{8}$/ ->  egy numbers 
+		
