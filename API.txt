@@ -24,6 +24,7 @@
 ------------ [ 1.6 ]
 - packages -> sql   :repo layer [context] 
 		   -> tools : PL [connection string]
+		   -> redis : core 
 		   
 
 - references -> API -> repo
@@ -185,3 +186,15 @@ update database using obj from dbContext => 1. every time run project apply all 
 						 => flexible data structure , has variety on key-Value data structure , not just string but also list , set , JSON....
 						 => problem , redis not support on windows so want to use linux subSys
 						 => run it using Cmd '$redis-server.exe'
+						 
+------------- [ 3.11 , 3.12, 3.13 ]
+
+- when terminate redis it take snapshot from data and save it in hard desk , and when run redis it take data from hard to ram 
+
+- to apply customer basket => 1. in core layer in folder entities add class 'basketItem' which inhirate from 'baseEntity' , and add class 'customerBasket' which have string id to use guid 
+						   => 2. in core layer , in folder repos add interface 'IBasketRepository' and will not inhiriate from genericRepo 'which treat with context' but this repo will treat with redis
+						   => 3. in app.json add redis connection string 
+						   => 4. in core layer install package 'StackExchange.Redis' and in class program allow DI for it after DbContext and make it Singleton to use same obj while user use wabsite
+						   => 5. in repo layer add class 'BasketRepository' which inhirate from 'IBasketRepository' and ask in ctor obj from class redisDB 'IConnectionMultiplexer'
+						   => 6. in class 'ApplicationServicesExtensions' in method 'ApplicationServices' allow DI for BasketRepository
+						   => 6. add basketController 
