@@ -25,7 +25,7 @@
 - packages -> sql   :repo layer [context] 
 		   -> tools : PL [connection string]
 		   -> redis : core 
-		   
+		   -> identity : core
 
 - references -> API -> repo
 			 -> repo -> core
@@ -198,3 +198,21 @@ update database using obj from dbContext => 1. every time run project apply all 
 						   => 5. in repo layer add class 'BasketRepository' which inhirate from 'IBasketRepository' and ask in ctor obj from class redisDB 'IConnectionMultiplexer'
 						   => 6. in class 'ApplicationServicesExtensions' in method 'ApplicationServices' allow DI for BasketRepository
 						   => 6. add basketController 
+						   
+------------------------------------------------------- [ session 04 ] ----------------------------
+
+------------ [ 4.1 ]
+
+- to apply identity module -> 1. in core layer install package identity
+						   -> 2. in core layer in entity folder add class 'appUser' which inhirate from 'identityUser' to custmise some prop to identity user class
+						   -> 3. in repo layer add folder 'identity' add class 'AppIdentityDbContext' which inhirate from 'identityDbcontext<appUser>'
+						   -> 4. in appSetting add connection string  
+						   -> 5. in class program allow DI for identity 
+						   -> 6. add migration from layer 'repo' which include context and update database 
+						   -> 7. to update db in class program by crate obj from identityDbcontext
+						   
+------------- [ 4.2 ]
+- to apply identity seeding -> 1. in repo layer in folder identity add static class 'AppIdentityDbContextSeed' which include static function 'seedUserAsync'
+							-> 2. in api layer in folder extentions add class 'IdentityServicesExtensions' which include extention method 'IdentityServices'
+							-> 3. allow DI identity in function 'IdentityServices' [$services.AddIdentity<AppUser,IdentityRole>(); $services.AddAuthentication();] 
+							-> 4. to update db in class program call 'seedUserAsync' function and create obj from userManeger then pass it as a parameter
