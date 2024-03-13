@@ -159,3 +159,41 @@
 		-> $/([1-7][0-9]|80)/ -> number from 10 to 80
 		-> $/^(\+2)?01[0125][0-9]{8}$/ ->  egy numbers 
 		
+
+------------------------- [ Session 7 , Week 11.1 ] ---------------
+
+- DOM -> document object model تمثيل للحاجات الموجودة في دوكيومينت في هيبئة اوبجيكت عشان لغات البرمجة تقدر تتعامل معاة
+	  -> used in -> events 
+				 -> DOM traversing عن طريق عنصر واحد اقدر اوصل لاي عنصر في التري 
+				 -> DOM manpulation 
+	  
+- DOM TREE -> contain of -> node -> element
+								 -> text
+								 -> attribute
+								 
+- different wayes to select html element in js => 1. document.getElementsByTagName("h2") -> htmlCollection [""] | []
+											   => 2. document.getElementsByClassName("") -> htmlCollection [""] | []
+											   => 3. document.getElementById("") -> element | null
+											   => 4. document.getElementsByName("") -> nodeList | [] ايوة اكتر من عنصر هيكون له نفس الاسم زي الراديو مثلا
+											   => 5. document.querySelector("") -> first match element | null
+											   => 5. document.querySelectorAll("") -> nodeList | []
+											   
+
+- htmlCollection VS nodeList => both have [length prop, access element using index, can loop throw, not support array methods]
+							 => htmlCollection [can get element inside it using id or name ]
+							 
+- function is first class citizen => can be assigned to a variable
+								  => can be stored inside object
+								  => can passed as an argument to another function [$repeat(sayHello)]
+								  => can return another function
+								  
+- $repeat(sayHello) -> pass function as an argument
+- $repeat(sayHello()) -> execute function first then pass return from this function as an argument
+
+
+- by defualt function of event has parameter 'event enfo' , can call it any thing -> $ e.target [ access event invoker]
+
+
+- event bubbling -> when element receives an event, and that event bubbles up to its parent and ancestor elements in the DOM tree until it gets to the root element
+				 -> to convert sequence add parameter 'true' to addEventListenr and this call event capturing
+				 -> can prevent it using $ e.stopPropagation
