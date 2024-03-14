@@ -29,7 +29,8 @@
 
 - references -> API -> repo
 			 -> repo -> core
-			 -> 
+			 -> services -> core 
+			 -> api -> service
 			 
 - to apply fluentAPI using class -> class:IentityTypeConfiguration
 								 -> override onModelCreating then apply configuration from assembly to apply all classes [ REFLECTION ]
@@ -216,3 +217,24 @@ update database using obj from dbContext => 1. every time run project apply all 
 							-> 2. in api layer in folder extentions add class 'IdentityServicesExtensions' which include extention method 'IdentityServices'
 							-> 3. allow DI identity in function 'IdentityServices' [$services.AddIdentity<AppUser,IdentityRole>(); $services.AddAuthentication();] 
 							-> 4. to update db in class program call 'seedUserAsync' function and create obj from userManeger then pass it as a parameter
+							
+------------ [ 4.3 & 4.4 ]
+
+- login & register endpoints -> 1. add class 'userDto' which include [displayName, email, token] and class 'loginDto' which include [email, password] & 'registerDto'
+							 -> 2. add 'AccountController' controller which include endPoints login & register [no need to check model state is valid or not becouse we configre 'invalidModelStateResponseFactory' to return obj from apiValidationErrorResponse]
+				 
+				 
+------------ [ 4.5 ]
+
+- JWT 'json web token' contain of -> header [alg 'hs256' | typ 'jwt']
+								  -> payload 'claims' [registerd 'key, issuer, audience, duration' is static for all users | private]
+								  -> signature
+								  
+- jwt token creation -> 1. in service layer install package 'jwt bearer' 
+					 -> 2. in core layer, folder service add interface 'ITokenService'
+					 -> 3. in services layer take ref from core layer and add class 'TokenService'
+					 -> 4. add key to appsetting.json
+					 -> 5. refactor login registresion endpoints
+					 -> 6. in class program allow DI for TokenService in function 'addIdentityServices'
+								$ services.AddScoped<ITokenService,TokenServices>();
+								$ services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme);
