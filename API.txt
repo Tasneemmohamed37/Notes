@@ -238,3 +238,23 @@ update database using obj from dbContext => 1. every time run project apply all 
 					 -> 6. in class program allow DI for TokenService in function 'addIdentityServices'
 								$ services.AddScoped<ITokenService,TokenServices>();
 								$ services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme);
+
+------------ [ 4.7 ]
+- get current user -> use prop 'User' which any controller inhirate it from controllerBase
+
+
+----------- [ 4.8 ]
+
+- to get user address -> prop : when use [$ userManeger.findByEmailAsync] will get user but by defualt nav prop 'address' not loaded
+					  -> solve : extention method for userManeger to get user include address
+					  -> 1. in api layer in folder extentions add class 'userManegerExtention'
+					  -> 2. in api layer add 'addressDto' to prevent object cycle error
+					  -> 3. in api layer in helper folder in profiles class add map for address [$ ]
+					  -> 4. in account controller add endPoint 'getUserAddress'
+					  
+- linq query execute -> defferd
+					 -> immediate execution -> casting [toList, toArray]
+											-> aggregate [sum, count, avg, min, max]
+											-> element [first, last, firstOrDefult, lastOrDefult]
+											-> foreach
+					 
