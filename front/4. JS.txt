@@ -197,3 +197,26 @@
 - event bubbling -> when element receives an event, and that event bubbles up to its parent and ancestor elements in the DOM tree until it gets to the root element
 				 -> to convert sequence add parameter 'true' to addEventListenr and this call event capturing
 				 -> can prevent it using $ e.stopPropagation
+				 
+
+------------------------- [ Session 8 , Week 11.2 ] ---------------
+
+- DOM traversing -> parentElement
+				 -> children -> htmlCollection of elements
+				 -> childNodes -> nodeList of nodes
+				 -> querySelector -> element تدخل جوا التري وتدور
+				 -> closest -> element تطلع لفوق وتدور 
+				 -> nextElementSibling -> element
+				 -> nextSibling -> node
+				 
+
+- DOM manpulation -> innerHTML لما اجي ازود بيمسح القديم ويزودلي علية 
+				  -> innerText التيكست اللي ظاهر لليوزر
+				  -> textContent كل التيكست حتي الحاجات اللي واخده دسبلاي نل 
+				  -> append (push node) بيضيف في الاخر من غير ما يمسح القديم 
+				  -> prepend (push node) بيضيف في الاول من غير ما يمسح القديم 
+				  -> after يضيف بعد العنصر نفسه 
+				  -> before يضيف قبل العنصر نفسه 
+				  
+- element.classList -> add | remove | replace
+					-> toggle (class found? delete : add) 
