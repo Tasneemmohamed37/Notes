@@ -258,3 +258,8 @@ update database using obj from dbContext => 1. every time run project apply all 
 											-> element [first, last, firstOrDefult, lastOrDefult]
 											-> foreach
 					 
+------------ [ 4.11 ]
+
+- to validate customerBasket -> 1. add class 'customerBasketDto' & 'basketItemDto' to use filters on prop 
+							 -> use double.maxValue becouse defulte dt of range filter and there is no decimal.max 
+							 -> create map for two dtos and inject Imapper in basketController ctor 
