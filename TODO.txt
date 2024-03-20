@@ -2,3 +2,8 @@
 - big data git course
 - API with onion arch
 - signalR
+- reflection 
+- crystal reports 
+- .net frameworks [ telerik, dev express]
+- tailwind
+- react 
