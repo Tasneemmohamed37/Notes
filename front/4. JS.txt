@@ -220,3 +220,7 @@
 				  
 - element.classList -> add | remove | replace
 					-> toggle (class found? delete : add) 
+					
+------------------------- [ Session 9 , Week 12.1 ] ---------------
+
+- API -> application programming interface 
