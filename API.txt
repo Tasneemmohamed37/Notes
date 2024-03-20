@@ -282,3 +282,10 @@ update database using obj from dbContext => 1. every time run project apply all 
 	
 - to apply order module -> 1. in core layer add entities 'Address | DeliveryMethod | Order | OrderItem | OrderStatus | ProductItemOrdered'
 						
+--------- [ 5.2 ]
+
+- add fluentAPI to configre -> store OrderStatus in db as string then retrive it as OrderStatus [$ builder.Property(O => O.Status).HasConversion(S => S.ToString(),S => (OrderStatus) Enum.Parse(typeof(OrderStatus),S));]
+							-> subtotal dt decimal (18,2) [$ builder.Property(O => O.SubTotal).HasColumnType("decimal(18, 2)")]
+							-> shipping address prop mapp as columns in order table ==> 1:1 total [$ builder.OwnsOne(O => O.ShipToAddress, sh => sh.WithOwner());]
+							-> 1. in repo layer > data > config > order > add class 'OrderConfiguration' & 'OrderItemConfiguration' & 'DeliveryMethodConfiguration' which inhirate from 'IentityTypeConfiguration'
+							
