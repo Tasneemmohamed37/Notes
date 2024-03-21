@@ -291,3 +291,32 @@ update database using obj from dbContext => 1. every time run project apply all 
 							-> 2. in repo layer > storeContext add DbSets then add migration
 							
 - EF core all classess mapped to db or related to them must have empty parameterless ctor use it to generate obj from this entity
+
+-------- [ 5.6 ]
+
+- apply order service -> 1. core layer > services > add interface 'IOrderService'
+					  -> 2. service layer add class 'OrderService' which inhirate from 'IOrderService'
+					  
+- Repo VS Services
+				repo --> represent DbSet [get - add - update - delete] which change obj state
+				services --> create obj it self then talk it to repo , commonly used with complex obj like order 
+				
+-------- [ 5.7 ]
+
+- implement createOrderAsync -> 1. Get Basket From Baskets Repo
+                                2. Get Selected Items at Basket From Products Repo
+                                3. Calculate SubTotal
+                                4. Get Delivery Method From DeliveryMethods Repo
+                                5. Create Order
+                                6. Save To Database , add methods 'addAsync & update & delete' to IGenericRepository , GenericRepository
+								
+- in EF core there isn`t updateAsync or deleteAsync 
+
+-------- [ 5.8 ]
+
+- apply unitOfWork -> 1. core layer add interface 'IUnitOfWork' which include method signature and inhirate from 'IAsyncDisposable'
+				   -> 2. repo layer add class 'UnitOfWork' which implement 'IUnitOfWork'
+				   -> 3. allow DI for unitOfWork in api layer > extentions folder > ApplicationServicesExtention [$services.AddScoped<IUnitOfWork, UnitOfWork>();]
+
+- arrayList based on obj 
+- list is generic version 
