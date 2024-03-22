@@ -320,3 +320,5 @@ update database using obj from dbContext => 1. every time run project apply all 
 
 - arrayList based on obj 
 - list is generic version 
+
+- create obj on the fly mean at run time
