@@ -296,6 +296,7 @@ update database using obj from dbContext => 1. every time run project apply all 
 
 - apply order service -> 1. core layer > services > add interface 'IOrderService'
 					  -> 2. service layer add class 'OrderService' which inhirate from 'IOrderService'
+					  -> 3. allow DI for OrderService in api layer > extentions > applicationServicesExtention
 					  
 - Repo VS Services
 				repo --> represent DbSet [get - add - update - delete] which change obj state
@@ -322,3 +323,17 @@ update database using obj from dbContext => 1. every time run project apply all 
 - list is generic version 
 
 - create obj on the fly mean at run time
+
+-------- [ 5.10 ]
+
+- create order endPoint -> 1. in api layer add orderController 
+						-> 2. in api layer add classes 'OrderDto' & 'OrderItemDto' & 'OrderToReturnDto'
+						-> 3. in api layer > helper > profiles , add profile fot dtos
+						
+-------- [ 5.11 ]
+
+- note -> nav prop when load -> one [eager loading ]
+							 -> many [ lazy load ], and items is many nav for order but will be eager load because each time you ask order must include items
+							 
+- get orders for user -> 1. in api layer > orderController add endPoint 'getOrdersForUser'
+					  -> 2. in core layer > Specifications > add class 'OrderWithItemsAndDeliveryMethodSpecifications' which inhirate from 'BaseSpecification<Order>'
