@@ -23,7 +23,7 @@
 - js is loosly type programming lang & dynamic lang 'بعرف فاريبول انت مثلا وبعدها اخليه سترنج عادي وهكذا'
 
 - data types => primitave -> string , number , undefinde , null , bool , bigInt , symbol
-			 => non primitave -> object 
+			 => non primitave -> object, arr, func 
 			 
 -values => truthy 
 		=> falsy  -> empty string / NaN / zero / false / null / undefinde
@@ -223,4 +223,24 @@
 					
 ------------------------- [ Session 9 , Week 12.1 ] ---------------
 
+- JS engine -> storing variables -> stack [primitave dt] which include global execution context [identifier, address, value]
+								 -> heap [non primitave]
+			-> execute code -> when call func make a context for it and add to stack then execute by [LIFO]
+
+
 - API -> application programming interface 
+
+- to send ajax call create obj from XMLHttpRequest -> $[var myHttp = new myHttpMLHttpRequest();
+														myHttp.open("GET","https://ecommerce.routemisr.com/api/v1/products");
+														myHttp.send();
+														myHttp.addEventListener("readystatechange", function(){
+															if(myHttp.readyState == 4)
+															console.log(JSON.parse(myHttp.response).data);
+														})]
+												   
+												   
+- readyState -> 0 -> unsend, mean not call open yet
+			 -> 1 -> opened
+			 -> 2 -> headersReceived
+			 -> 3 -> loading
+			 -> 4 -> done
