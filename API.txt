@@ -355,9 +355,26 @@ update database using obj from dbContext => 1. every time run project apply all 
 
 - apply payment module -> 1. create profile on stripe website
 					   -> 2. in core layer, install package stripe.net 
-					   -> 3. in appsetting.json add PK & SK 
+					   -> 3. in appsetting.json add PK 'used in front end' & SK 'used in api' 
 					   -> 4. in core layer > services, add 'IPaymentService'
 					   -> 5. in repo layer, add 'PaymentService' which implement 'IPaymentService'
 					   -> 6. in api layer > extentions > ApplicationServicesExtention, allow DI for PaymentService  
 					   -> 7. in core layer > entity > edit customerBasket class add attributes $[PaymentIntentId-ClientSecret-DeliveryMethodId-ShippingPrice]
 					   -> 8. in api layer add 'PaymentController'
+					   
+
+------ [ 6.3 ]
+
+- refactor code to set paymentIntent with order obj -> 1. core layer > entiteis > order add in ctor PaymentIntentId 
+													   2. service layer > order service > CreateOrderAsync > step 5 > in ctor of order add , basket.PaymentIntentId
+													   3. core layer> spec folder > order folder > add OrderWithPaymentIntentSpecifications
+													   4. service layer > order service > CreateOrderAsync > step 5 > add step 5
+													   
+----- [ 6.4 ]
+
+- to use angular project -> 1. in program file > add middelware before auth $app.UseCors();
+						 -> 2.  program before app builder.build $builder.Services.AddCors();
+
+----- [ 6.5 ]
+
+- stripe webhook endPoint -> 1. in api layer, PaymentController add endPoint with any name with route 'webhook' 
