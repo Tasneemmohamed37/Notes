@@ -337,3 +337,27 @@ update database using obj from dbContext => 1. every time run project apply all 
 							 
 - get orders for user -> 1. in api layer > orderController add endPoint 'getOrdersForUser'
 					  -> 2. in core layer > Specifications > add class 'OrderWithItemsAndDeliveryMethodSpecifications' which inhirate from 'BaseSpecification<Order>'
+					  
+					  
+					  
+------------------------------------------------------- [ session 06 ] ----------------------------
+
+-------- [ 6.1 ]
+
+- can apply payment by one of two approach -> 1. create payment get way 
+										   -> 2. integrate with exesting payment get way [stripe, payfort'amazon', paypal, eFinance'وزارة المالية']
+										   
+- three ways to integration with payment get way -> 1. لينك اليوزر يدفع عند الابلكيشن التاني وبعدها الجيت واي دي تكلم ايند بوينت عندي عشان تقولي ان اليوزر دفع 
+												 -> 2. نفس الطريقة الاولي بس بدل لينك هنستخدم iframe 
+												 -> 3. strong customer authentication [sca]
+												 
+-------- [ 6.2 ]
+
+- apply payment module -> 1. create profile on stripe website
+					   -> 2. in core layer, install package stripe.net 
+					   -> 3. in appsetting.json add PK & SK 
+					   -> 4. in core layer > services, add 'IPaymentService'
+					   -> 5. in repo layer, add 'PaymentService' which implement 'IPaymentService'
+					   -> 6. in api layer > extentions > ApplicationServicesExtention, allow DI for PaymentService  
+					   -> 7. in core layer > entity > edit customerBasket class add attributes $[PaymentIntentId-ClientSecret-DeliveryMethodId-ShippingPrice]
+					   -> 8. in api layer add 'PaymentController'
