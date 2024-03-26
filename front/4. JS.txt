@@ -244,3 +244,33 @@
 			 -> 2 -> headersReceived
 			 -> 3 -> loading
 			 -> 4 -> done
+			 
+------------------------- [ Session 10 , Week 12.2 ] ---------------
+
+- prob -> code not execute with same order write it becouse sync, async
+- solve -> 1. callback function [function(callback_func)] -> prob : callback hell
+		-> 2. promise 'obj has methods'  $[var x = new promise(function (resolved, rejected){
+												console.log('first');
+												resolved();
+											});
+											function second (){console.log('second');}
+											function error (){console.log('error');}
+											
+											x.then(second),catch(error);
+										  ]
+		-> 3. await, but must apply some terms [await keywork write in async func - write before function return promise]
+		
+
+- built in function 'fech' by defualt 'GET' -> $[ async function getPizza(){
+													var response = await fetch("url",
+													{
+														method : "",
+														body : "",
+														header : ""
+													});
+													var data = await response.json();
+													console.log(data);
+													}
+												]
+
+- can use 'dribbble' website to get designs
