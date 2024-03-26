@@ -88,6 +88,8 @@
 - function types => declaretion function تبدأ بكلمه فانكشن  -> occure hoisting so can use it in line before line of function body
 		         => expression function -> var x = function(){} -> if you call var in line before line of function will get error 
 				 => IIFE 'imiddiatly invoke function expression' -> self invoke function ->> (function(){})()
+				 => arrow -> let myFunction = (a, b) => a * b;
+						  -> don`t contain keyworks 'this & arguments'
 				 
 - hoisting => JS compile code by collect all declard vars first , then execute code line by line
 		   => ex : console.log(x) ; x=10; --> undefinde 
@@ -274,3 +276,37 @@
 												]
 
 - can use 'dribbble' website to get designs
+
+------------------------- [ Session 11 , Week 13.1 , ES next ] ---------------
+
+- js moods -> sloppy mood
+		   -> strict mood -> write at frist line in js file $'use strict'
+						  -> prevent many problems like -> 1. when intialize variable without declare it 'not use var keywork' $[x = 10] , js will add it to window obj so will be global scope
+														-> 2. duplicate param name in function
+														-> 3. call delete on identifier $[var age =10; delete age;]
+														-> 4. name var with reserved words 
+
+- var problems -> 1. global inside loop or function
+			   -> 2. redeclare variables
+			   -> 3. attached variables to window obj
+			   -> 4. hoisting, access var before initialization 
+			   
+- let & const -> has three scopes [global, local'inside func', block 'inside if, loop']
+			  
+- template literals -> ``
+
+- ternary operator -> summarized if 
+				   -> expression so can use it with template literals
+				   -> condiction ? true : false
+				   
+- this inside function in addEventListener -> always refer to element which has eventListener ودا الفرق بينها وبين التارجيت لانه في حاله كان ديف جواه بتن التارجت هيكون البتن لكن الزيس هيكون الديف 
+
+- this keywork cases -> 1. global context -> window
+					 -> 2. inside function -> sloppy: window || strict: undefinde
+					 -> 3. inside function in addEventListener -> element fires event 
+					 -> 4. inside method -> owner function 
+					 
+- arguments keywork ->  is an array-like object accessible inside functions that contains the values of the arguments passed to that function.
+
+- ...1,2,3 -> [1,2,3] rest pattern 'rest param'
+  ...[1,2,3] -> 1,2,3 spread operator
