@@ -310,3 +310,37 @@
 
 - ...1,2,3 -> [1,2,3] rest pattern 'rest param'
   ...[1,2,3] -> 1,2,3 spread operator
+  
+  
+- destructing -> $[
+					let car = {
+						price:5000;
+						madeIn:{
+							contryOne : "cairo";
+						}
+					}
+					let {contryOne: x = 'defualt'} = car.madeIn ;
+				  ]
+				  
+			  -> $[
+					let friendes = ['malak','ziad','tasneem']
+					let [,,x] = friendes;
+					]
+					
+
+- higher order function -> take function as a parameter or return function
+						-> array methods 'work on array'
+						-> map , reduce, filter
+  
+------------------------- [ Session 12 , Week 13.2 , OOP ] ---------------
+
+- OOP -> prototype-based
+	  -> class-based
+
+- JS is prototype-based
+
+- prototypal inheritance -> $[ Object.setPrototypeOf(instructor, human)]
+
+- prototype of obj is null 
+
+- class inherite from other class useing keywork 'extend'
