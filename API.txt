@@ -378,3 +378,11 @@ update database using obj from dbContext => 1. every time run project apply all 
 ----- [ 6.5 ]
 
 - stripe webhook endPoint -> 1. in api layer, PaymentController add endPoint with any name with route 'webhook' 
+
+------------------------------------------------------- [ session 07 ] ----------------------------
+
+- to apply caching module -> 1. in core layer > services > add interface 'IResponseCacheServiceIResponseCacheService'
+						  -> 2. in service layer add class 'ResponseCacheService'
+						  -> 3. allow DI for service [$services.AddSingleton<IResponseCacheService, ResponseCacheService>();]
+						  -> 4. in api layer > helpers > add class 'cachedAttribute' which inhirate from class 'attribute' and implement interface 'IAsyncActionFilter'
+						  -> 5. using attribute from type 'action filter' [cachedAttribute] on all endPoints with action GET 
