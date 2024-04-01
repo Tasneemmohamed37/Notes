@@ -1,9 +1,7 @@
-- Unit Testing
-- big data git course
-- API with onion arch
 - signalR
-- reflection 
-- crystal reports 
-- .net frameworks [ telerik, dev express]
 - tailwind
 - react 
+- crystal reports 
+- big data git course
+- reflection 
+- .net frameworks [ telerik, dev express]
