@@ -1,0 +1,23 @@
+
+https://www.youtube.com/playlist?list=PLsV97AQt78NS2O4QeWFVHOOALoehl22vU
+
+- unit testing -> white box (clear box) -> tester has source code and arch 
+			   -> black box -> only know functionality so test as a user
+			   -> 1. in solution for each project add project from type 'xUnit' and name it 'originalProjectName.tests' and add to it ref from originalProject
+			   -> to make method unit test use attribute '[fact]'
+			   -> 2. as naming convintion name class 'orignalClassTest' and name function 'originalfunction_condition_expectedResult'
+			   -> 3. in body of method use tripal 'A' -> Arrange -> declare and initalize vars and prerequest
+													  -> Act -> call method which want to test and store this result
+													  -> Assert -> test result 
+													  
+			   -> 4. to run testMethod -> open test explorer then run || R-click on method name then runTests
+			   
+- classes or methods want to test must isolate from it dependencies -> becouse if leave it will get unexpected inputs
+																	-> so make fake implementation for this dependencies which return fixed results
+																	-> this name  [fakes | mocks | stubs]
+																	-> 1. install package 'fackItEasy' then create obj from dependencies using it $[var x = A.fake(x);]
+																	-> 2. install package 'microsoft.entityframeworkecore.inmemory' in case fake dbcontext by add new class inhairate from orignalDbContext
+
+- test classes must be public
+
+- 
