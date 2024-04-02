@@ -1,0 +1,4 @@
+
+- to make website real time have multiple technics -> 1. polling -> setInterval to request server to check if there is new data 
+												   -> 2. long polling -> server have requests till change occure then response
+												   -> 3. 
