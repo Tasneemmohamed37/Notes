@@ -103,7 +103,7 @@
 - to access obj prop -> dot notation $person.son.name
 					 -> praket notation $person["son"]["name"]
 					 
-- in case prop is number can access it only use praket notation
+- in case prop is number can access it only use praket notation or if prob name is var only can use praket notation
 
 - expression -> حاجة في الاخر تتفك لفاليو واحدة
 
@@ -344,3 +344,12 @@
 - prototype of obj is null 
 
 - class inherite from other class useing keywork 'extend'
+
+------------------------- [ Session 13 , Week 14.1 , OOP ] ---------------
+
+- to get obj lenght -> $Object.Keys(car).lenght
+
+- map obj -> $ const carMap = new map([ ["apples", 500], ["bananas", 300], ["oranges", 200] ]);
+		  -> to get lenght $carMap.size
+		  -> also can use var to get prop
+		  -> map obj key can be any data type
