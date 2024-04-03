@@ -1,4 +1,26 @@
+- https://drive.google.com/drive/folders/1y0DtchCVNK1U_RhGvOQpw8sebMqcTojI?fbclid=IwAR1bA_7j9yykeDUc0ypQN37cS9-ChayWD1DJN8OE3XiTBdeay0bKL54IY1o
 
-- to make website real time have multiple technics -> 1. polling -> setInterval to request server to check if there is new data 
+- to make website real time have multiple technics -> 1. polling -> setInterval include ajax request to check if there is new data
+																 -> prob : server headache
 												   -> 2. long polling -> server have requests till change occure then response
-												   -> 3. 
+																	  -> prob : connection time out
+												   -> 3. forever frame -> depend on chunked encoding 'http bug' which send response part by part but unknown part numbers 
+																	   -> client send only one request and every time server has new data send it in chunk 
+																	   -> prob : 'one way' only work to recieve data, in case want to send must stop forever frame first & only work on microsoft browser
+												   -> 4. server sent event 'api' -> client subscribe and server publish when event fires 
+																				 -> prob : one way & not work on ie browser
+												   -> 5. webSocket -> new protocol depend on 'tcp/ip' will open channel between server and client 
+																   -> first request knowen as 'hand shack' send using http 
+																   -> prob : only work with os and browsers publich on 2012 ot latest 
+												
+- SignalR -> write code once in c# 'hub' then by using 'connection layer' will deciede suitable tech for server and client  
+		  -> to call this function use proxy class 'class similar to hub class using client side technologies'
+		  -> using 'RPC' remote procedur calling which allow server side to call client side function
+		  -> 1. in class program allow DI for signalr [$ builder.services.addSignalr()]
+		  -> 2. add class 'chathub' which inhairete class 'hub'
+		  -> 3. add middleware for created class [$ app.maphub<chathub>("/chat")]
+		  -> 4. in client side -> add signalr client library 
+							   -> define connection url so by defualt create proxy 
+							   -> start connection
+							   -> call server method 'service method'
+							   -> define callback func 'subscribe broadcasting'
