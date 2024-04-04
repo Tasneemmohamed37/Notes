@@ -13,14 +13,20 @@
 																   -> first request knowen as 'hand shack' send using http 
 																   -> prob : only work with os and browsers publich on 2012 ot latest 
 												
-- SignalR -> write code once in c# 'hub' then by using 'connection layer' will deciede suitable tech for server and client  
+- SignalR -> write code once in c# 'hub' then by using 'connection layer' will negotiate to deciede suitable tech for server and client  
 		  -> to call this function use proxy class 'class similar to hub class using client side technologies'
 		  -> using 'RPC' remote procedur calling which allow server side to call client side function
 		  -> 1. in class program allow DI for signalr [$ builder.services.addSignalr()]
-		  -> 2. add class 'chathub' which inhairete class 'hub'
+		  -> 2. add class 'chathub' which inhairete class 'hub' and contain services 
 		  -> 3. add middleware for created class [$ app.maphub<chathub>("/chat")]
 		  -> 4. in client side -> add signalr client library 
 							   -> define connection url so by defualt create proxy 
 							   -> start connection
 							   -> call server method 'service method'
 							   -> define callback func 'subscribe broadcasting'
+							   
+
+- connectionId -> when client start connection will created and store it in client and server memory 'any info stored in server memory hard to tark it only if store it in db'
+			   -> used to know online clients
+			   
+- in case you want to broad cast so need one function in hub 'service' and two functions in front, first consum service
