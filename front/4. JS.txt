@@ -167,7 +167,7 @@
 - DOM -> document object model تمثيل للحاجات الموجودة في دوكيومينت في هيبئة اوبجيكت عشان لغات البرمجة تقدر تتعامل معاة
 	  -> used in -> events 
 				 -> DOM traversing عن طريق عنصر واحد اقدر اوصل لاي عنصر في التري 
-				 -> DOM manpulation 
+				 -> DOM manpulation اضيف او امسح عنصر 
 	  
 - DOM TREE -> contain of -> node -> element
 								 -> text
@@ -249,6 +249,8 @@
 			 
 ------------------------- [ Session 10 , Week 12.2 ] ---------------
 
+- callback function -> func passed to another function
+
 - prob -> code not execute with same order write it becouse sync, async
 - solve -> 1. callback function [function(callback_func)] -> prob : callback hell
 		-> 2. promise 'obj has methods'  $[var x = new promise(function (resolved, rejected){
@@ -280,7 +282,7 @@
 ------------------------- [ Session 11 , Week 13.1 , ES next ] ---------------
 
 - js moods -> sloppy mood
-		   -> strict mood -> write at frist line in js file $'use strict'
+		   -> strict mood -> write at frist line in js file $'use strict' || use attribute 'type=module' in script tag 
 						  -> prevent many problems like -> 1. when intialize variable without declare it 'not use var keywork' $[x = 10] , js will add it to window obj so will be global scope
 														-> 2. duplicate param name in function
 														-> 3. call delete on identifier $[var age =10; delete age;]
@@ -345,11 +347,28 @@
 
 - class inherite from other class useing keywork 'extend'
 
-------------------------- [ Session 13 , Week 14.1 , OOP ] ---------------
+------------------------- [ Session 13 , Week 14.1 ] ---------------
 
-- to get obj lenght -> $Object.Keys(car).lenght
+- obj limitation -> key must be string or symbol
+				 -> can`t directiry get obj lenght -> can use $Object.Keys(car).lenght
+				 -> can`t directiry loop on obj  
 
-- map obj -> $ const carMap = new map([ ["apples", 500], ["bananas", 300], ["oranges", 200] ]);
+- to check if prop exist or not $car.hasOwnProp("propName");
+
+- map obj -> $ const carMap = new map(Object.entries(car));
 		  -> to get lenght $carMap.size
 		  -> also can use var to get prop
 		  -> map obj key can be any data type
+		  
+		  
+- array can contain duplicated elements -> use Set insted of it 
+
+- BOM -> browser object model 
+	  -> contain window obj & location obj 
+	  
+- setTimeOut & setInterval -> async functions
+
+- Modules -> separate related functionality in file 
+		  -> must use attribute 'type=module' in script tag 
+		  -> use export & import
+		  -> link entry js file with index.html

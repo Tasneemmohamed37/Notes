@@ -1,0 +1,82 @@
+------------------------- [ Session 13 , Week 14.1 ] ---------------
+
+- jquery is a library 
+
+- to select element -> $("")
+
+- to add event listener -> $("").on("eventName",function(){});
+
+- to make vs code auto complete jquery -> add in same dirc with index.html file 'jsConfig.json' witch include $[{typeacquisition{"include":["jquery"]}}] 
+
+- jquery animation effects -> [ hide(durationInMs) | slideDown() | show | fadeIn ]
+						  
+
+- DOM manipulation functions -> $(""). [ html() | text() | val() | attr() | css("prop","val") | addClass() | removeClass() | toggelClass() if found ? delete : add ]
+
+- DOM travelsing -> $(""). [ parent() | parents() | parentsUntil() | sibllings() | prev() | prevAll() | prevUntil() | next() | nextAll() | nextUntil() | not() | eq() | children() | find() ]
+
+- dimensions -> $(""). [ width() | innerWidth() | outerWidth() ]
+
+- $("".offset()) -> return obj contain space between element and top | left 
+
+- change navbar background on scroll -> [
+											$(window).on("scroll", function() => {
+												const aboutSectionTopOffest = $("#about").offset().top;
+												if ($(window).scrollTop() > aboutSectionTopOffest - 50) {
+												$(".navbar").addClass("nav-fixed");
+												$(".scroll-to-top").fadeIn(200);
+												} else {
+												$(".navbar").removeClass("nav-fixed");
+												$(".scroll-to-top").fadeOut(200);
+												}
+											});
+										]
+										
+- Scroll to Top -> [
+						$(".scroll-to-top").on("click", () => {
+							$("html, body").animate({ scrollTop: 0 }, 1000);
+						});
+				   ]
+				   
+- scroll to specifc section -> [
+								$(".navbar-nav a").on("click", function () {
+									const currentSectionSelector = $(this).attr("href");
+									const currentSectionTopOffest = $(currentSectionSelector).offset().top;
+									$("html, body").animate({ scrollTop: currentSectionTopOffest }, 1000);
+								});
+							   ]
+							   
+- Color Box -> [
+					const colorBoxWidth = $(".settings").outerWidth();
+						$(".settings").css({ left: `-${colorBoxWidth}px` });
+						let isOpen = false;
+						
+						$(".gear-icon").on("click", () => {
+							const colorBoxWidth = $(".settings").outerWidth();
+							if (isOpen) {
+							// * close it
+							$(".settings").css({ left: `-${colorBoxWidth}px` });
+							$(".gear-icon i").removeClass("fa-xmark").addClass("fa-gear fa-spin");
+							isOpen = false;
+							} else {
+							$(".settings").css({ left: `0px` });
+							$(".gear-icon i").removeClass("fa-gear fa-spin").addClass("fa-xmark");
+							isOpen = true;
+							}
+						});
+						
+						$(".colors li").on("click", function () {
+							const currentColor = $(this).css("backgroundColor");
+							$(":root").css({ "--main-color": currentColor });
+							$("h1,h2,h3,h4,h5,h6").css({
+							color: currentColor,
+							});
+						});
+			   ]
+			   
+- Loading Screen -> [
+						$(".loading").fadeOut(1000, function () {
+							$("body").css({ overflow: "auto" });
+						});
+						});
+					]
