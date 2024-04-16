@@ -6,7 +6,7 @@
 
 - to add event listener -> $("").on("eventName",function(){});
 
-- to make vs code auto complete jquery -> add in same dirc with index.html file 'jsConfig.json' witch include $[{typeacquisition{"include":["jquery"]}}] 
+- to make vs code auto complete jquery -> add in same dirc with index.html file 'jsConfig.json' witch include $[{"typeAcquisition":{"include":["jquery"]}}] 
 
 - jquery animation effects -> [ hide(durationInMs) | slideDown() | show | fadeIn ]
 						  

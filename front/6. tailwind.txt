@@ -1,0 +1,36 @@
+------------------------- [ Session 1 , Week 15.1 ] ---------------
+
+- specificity for * is zero 
+
+- styles found in layers -> one for browser , other for auther
+						 -> this not effected with specificity, auther always override browser so * override user agint 'browser'
+
+- use @layer -> CSS at-rule is used to declare a cascade layer and can also be used to define the order of precedence in case of multiple cascade layers
+			 -> $ [ 
+						<style> @import url (bootsrap cdn) layer(bootsrap) </style>
+						@ layer bootsrap, custom
+						@layer custom {}
+				  ]
+			 
+- so order to apply styles -> unlayerd styles
+						   -> layer two
+						   -> layer one
+						   
+- if use !imortant with layers will reverse order 
+
+- npm -> node package maneger, website include packages
+	  -> 1. install node js
+	  -> 2. open terminal in vs code then write $[ npm install bootsrap ]
+	  -> send project without folder 'node_modules' and write $[ npm i ] will install all dependencies which write in file 'package.json'
+	  
+
+
+- tailwind -> css framework aplly concept of 'atoimc css' which make style classes dynamic using 'atomizer' tool
+		   -> to install it -> 1. $[ npm i tailmindcss -D ] then $[ npx tailwindcss init ]
+							-> 2. Configure your template paths Add the paths to all of your template files in your tailwind.config.js file.
+							-> 3. in file input.css add $[@tailwind base;@tailwind components;@tailwind utilities;]
+							-> 4. npx tailwindcss -i ./src/input.css -o ./src/output.css --watch
+							
+- to auto complete -> intall package 'tailwind css intiligince'
+
+- use website 'https://tailwindcomponents.com/cheatsheet/'
