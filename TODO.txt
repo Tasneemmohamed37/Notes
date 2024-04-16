@@ -1,5 +1,3 @@
-- signalR
-- tailwind
 - react 
 - crystal reports 
 - big data git course
