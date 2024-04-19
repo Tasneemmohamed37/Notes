@@ -35,3 +35,14 @@ https://www.youtube.com/playlist?list=PLesfn4TAj57WJFn86KXOInQAsCdJlp6vl
 - Decorator design pattern is used to modify the functionality of an object at runtime like '@ngModule' which used with class to make it module
 
 - can send in header request some data like [ content type - token ]
+
+- to install bootstrap -> 1. $[ npm i bootstrap ]
+					   -> 2. in file 'angular.json' add style $[ node_modules/bootstrap/dist/css/bootstrap.min.css ] and scripts $[ node_modules/bootstrap/dist/js/bootstrap.bundle.min.js ]
+					   
+- prob -> in angular can write js only in file index , but what about bootstrap???
+  solve -> install angular material 
+  
+- to add new combonent -> 1. in src/components open new terminal $[ ng g c component_name --skip-tests ]
+					   -> 2. add this selector to appComponent.html 
+					   
+- structure directive -> $[ *ngFor='let i of arr' ]
