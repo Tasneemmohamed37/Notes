@@ -1,3 +1,4 @@
+- design patterns [ singilton | factory method | decorator | observer ]
 - react 
 - crystal reports 
 - big data git course

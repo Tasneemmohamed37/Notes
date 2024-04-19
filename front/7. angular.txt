@@ -1,0 +1,37 @@
+https://www.youtube.com/playlist?list=PLesfn4TAj57WJFn86KXOInQAsCdJlp6vl
+
+--------------------- [ session 01 ] ---------------------
+
+- angular -> front-end framework
+		  -> SPA
+		  -> component based [ page contain of components ]
+		  -> use MVC arch pattern 
+		  -> 1. install npm
+		  -> 2. install angular $[npm install -g @angular/cli ]
+		  -> 3. in specific folder $[ ng new projectName ]
+		  -> 4. in project terminal $[ npm start ]
+
+- project structure -> node modules -> contain all modules or packages which are built in or installed 
+					-> package.json -> contain all dependencies name and version 
+					-> tsConfig.json -> contain cofig used to combine from ts to js 
+					-> build -> contain outPath 'files produced from compilation'
+					-> index.html -> the only file in the project can type js in it & link this with style using file 'angular.json'
+					-> main.js -> contain two func -> bootstrap module -> decide first module to run 'appModule' 
+												   -> platform browser dynamic -> use 'polyfiles' based on defualt used browser 
+					-> appModule.ts -> contain 4 arrays -> declarations -> contain all components of this module 
+														-> imports -> in case want to use any other module
+														-> provider -> service providers
+														-> bootstrap -> first component to run, for sure this component name found in declarations
+					-> appComponent.ts -> contain of -> selctor 
+													 -> templetUrl 'html'
+													 -> styleUrls
+
+- module contain of many components
+
+- selector -> component directive 'angular tags' used to call component
+												   
+- project life cycle -> index / main.js / appModule / bootstrap component 'appComponent' / appComponent.ts / selector <app-root> / appComponent.html  
+
+- Decorator design pattern is used to modify the functionality of an object at runtime like '@ngModule' which used with class to make it module
+
+- can send in header request some data like [ content type - token ]
