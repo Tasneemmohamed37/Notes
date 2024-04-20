@@ -46,3 +46,23 @@ https://www.youtube.com/playlist?list=PLesfn4TAj57WJFn86KXOInQAsCdJlp6vl
 					   -> 2. add this selector to appComponent.html 
 					   
 - structure directive -> $[ *ngFor='let i of arr' ]
+
+
+
+--------------------- [ session 02 ] ---------------------
+
+- Data Binding -> one way -> from ts to html -> interpolation {{}} 
+											 -> prop binding $[ <img [src]="item.url">]
+						  -> from html to ts -> event binding
+			   -> two way -> require adding formModules in imports 
+			   
+- event binding -> when spec event fire in html, call func in ts 
+				-> 1. pass primitive data -> $[ <button (click)="printMsg('hello')"></button>]
+				-> 2. templete var, pass element using ref -> $[ <input #itemCount> <button (click)="buy(itemCount)"></button>]
+				-> 3. pass event args -> $[ <button (click)="printBtn($event)"></button>  printBtn(x:any){x.target.innerHtml = 'lol'}]
+				-> 4. view child -> decorator include spec element in html page, can use this element in ts file as you like
+								 -> $[
+										<div #divViewChild> <p></p> </div>
+										@viewChild(divViewChild) dvc:any
+										this.dvc.nativeElement.innerHtml = ''
+									]
