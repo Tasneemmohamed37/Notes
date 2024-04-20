@@ -29,8 +29,25 @@
 		   -> to install it -> 1. $[ npm i tailmindcss -D ] then $[ npx tailwindcss init ]
 							-> 2. Configure your template paths Add the paths to all of your template files in your tailwind.config.js file.
 							-> 3. in file input.css add $[@tailwind base;@tailwind components;@tailwind utilities;]
-							-> 4. npx tailwindcss -i ./src/input.css -o ./src/output.css --watch
+							-> 4. npx tailwindcss -i ./src/input.css -o ./src/output.css --watch كل ما افتح البروجكت اكتب الكوماند دا 
 							
 - to auto complete -> intall package 'tailwind css intiligince'
 
 - use website 'https://tailwindcomponents.com/cheatsheet/'
+
+
+------------------------- [ Session 2 , Week 15.2 ] ---------------
+
+
+- any number/4 = x rem = x*16 px
+
+- اي كسر = percentage
+
+- custom style -> 1. $[ w-[4.5px]]
+			   -> 2. in tailmind.config.js in extend theme add your own class 
+			   
+- space -> add space between direct childrens 
+
+- bg imge width -> bg-[length:100px_200px]
+
+- inset -> position props top rigth bottom left 
