@@ -42,7 +42,7 @@ https://www.youtube.com/playlist?list=PLesfn4TAj57WJFn86KXOInQAsCdJlp6vl
 - prob -> in angular can write js only in file index , but what about bootstrap???
   solve -> install angular material 
   
-- to add new combonent -> 1. in src/components open new terminal $[ ng g c component_name --skip-tests ]
+- to add new component -> 1. in src/components open new terminal $[ ng g c component_name --skip-tests ]
 					   -> 2. add this selector to appComponent.html 
 					   
 - structure directive -> $[ *ngFor='let i of arr' ]
@@ -96,3 +96,16 @@ https://www.youtube.com/playlist?list=PLesfn4TAj57WJFn86KXOInQAsCdJlp6vl
 					 -> 3. add this class selctor to any html element $[lightBox='red']  NOTE!! in case write [lightBox]='readFromPropInTs'
 					 
 - @hostListener -> is function decorator used to execute function when fire spec event 
+
+--------------------- [ session 03 ] ---------------------
+
+- pipes -> functions used to accept an input value [strings, currency amounts, dates, other dt] separete with ' | ' and return a transformed value.
+		-> $[ {{prd.price | currency}} ]
+		
+- component lifecycle -> 1. ctor => use it in var init | DI
+					   -> 2. ngOnChange => call it every time component input decorator params changes
+					   -> 3. ngOnInit => بضيف فيه اي حاجة عايزها تحصل اول ما الكومبوننت يفتح 
+					   -> 4. ngAfterViewInit
+					   -> 5. ngOnDestroy 
+					   
+- component interAction -> 
