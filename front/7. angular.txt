@@ -52,7 +52,7 @@ https://www.youtube.com/playlist?list=PLesfn4TAj57WJFn86KXOInQAsCdJlp6vl
 --------------------- [ session 02 ] ---------------------
 
 - Data Binding -> one way -> from ts to html -> interpolation {{}} 
-											 -> prop binding $[ <img [src]="item.url">]
+											 -> prop binding $[ <img [src]="item.url">] -> between double quests prop will replaced with this value
 						  -> from html to ts -> event binding
 			   -> two way -> require adding formModules in imports 
 			   
@@ -66,3 +66,33 @@ https://www.youtube.com/playlist?list=PLesfn4TAj57WJFn86KXOInQAsCdJlp6vl
 										@viewChild(divViewChild) dvc:any
 										this.dvc.nativeElement.innerHtml = ''
 									]
+									
+- two way binding -> 1. normal way -> event + interpolation
+				  -> 2. forms module -> 1. inside appModule import formsModule
+									 -> 2. each input field must have name
+									 -> 3. declare var in ts file 
+									 -> 4. in html [(ngModel)] = var 
+									 
+- $[class.d-none]="prd.categoryID!=selectedCatId" -> use prop bindig to apply spec class 
+
+- Directives -> 1. component directive -> directive with a tempelte 'use class selector'
+			 -> 2. structure directive -> change layout of the elements [ngIf - ngIfElse - ngFor - ngSwich]
+									   -> can`t use two structure directive with the same element, can solve this using ngContainer 
+			 -> 3. attribute directive -> change the apperence or behaivur of particular element [ngClass - ngStyle - ngModel]
+			 
+- trackBy function -> used to specify iterable objects identity, and so enhance the performance of ngFor in case of change to the collection, and update changed object without re-build the DOM 
+				   -> $[ 
+						*ngFor="let prd of prdList; let i = index; trackBy:prdTrackByFunc"
+					     prdTrackByFunc(index:number, prd:IProduct):number{return prd.id ;}
+					   ]
+
+- in case want to filter collection based on spec condition, what is the best performance,use structure directive 'ngIf' or prop bindig '[class.d-none]="prd.categoryID!=selectedCatId"'??
+					-- prop binding is best performance, becouse structure directive in run time will remove element from DOM then reload DOM
+					
+- ngTemplete VS ngContainer -> ngTemplete only work with structure tempelte, but ngContainer by defualt show element but the major benfite that it don`t add element to DOM 
+
+- customer directive -> 1. $[ ng g directive lightBox ]
+					 -> 2. in directive ts file ctor $[ constructor(eleRef: ElementRef){eleRef.nativeElement.style.border = '1px solid red';} ]
+					 -> 3. add this class selctor to any html element $[lightBox='red']  NOTE!! in case write [lightBox]='readFromPropInTs'
+					 
+- @hostListener -> is function decorator used to execute function when fire spec event 
