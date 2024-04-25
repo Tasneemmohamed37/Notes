@@ -26,10 +26,11 @@
 
 
 - tailwind -> css framework aplly concept of 'atoimc css' which make style classes dynamic using 'atomizer' tool
-		   -> to install it -> 1. $[ npm i tailmindcss -D ] then $[ npx tailwindcss init ]
-							-> 2. Configure your template paths Add the paths to all of your template files in your tailwind.config.js file.
-							-> 3. in file input.css add $[@tailwind base;@tailwind components;@tailwind utilities;]
-							-> 4. npx tailwindcss -i ./src/input.css -o ./src/output.css --watch كل ما افتح البروجكت اكتب الكوماند دا 
+		   -> to install it -> 1. $[ npm init]
+							-> 2. $[ npm install -D tailwindcss ] then $[ npx tailwindcss init ]
+							-> 3. Configure your template paths Add the paths to all of your template files in your tailwind.config.js file.
+							-> 4. in file input.css add $[@tailwind base;@tailwind components;@tailwind utilities;]
+							-> 5. npx tailwindcss -i ./src/css/input.css -o ./dist/css/output.css --watch كل ما افتح البروجكت اكتب الكوماند دا 
 							
 - to auto complete -> intall package 'tailwind css intiligince'
 
@@ -43,11 +44,24 @@
 
 - اي كسر = percentage
 
+- in general can and negative margin, but can`t add negative padding 
+
 - custom style -> 1. $[ w-[4.5px]]
 			   -> 2. in tailmind.config.js in extend theme add your own class 
 			   
-- space -> add space between direct childrens 
+- space -> add margin to direct childrens exept first one 
 
-- bg imge width -> bg-[length:100px_200px]
+- bg imge size -> bg-[length:100px_200px]
 
-- inset -> position props top rigth bottom left 
+- container -> is tailwind component 
+			-> by default w-full  
+
+- inset -> shorthand correspons to position props top rigth bottom left 
+
+- hidden -> d-none
+- invisible -> visibility hidden
+
+- to apply spec style when hover to parent -> 1. element hover on it $[ group/group_name]
+										   -> 2. element to apply styles $[ group-hover/group_name:class_to_apply]
+										   -> in case hover to sibling use 'peer' keyword 
+										   
