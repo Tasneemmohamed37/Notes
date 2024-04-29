@@ -1,0 +1,106 @@
+1- try, catch used to handle exceptions and finaly used to clean used clean up resources like close sql connection
+
+2- abstract class VS interface ?
+   abstract class -> not fully implemented class, so can`t create obj only used to inherite 	interface -> code contract 
+				  -> include fields or attributes				      									  -> can`t have fields only include signature for prop, signature for method, defualt implemented methods 'c# 8'
+				  -> inherit only one class 						  									  -> implemente multiple interfaces
+				  -> can have access modifiers 						  									  -> can`t
+				  -> inherit from interface or abstract class		  									  -> inherit from another interface only 
+				  
+3- sealed class -> can`t inherite from it, used to terminate inherite chain 
+
+4- diamond problem or ambiguity problem in multiple class inheritance ? can solve it using implemente many interfaces
+
+5- Access modifiers => public -> access throw solution 
+					=> private -> access throw his scope only 
+					=> internal -> access throw project only 
+					=> protected -> access throw childes 'derived classes' only 
+					
+6- string VS string builder ?
+	StringBuilder is used to represent a mutable string 'can be changed' It will not create a new modified instance of the current string object but do the modifications in the existing string object
+	
+7- array VS list VS linkedList VS arrayList ?
+   array -> fixed size, index so fast random access but slow insertion and deletion
+   list -> dynamic allocation, stored sequentially 'elements stored one after other' so fast access but slower in addition or deletion
+   linkedList -> consist of nodes [data + pointer to next node], Sequential access mean you have to traverse the list from the beginning or end to reach the desired element.
+   arrayList -> old data structure include items with deffrente dt 
+   
+8- Polymorphism -> بينفذوها بطرق مختلفة derived classes وال Parent class فانكشن في ال
+				-> virtual : use in parent method to allow override
+				-> override : use in child method, to different implemente for inherited method 
+				-> new : use to hide parent function 
+				
+9- overload VS override ?
+	overload -> functions with same name different in parameter [ number | data type ]
+	override -> Polymorphism
+	
+10- Reflection -> object run time reverse engeneering 'get meta data of class for spec obj in run time'
+			   -> examples -> in case apply fluentAPI,add configuration to apply all classes:IentityTypeConfiguration in assembly to onModelCreating
+						   -> attributes like [authorize] [EnumMember(Value = "Pending")] [AllowNull] to modify the functionality or behavior of an object at runtime
+						   
+11- linq -> language integrated query 
+		 -> simply its sql DQL implemented in +40 extention c# methods for Enumerable interface
+		 
+12- var VS dynamic?
+	var -> clr Detect var dt Based On Its Initial Value at Compilation Time		dynamic -> CLR Detect var dt Based On Its Last Value in RunTime
+		-> Must be Initialized															-> must`nt
+		-> Can't be Initialized with null												-> can 
+		-> After Initialization, U Can't Change its datatype							-> can 
+		
+		
+13- PK VS FK ?
+	PK -> Uniquely identify each row	FK -> Refer to a primary key in another table
+	   -> Doesn’t allow null		       -> allow 
+	   -> Cannot be duplicated			   -> can 
+	   
+14- where clause VS having ? having work with aggregate functions [min - max - count - avg - sum] but where can`t
+
+15- clustered index -> detect table order in table itself 		 		     non clustered index -> arrang table in memory
+					-> only one 'PK by defualt' 		 				 						 -> up to 999 'uniqe by defualt'
+					-> Last Level Is The Actual Data 											 -> Last Level Is The Actual Data
+					-> faster , use binary search 
+	
+16- Normalization -> 1NF -> separate table to many tables used with atomic data 'داتا متجزئه' 
+				  -> 2NF -> separate table, column not fully depend on PK
+				  -> 3NF -> delete column, column not depend on PK, but depend on another column like 'total price'
+				  
+17- stored procedure VS user defined function?
+	stored procedure -> return Zero or n values   												function -> Return only one value, which is mandatory
+					 -> have input/output parameters						 						 	 -> only input parameters
+					 -> Allows DML(Data manipulation language 'select, insert, update, delete') 	     -> Allows only select statements
+					 -> can call function																 -> can`t call procedure
+					 
+					 
+18- boxing -> save casting, implicit, convert from value type to reference type
+	unBoxing -> explicit casting , convert from ref type to value
+
+19- What is ctor and different types of it? special method automatically invoked when create obj 
+		-> Default ctor 'parameterless'
+		-> Parameterized ctor
+		-> Copy ctor
+		-> Static ctor
+		-> Private ctor	-> to prevent create obj from this class  
+		
+20- Garbage collector -> frees the unused code objects in the memory.
+
+21- caching -> storing the data temporarily in the memory instead of retrive it from db, can handle it using 'redis'
+
+22- delegate -> pointer to function 
+			 -> built in delegates => action -> return void
+								   => func -> must return
+								   => predicate -> parameter generic , return bool
+								   
+23- OOP principles -> 1- encapsulation => related data and functionality in class and hide data form any thing out this class [black box] controll accessability using getter , setter to apply validation
+					  2- inhiretence => "is a relationship" كلاس بيكتسب جميع الصفات والافعال من كلاس تاني وبيزود عليها حاجات خاصه بيه خلته نوع جديد مميز
+					  3- polymerphism => [overload , override , pass parameter function or any child of this parameter]
+ 					  4- abstraction => شكل مجرد للاوبجكت بعيد عن اي تفاصيل 
+									 => implementationبعمل كلاس بشكل معين لبيزنيز لوجيك معين ولو احتاجت نفس الكلاس ل بيزنيز لوجيك تاني اقدر اغير ال 
+									 
+
+24- SOLID principles ->	S => single responsipility
+						O => open for extention , closed for modification 
+						L => liscov Substitution  --> subTypes must be substitution for base types
+						I => interface Segregation --> interface should focuse on specific client requirment 
+						D => dependency inversion --> high level moduls should`nt depend on low level module , both should depend on abstraction
+						
+25- extension method -> used to add new methods in the existing class or the structure without modifying the source code of the original type.
