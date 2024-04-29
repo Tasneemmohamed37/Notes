@@ -104,3 +104,7 @@
 						D => dependency inversion --> high level moduls should`nt depend on low level module , both should depend on abstraction
 						
 25- extension method -> used to add new methods in the existing class or the structure without modifying the source code of the original type.
+
+26- middleware -> run : terminate
+			   -> map : map to url
+			   -> use : handle current middleware then execute next 
