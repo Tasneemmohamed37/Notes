@@ -54,7 +54,8 @@
 - bg imge size -> bg-[length:100px_200px]
 
 - container -> is tailwind component 
-			-> by default w-full  
+			-> by default w-full 
+			-> to solve this $[ <div class="max-w-screen-xl mx-auto"> <div class="container mx-auto"></div> </div> ]
 
 - inset -> shorthand correspons to position props top rigth bottom left 
 
