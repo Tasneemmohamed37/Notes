@@ -35,7 +35,7 @@
 - to auto complete -> intall package 'tailwind css intiligince'
 
 - use website 'https://tailwindcomponents.com/cheatsheet/'
-
+- use website 'https://daisyui.com/' as a tailwindcss plugin
 
 ------------------------- [ Session 2 , Week 15.2 ] ---------------
 
