@@ -103,9 +103,22 @@ https://www.youtube.com/playlist?list=PLesfn4TAj57WJFn86KXOInQAsCdJlp6vl
 		-> $[ {{prd.price | currency}} ]
 		
 - component lifecycle -> 1. ctor => use it in var init | DI
-					   -> 2. ngOnChange => call it every time component input decorator params changes
-					   -> 3. ngOnInit => بضيف فيه اي حاجة عايزها تحصل اول ما الكومبوننت يفتح 
-					   -> 4. ngAfterViewInit
-					   -> 5. ngOnDestroy 
+					  -> 2. ngOnChange => call it every time component input decorator params changes [used it when send data from parent to child]
+					  -> 3. ngOnInit => بضيف فيه اي حاجة عايزها تحصل اول ما الكومبوننت يفتح 
+					  -> 4. ngAfterViewInit
+					  -> 5. ngOnDestroy 
 					   
-- component interAction -> 
+- color='red' --> will take value direct
+  [color]='red' --> will take value of prop red	
+
+  
+- component interAction -> 1. from parent to child -> 1. add child selector into parent html
+												   -> 2. inside parent ts file add var $[parentData: string = "from parent";]
+												   -> 3. inside child ts add var with decorator '@Input()' to store parent var on it  $[@Input() childData: string = "";]
+												   -> 4. in parent html inside child selctor add prop binding $[<app-child [childData]="parentData"></app-child>]
+						
+						-> 2. from child to parent -> 1. in child ts add var contain data $[childData: string = "sent from child";]
+												   -> 2. in child ts add event with declare '@Output()' to send data out side component $[ @Output() myEvent: EventEmitter<string> = new EventEmitter<string>(); ]  note!! import EventEmitter from '@angular/core'
+												   -> 3. in child ts emitting event (when click on button || inside ngOnInit) $[ SendData(){ this.myEvent.emit(childData);}]
+												   -> 4. in parent html inside child selctor bind on event to get data $[ <app-child (myEvent)="getData($event)"></app-child>]
+												   -> 5. implement parent function and save data in component var $[getData(childMsg:string){}]
