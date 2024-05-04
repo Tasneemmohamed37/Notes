@@ -1,5 +1,5 @@
 - design patterns [ singilton | factory method | decorator | observer ]
-- react 
+- localization / globalization 
 - crystal reports 
 - big data git course
 - reflection 
