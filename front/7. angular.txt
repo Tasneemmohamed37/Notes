@@ -9,14 +9,14 @@ https://www.youtube.com/playlist?list=PLesfn4TAj57WJFn86KXOInQAsCdJlp6vl
 		  -> 1. install npm
 		  -> 2. install angular $[npm install -g @angular/cli ]
 		  -> 3. in specific folder $[ ng new projectName ]
-		  -> 4. in project terminal $[ npm start ]
+		  -> 4. in project terminal $[ npm start || ng serve ]
 
 - project structure -> node modules -> contain all modules or packages which are built in or installed 
 					-> package.json -> contain all dependencies name and version 
 					-> tsConfig.json -> contain cofig used to combine from ts to js 
 					-> build -> contain outPath 'files produced from compilation'
 					-> index.html -> the only file in the project can type js in it & link this with style using file 'angular.json'
-					-> main.js -> contain two func -> bootstrap module -> decide first module to run 'appModule' 
+					-> main.js -> contain two func -> bootstrap module 'eager loaded module' -> decide first module to run 'appModule' 
 												   -> platform browser dynamic -> use 'polyfiles' based on defualt used browser 
 					-> appModule.ts -> contain 4 arrays -> declarations -> contain all components of this module 
 														-> imports -> in case want to use any other module
@@ -58,14 +58,16 @@ https://www.youtube.com/playlist?list=PLesfn4TAj57WJFn86KXOInQAsCdJlp6vl
 			   
 - event binding -> when spec event fire in html, call func in ts 
 				-> 1. pass primitive data -> $[ <button (click)="printMsg('hello')"></button>]
-				-> 2. templete var, pass element using ref -> $[ <input #itemCount> <button (click)="buy(itemCount)"></button>]
+				-> 2. templete var, pass element using ref -> $[ <input #itemCount> <button (click)="buy(itemCount)"></button>]  note!!! can only use throw html file
 				-> 3. pass event args -> $[ <button (click)="printBtn($event)"></button>  printBtn(x:any){x.target.innerHtml = 'lol'}]
-				-> 4. view child -> decorator include spec element in html page, can use this element in ts file as you like
+				-> 4. view child -> decorator include spec element in html page using tempelte var, can use this element in ts file as you like 'use it instead of doc.getElementByID'
 								 -> $[
-										<div #divViewChild> <p></p> </div>
+										<div #divViewChild></div>
 										@viewChild(divViewChild) dvc:any
+										ngAfterViewInit(): void {
 										this.dvc.nativeElement.innerHtml = ''
-									]
+										}
+									]	
 									
 - two way binding -> 1. normal way -> event + interpolation
 				  -> 2. forms module -> 1. inside appModule import formsModule
@@ -104,9 +106,9 @@ https://www.youtube.com/playlist?list=PLesfn4TAj57WJFn86KXOInQAsCdJlp6vl
 		
 - component lifecycle -> 1. ctor => use it in var init | DI
 					  -> 2. ngOnChange => call it every time component input decorator params changes [used it when send data from parent to child]
-					  -> 3. ngOnInit => بضيف فيه اي حاجة عايزها تحصل اول ما الكومبوننت يفتح 
-					  -> 4. ngAfterViewInit
-					  -> 5. ngOnDestroy 
+					  -> 3. ngOnInit => connect with api & use service بضيف فيه اي حاجة عايزها تحصل اول ما الكومبوننت يفتح 
+					  -> 4. ngAfterViewInit => use it in viewChild
+					  -> 5. ngOnDestroy  => close api connection & unsubscribe to observable
 					   
 - color='red' --> will take value direct
   [color]='red' --> will take value of prop red	
@@ -122,3 +124,52 @@ https://www.youtube.com/playlist?list=PLesfn4TAj57WJFn86KXOInQAsCdJlp6vl
 												   -> 3. in child ts emitting event (when click on button || inside ngOnInit) $[ SendData(){ this.myEvent.emit(childData);}]
 												   -> 4. in parent html inside child selctor bind on event to get data $[ <app-child (myEvent)="getData($event)"></app-child>]
 												   -> 5. implement parent function and save data in component var $[getData(childMsg:string){}]
+												   												   
+										
+- x!: elementRef -> non-null asseration operator  ==> to define this element impossible will be null 
+										
+- so now we can use any thing inside child in parent use two ways [ @Output | viewChild ] so what different between them?? 
+											-> @Output -> use in case there is an event happen
+											-> viewChild -> can use it any time 
+											
+											
+--------------------- [ session 04 ] ---------------------
+
+- service -> contain all business logic of component
+		  -> 1. $[ ng g s ay7aga --skip-tests ] and add crud operations inside this file 
+		  -> 2. inject this service in component ctor then can use it inside 'onInit()'
+		  -> in service file found "providedIn:" -> 'root' -> apply singleton design pattern on service
+												 -> 'any' -> eager loaded modules share singleton instance however lazy loaded modules get there own unique instance 
+												 -> 'module_name' 
+
+- dependency injection -> used to remove hard code depencency 
+					   -> can inject using [ ctor | method | prop ]
+					  
+- routing -> 1. inside file 'app.routes.ts' add paths in routes array $[{path: 'Home', component: HomeComponent} ]  note!!! path name is case sensetave
+		  -> note that arrange of routes array importent!! so must start with defualt path $[{path: '', redirectTo: '/home', pathMatch:'full'}] and end with wild card $[ {path:'**', component:NotFoundComponent}]
+		  -> 2. inside appComponent.html add $[ <router-outlet></router-outlet> ]
+		  -> 3. add the RouterLink, RouterLinkActive, and RouterOutlet to the imports array of AppComponent.
+		  -> 4. use routing by add $[ [routerLink]='/Home'] in html file to make it absolute path  and $[routerLinkActive="active"] to apply active class 
+		  
+- to use defferent layouts use child routes in file 'app.routes.ts' $[ 
+																		export const routes: Routes = [
+																			{path: '', component: MainLayoutComponent,children:[
+																				{path: '', redirectTo: '/home', pathMatch:'full'},
+																				{path: 'home', component: HomeComponent},
+																				{path: 'products', component: ProductsListComponent},
+																				{path: 'order', component: OrderMasterComponent},
+																			]},
+																			{path: 'login', component: LoginComponent},
+																			{path:'**', component:NotFoundComponent} // wild card path
+																		];
+																		]
+																		
+																		
+- to attach id to url -> 1. inside ctor inject route service $[ constructor(private router: Router){}]
+					  -> 2. $[this.router.navigate(['/products',prdId]);]
+
+- to get id from url -> 1. inside ctor inject active route service $[ constructor(private activatedRouter:ActivatedRoute){}]
+					 -> 2. $[ this.activatedRouter.snapshot.params['id']; ]
+					 
+- so to navigate to specific url -> in ts use 'Router'
+								 -> in html use 'routerLinkActive'
