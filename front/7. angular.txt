@@ -169,7 +169,17 @@ https://www.youtube.com/playlist?list=PLesfn4TAj57WJFn86KXOInQAsCdJlp6vl
 					  -> 2. $[this.router.navigate(['/products',prdId]);]
 
 - to get id from url -> 1. inside ctor inject active route service $[ constructor(private activatedRouter:ActivatedRoute){}]
-					 -> 2. $[ this.activatedRouter.snapshot.params['id']; ]
+					 -> 2. inside ngOnInit $[ this.activatedRouter.snapshot.params['id']; ]
 					 
 - so to navigate to specific url -> in ts use 'Router'
 								 -> in html use 'routerLinkActive'
+								 
+- $[ {{prd | json}} ] -> built-in pipe using throw import { CommonModule } from '@angular/common'
+
+- on angular when navigate to same component, will not reload component even if theres change in route parameters
+		--> can handle this using 'paramMap' observable $[this.activatedRouter.paramMap.subscribe((p)=>{
+																										this.prdID = Number(p.get('id'));
+																										this.prd = this.prdService.getProductByID(this.prdID);
+																										});
+														  ]
+														  
