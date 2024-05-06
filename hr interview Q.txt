@@ -1,0 +1,76 @@
+
+- small talk sentences -> nice to meet you mr. __
+					   -> it has been great experienc
+					   -> furthermore
+					   -> that`s quite impressive, i must admit
+					   -> i look forward to it
+					   -> which causes me 
+					   -> may i come in
+
+- i have few question may i ask?
+  is that job full time or part, what are the hours, position, are there benefits like medical insurance, notice period, over time,  
+	
+	
+- 1. did you have any trouble finding the office ?
+	 no, the directions on the website are great!
+	
+	
+- 2. introduce your self?
+	 well, I am Tasneem Elhussiny, a 23-year-old, fresh graduate of Faculty of Computer Science Minia University. 
+	 After my graduation, I completed an Intensive Code Camp program at the Information Technology Institute (ITI), 
+	 specializing in Full Stack Web Development using .NET.
+	 and I’m currently looking forward to start off my career
+
+	 
+- 3. what attracted you to our company?
+	 i can see that your company has much future growth potential ,
+	 furthermore i would like to grow my career at a company that has great reputation
+	 
+	 
+- 4. what are your points of strength? why should we hire you?
+	 I pride myself on my intelligence, discipline, hard work, and supportive nature towards others.
+	 and i am always eager to learn new things + time mangment -> iti interview
+	 I believe that these qualities, combined with my technical skills, will enable me to make a positive impact on your Company.
+
+	 
+- 5. point of weekness?
+	 perfictionism
+	 workaholic -> iti 18h
+	 but i`m trying to solve this problem by work live balance  
+
+	 
+- 6. what did you do if you didn`t get on with someone on your team?
+	 i`d try to find a solution in calm and retetional manner and 
+	 i`d do the best to get on with that person for the sake of the team 
+	 
+	 
+- 7. where do you see yourself in 5 years?
+	 in 5 years i`d like to gain more experienc in software development and 
+	 i hope to be offered the chance to reach a senior position at good company like [NI, link dev, dsqueres, vois, atos, fang companies, big 4] 
+
+	 
+- 8. how others would describe you?
+	 i`m not sure that every one likes me but they all know that they can trust me and depend on me no matter what --> recommendation 
+
+	 
+- 9. how do you manage situations ? if you have alot of work
+	 i`m very organized
+
+	 
+- 10. what does success means for you?
+		success means achieve agoal that have set for my self, and produce high quality work within deadline
+
+		
+- 11. can you work well under pressure?
+
+		
+- 12. how do you make an importent decisions?
+	  i gather all infromation i can find and based on it i will come to best decision i can,
+	  and if i know a coworker was in a similar situation , i would hesitate to find out the results to make sure the decision is the best one  
+
+	  
+- 13. expected salary? range of __ would be appropriate. 
+
+- 14. What is your greatest failure, and what did you learn from it?
+
+- 15. What motivates you?
