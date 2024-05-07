@@ -6,6 +6,7 @@
 					   -> i look forward to it
 					   -> which causes me 
 					   -> may i come in
+					   -> Can you clarify the question?
 
 - i have few question may i ask?
   is that job full time or part, what are the hours, position, are there benefits like medical insurance, notice period, over time,  
@@ -23,25 +24,27 @@
 
 	 
 - 3. what attracted you to our company?
-	 i can see that your company has much future growth potential ,
-	 furthermore i would like to grow my career at a company that has great reputation
+	 i can see that ___ has much future growth potential ,
+	 furthermore i would like to grow my career at a company that has great reputation For over 25 years like __
 	 
 	 
 - 4. what are your points of strength? why should we hire you?
 	 I pride myself on my intelligence, discipline, hard work, and supportive nature towards others.
-	 and i am always eager to learn new things + time mangment -> iti interview
-	 I believe that these qualities, combined with my technical skills, will enable me to make a positive impact on your Company.
+	 and i am always eager to learn new things,I believe that these qualities, combined with my technical skills,
+	 will enable me to make a positive impact on your Company.
 
 	 
-- 5. point of weekness?
-	 perfictionism
-	 workaholic -> iti 18h
-	 but i`m trying to solve this problem by work live balance  
+- 5. point of weakness?
+	 It can be challenging for me to maintain a healthy work-life balance, 
+	 especially with ambitious career goals. 
+	 There have been times when my study  hours have extended quite long,sometimes reaching up to 18 hours a day. 
+	 However, I've recognized the importance of creating space in my schedule to focus on my personal life, 
+	 particularly spending quality time with my family. 
 
 	 
 - 6. what did you do if you didn`t get on with someone on your team?
-	 i`d try to find a solution in calm and retetional manner and 
-	 i`d do the best to get on with that person for the sake of the team 
+	 i think i'd try to find a solution in calm and rational manner 
+	 and i'd do the best to get on with that person for the sake of the team 
 	 
 	 
 - 7. where do you see yourself in 5 years?
@@ -50,27 +53,47 @@
 
 	 
 - 8. how others would describe you?
-	 i`m not sure that every one likes me but they all know that they can trust me and depend on me no matter what --> recommendation 
+	 i`m not sure that every one likes me but they all know that they can trust me and depend on me no at any situation --> recommendation 
+	 My best friend would probably say that my three greatest strengths are my leadership capability, my communication skills and my organisational ability.
 
 	 
-- 9. how do you manage situations ? if you have alot of work
-	 i`m very organized
+- 9. how do you manage situations if you have alot of work ?  can you work well under pressure?
+	 In situations where I have a lot of work to manage, 
+	 I rely on my strong organizational skills to ensure everything gets done effectively and on time. 
+	 One of my strategies is to create a todo list, where I prioritize tasks based on their importance and deadlines. 
 
 	 
 - 10. what does success means for you?
-		success means achieve agoal that have set for my self, and produce high quality work within deadline
+		Success means finding joy and satisfaction in what I do and It's about continuously striving to improve myself, 
+		whether it's in my professional skills, personal development, or relationships.
 
 		
-- 11. can you work well under pressure?
+- 11. plan b in case rejected?
+	  first i will sad to lose chance to work at agood company like __
+	  Next, I would take this rejection as motivation to continue striving towards my goals. 
+	  I firmly believe that setbacks are a natural part of any journey towards success, and they only make eventual achievements even more rewarding
 
 		
 - 12. how do you make an importent decisions?
 	  i gather all infromation i can find and based on it i will come to best decision i can,
-	  and if i know a coworker was in a similar situation , i would hesitate to find out the results to make sure the decision is the best one  
+	  and if i know someone was in a similar situation , i would ask to find out the results to make sure the decision is the best one  
 
 	  
 - 13. expected salary? range of __ would be appropriate. 
 
 - 14. What is your greatest failure, and what did you learn from it?
+	  One of my greatest failures was during my first semester of college when I received grade F in one of my courses. 
+	  It was a challenging experience, as it was unexpected and disappointing. 
+	  However, instead of letting it discourage me, I used it as a learning opportunity. 
+	  and In the following semester, I implemented a more disciplined study routine, 
+	  and  As a result of my efforts, I not only passed the course but achieved an A+.
+	  
 
 - 15. What motivates you?
+	  make my family prode of me 
+
+- 16. The most difficult situation you have ever been in ?
+	  The most challenging situation was when my final exam for a college course clashed  with an interview appointment at ITI. However, I trusted in my abilities and time management skills. 
+	  I successfully completed the exam in half the allotted time in order to make it to the interview on time.
+	  In the end, I received an A+ in the exam and was accepted into ITI.
+	  
