@@ -80,7 +80,7 @@ https://www.youtube.com/playlist?list=PLesfn4TAj57WJFn86KXOInQAsCdJlp6vl
 - Directives -> 1. component directive -> directive with a tempelte 'use class selector'
 			 -> 2. structure directive -> change layout of the elements [ngIf - ngIfElse - ngFor - ngSwich]
 									   -> can`t use two structure directive with the same element, can solve this using ngContainer 
-			 -> 3. attribute directive -> change the apperence or behaivur of particular element [ngClass - ngStyle - ngModel]
+			 -> 3. attribute directive -> change the apperence or behaviur of particular element [ngClass - ngStyle - ngModel]
 			 
 - trackBy function -> used to specify iterable objects identity, and so enhance the performance of ngFor in case of change to the collection, and update changed object without re-build the DOM 
 				   -> $[ 
@@ -183,3 +183,39 @@ https://www.youtube.com/playlist?list=PLesfn4TAj57WJFn86KXOInQAsCdJlp6vl
 																										});
 														  ]
 														  
+														  
+--------------------- [ session 05 ] ---------------------
+
+- observable -> implementation for design pattern 'observe' this logic like event  ex[promise, async await]
+		     -> in angular or js interacte with observable using library RXjs 'reactiveX'
+			 -> to create customer observable $[new observable(callBack func contain next, error, complete)] 'callBack is func passed to another func'
+			 -> return unsubscribe function which execute when [ error | complete | call it]
+			 -> two types -> cold 'emit value when subscribe it'
+						  -> hot 'emit value even if before subscriping واللي ملحقهوش خلاص '
+			 -> built in observable -> creating observable [form | interval | range...]
+									-> transforming observable [ flatMap | map | buffer ]
+									-> filters observable [distinct | take | skip ]
+			 
+- asynchronous programming 'promise' VS observable -> promise execute code once when event fire, but observable each time change occure will execute code 
+												   -> observable can be cancelled using unsubscribe
+												   -> observable provide many operators 'map, foreach, filter, filter, reduce...' on returned data 
+												   -> observable is lazy executed 'not called untill we subscribe'
+												   
+- Subject -> sort of bridge or proxy which act both as observe [subscribe for observable] & observable [emit values contain 'next, error, complete'] 
+		  -> special type of Observable that allows values to be multicasted to many Observers. 
+		  -> While plain Observables are unicast (each subscribed Observer owns an independent execution of the Observable)
+		  -> usually used to handle login/logout & add to card [any change occur on body will effect on navbar 'two components'] 
+
+							   
+- publishSubject -> emits to an observer only those items that are emitted by the source Observable(s) subsequent to the time of the subscription. لما يحصل سبسكرايب هيبدأ يبعت الفاليوز والحاجات اللي حصلها ايميت قبل كدا مش هتوصله
+
+- ReplaySubject -> emits to any observer all of the items that were emitted by the source Observable(s), regardless of when the observer subscribes
+
+- in case want to treate with function as a read only prop use keyword 'get'
+
+
+- gaurds -> $[ng g g gaurdName] 
+		 -> types -> canActivate -> guard executed when open specific route
+				  -> canActivateChild
+				  -> canDeactivate -> when leave specific route
+				  -> canLoad 
