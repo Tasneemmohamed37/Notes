@@ -151,7 +151,8 @@ https://www.youtube.com/playlist?list=PLesfn4TAj57WJFn86KXOInQAsCdJlp6vl
 		  -> 3. add the RouterLink, RouterLinkActive, and RouterOutlet to the imports array of AppComponent.
 		  -> 4. use routing by add $[ [routerLink]='/Home'] in html file to make it absolute path  and $[routerLinkActive="active"] to apply active class 
 		  
-- to use defferent layouts use child routes in file 'app.routes.ts' $[ 
+- to use defferent layouts use child routes in file 'app.routes.ts' -> 1. add component 'MainLayoutComponent' in html add only $[ <router-outlet></router-outlet> ]
+																		$[ 
 																		export const routes: Routes = [
 																			{path: '', component: MainLayoutComponent,children:[
 																				{path: '', redirectTo: '/home', pathMatch:'full'},
@@ -189,6 +190,7 @@ https://www.youtube.com/playlist?list=PLesfn4TAj57WJFn86KXOInQAsCdJlp6vl
 - observable -> implementation for design pattern 'observe' this logic like event  ex[promise, async await]
 		     -> in angular or js interacte with observable using library RXjs 'reactiveX'
 			 -> to create customer observable $[new observable(callBack func contain next, error, complete)] 'callBack is func passed to another func'
+			 -> usefull to handle real time apps كل ما يحصل تغيير الاوبسيرفابول هيبعتلي الداتا الجديدة 
 			 -> return unsubscribe function which execute when [ error | complete | call it]
 			 -> two types -> cold 'emit value when subscribe it'
 						  -> hot 'emit value even if before subscriping واللي ملحقهوش خلاص '
@@ -214,8 +216,39 @@ https://www.youtube.com/playlist?list=PLesfn4TAj57WJFn86KXOInQAsCdJlp6vl
 - in case want to treate with function as a read only prop use keyword 'get'
 
 
-- gaurds -> $[ng g g gaurdName] 
+- gaurds -> guards are special classes used to control and manage access to different parts of an application, by decide whether a user can navigate to a particular route or perform certain actions or not
+		 -> 1. $[ng g g gaurdName]
+		 -> 2. inject service in guard ctor => return boolean;
+		 -> 3. app-routing $[{path: 'order', component: OrderMasterComponent, canActivate:[gaurdName]},]
 		 -> types -> canActivate -> guard executed when open specific route
 				  -> canActivateChild
 				  -> canDeactivate -> when leave specific route
 				  -> canLoad 
+				  
+
+--------------------- [ session 06 ] ---------------------
+
+- json server -> package used to make customized fake api 
+			  -> 1. $[npm install -g json-server]
+			  -> 2. add file 'db.json' which include your data
+			  -> 3. $[json-server --watch db.json]
+
+- HttpClientModule -> angular module contain all method which handle api connection and this method return observable so when use it $[.subscribe()]
+			 
+
+- Connect to api ->	1. in 'app.config.ts' add provideHttpClient() to the providers:
+				 -> 2. add your baseUrl to file 'environment.ts' 
+				 -> 3. create service for each controller to contain -> 1. bmethod for each endpoint 
+																	 -> 2. inject in ctor httpClient
+				 -> 4. at component ts file -> 1. inject service in ctor [ وكل ما اكلم السيرفيس دي اقول .subscribe()]
+											-> 2. inside onInit connect to api using the service
+
+											
+- to send info in request header -> 1. create obj from 'httpHeaders' contain data $[ this.httpOption = {
+																						headers: new HttpHeaders({
+																							'Content-Type': 'application/json'
+																							// ,Authorization: 'my-auth-token'
+																						})
+																						};
+																					]
+								 -> 2. pass this obj as a parameter to HttpClientModule methods
