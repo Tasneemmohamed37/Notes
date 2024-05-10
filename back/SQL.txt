@@ -1,0 +1,82 @@
+
+- sql dt -> 1. numeric [bit - int - smallint - bigint..]
+		 -> 2. fractions [money - float - dec]
+		 -> 3. string [char - varchar - nvarchar] -> CHAR(10) store "hello", will still take up 10 characters of storage space, regardless of the actual length of the string you store in it, use it when you have fixed-length data, such as postal codes or certain types of identifiers.
+												  -> VARCHAR(10) store "hello", will only take up 5 characters of storage space.
+												  -> n == unicode , used when you need to store characters from multiple languages
+
+- variables -> local $[ @age int = 3]
+			-> global $[ select @@ServerName ]
+
+- before any thing must select database first $[use db_name]
+	
+- to add fk use keyword 'reference'
+	
+- sql -> 1. DDL "Data Definition Language" interacte with metadata & structure [crate table|view|function - alter - drop]
+	  -> 2. DML "Data Manpulation Language" interacte with data [insert - update - delete] 
+	  -> 3. DQL "Data Query Language" display data [select - aggFunc - grouping - union - joins - subqueries]
+	  -> 4. DCL "Data Control Language" security & permissions [grant - deny - revoke]
+	  -> 5. TCL "Transaction Control Language" execution [commit - rollback]
+
+- sql patterns -> _ => one Char
+				  % => Zero or More Chars
+				  'a%h' ah aghjklh
+				  '%a_' ak hjkak
+				  '[ahm]%' amr hassan mohamed a
+				  '[^ahm]%' Esraa Fatma Sara اى حرف غير ال اي او الاتش او الام
+				  '[a-h]%' الحروف من ال ايه الى الاتش
+				  '[^a-h]%' الحروف الى مش من ال ايه الى الاتش
+				  '[346]%' جملة تبدأ ب اي رقم من دول
+				  '%[%]' ghjkl%
+				  استخدمنا البراكتس عشان نقوله ان علامة البيرسنت دي او _ احنا عايزين نسلكتها لانها محجوزة فى اللغة
+				  '%[_]%' Ahmed_Ali _
+				  '[_]%[_]' _Ahmed_
+				  
+- Distinct -> لو عندى اكتر من حاجة مكررة هستخدم ديستنكت لتفادى التكرار
+
+- joins -> 1. Cross join (Cartisian Product)
+		-> 2. Inner Join (Equi Join) 'two parts musn't be null' 
+		-> 3. Outer Join -> 3.1 Left Outer Join 'select all data in left table which is not null'
+						 -> 3.2 Right Outer Join
+						 -> 3.3 Full Outer Join
+		-> 4. Self Join
+		
+
+
+- Built-in Functions -> 1. Aggregate Functions 'Scalar Functions' [count - sum - avg - min - max] Return Only One Value which Not Existed In Database    note!!! If You Select Columns With Aggregate Functions,You Must Group By With The Same Columns
+					 -> 2. Null Functions [IsNull - Coalesce]
+					 -> 3. Casting Functions [convert - cast - format]
+	
+	
+- groupBy -> You Can't Group By With * or PK
+		  -> We Grouping With Repeated Value Column
+
+		  
+- You Can't Use Agg Functions Inside Where Clause but can use it only in case of subquery 
+	not valid ❌							valid✔								valid✔	
+	select Sum(Salary)						select Sum(Salary)					select Super.St_FName, Count(Stud.St_Id)
+	from Instructor							from Instructor						from Student Stud, Student Super
+	where count(Ins_Id) < 100				having count(Ins_Id) < 100			where Super.St_Id = Stud.St_Super
+																				group by Super.St_FName
+									
+	
+
+- having -> used with groupBy or aggFunc 
+
+- Sub Query -> Output Of Sub Query[Inner] As Input To Another Query[Outer]
+			-> SubQuery Is Very Slow (Not Recommended Except Some Cases) بطئ جدا
+			-> استخدمه فى الحالات اللى زي اللى تحت دي
+			-> 1 لو انا عايز اعمل كوندشن بالاجريجيت فانكشن باستخدام الوير -
+			-> 2 لو انا عايز اسليكت اجرجيجت فانكشن وانا مش مستخدم جروب باي
+
+
+- execution order -> from
+				  -> join
+				  -> on
+				  -> where
+				  -> group by
+				  -> having
+				  -> select
+				  -> order by
+				  -> top
+				  
