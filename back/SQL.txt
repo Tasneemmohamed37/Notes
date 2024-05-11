@@ -12,8 +12,8 @@
 	
 - to add fk use keyword 'reference'
 	
-- sql -> 1. DDL "Data Definition Language" interacte with metadata & structure [crate table|view|function - alter - drop]
-	  -> 2. DML "Data Manpulation Language" interacte with data [insert - update - delete] 
+- sql -> 1. DDL "Data Definition Language" interacte with metadata & structure [crate table|view|function - alter - drop - rename - trancate'delete without where']
+	  -> 2. DML "Data Manpulation Language" interacte with data [insert - update - delete - select into] 
 	  -> 3. DQL "Data Query Language" display data [select - aggFunc - grouping - union - joins - subqueries]
 	  -> 4. DCL "Data Control Language" security & permissions [grant - deny - revoke]
 	  -> 5. TCL "Transaction Control Language" execution [commit - rollback]
@@ -72,7 +72,7 @@
 
 - execution order -> from
 				  -> join
-				  -> on
+				  -> on 'used with join instead of where'
 				  -> where
 				  -> group by
 				  -> having
@@ -80,3 +80,50 @@
 				  -> order by
 				  -> top
 				  
+
+- Schema ->  logical view of the entire database. It defines how data is organized and how relations among them are associated.
+		 -> used to solve some prob -> 1. You Can't Create Object With The Same Name [Table, View, Index, Trigger, Stored Procedure, Rule]
+									-> 2. There Is No Logical Meaning (Logical Name)
+									-> 3. Permissions
+		 -> Default Schema -> DBO 'Database Owner'
+
+		 
+- Union Family -> combine result sets of two or more SELECT into a single result set | merge results of two or more queries into a single result set
+			   -> Have 2 Conditions Columns must have The Same [ Datatype & numbers ]
+			   -> union all 'with duplication'
+			   -> union 'without duplication'
+			   -> intersect 
+			   -> except 
+				
+- view -> virtual table contain result set of a SELECT query [variable contain query and when call it execute query and return result in virtual table]
+	   -> Unlike a physical table, a view does not store data itself; instead, it dynamically retrieves data from one or more underlying tables whenever the view is queried.
+	   -> used for [Simplifying Complex Queries - Data Security - Data Abstraction - Reusability]
+
+- view VS function -> functions are used to encapsulate logic and perform calculations [can take a parameters],
+				   -> views just display and used to simplify query complexity and provide a virtual representation of data.
+
+- drop -> delete table it self 'ddl'
+  delete -> delete rows from a table based on specified conditions 'dml'
+  trancate -> delete all rows 'ddl' & cannot be rolled back using a transaction
+
+
+- stored procedure 🆚 user defined function?
+	stored procedure -> return Zero or n values   												function -> Return only one value, which is mandatory
+					 -> have input/output parameters						 						 	 -> only input parameters
+					 -> Allows DML(Data manipulation language 'select, insert, update, delete') 	     -> Allows only select statements
+					 -> can call function																 -> can`t call procedure
+					 
+
+- trigger -> Special Stored Procedure
+		  -> Can't call or take parameters
+		  -> can handle it using [Drop | Disable | Enable]
+		  -> types -> 1. Server Level
+				   -> 2. DB Level
+				   -> 3. Table Level (events)
+					
+					
+- clustered index -> detect table order in table itself 		 		     non clustered index -> arrang table in memory
+					-> only one 'PK by defualt' 		 				 						 -> up to 999 'uniqe by defualt'
+					-> Last Level Is The Actual Data 											 -> Last Level Is The Actual Data
+					-> faster , use binary search 
+	
