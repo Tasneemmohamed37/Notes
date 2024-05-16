@@ -5,39 +5,50 @@
 		-> component based [ page contain of components ]
 
 		
-- to create react project -> 1. $[ npm create vite ]
-						  -> 2. $[ npm i ]
+- to create react project -> 1. open folder with vscode $[ npm create vite @latest project_name -- --template react]
+						  -> 2. open project with vscode $[ npm i ]
 						  -> to run project $[ npm run dev ]
 
 						  
 - project structure -> vite.config.js
 					-> package.json -> contain all dependencies name and version
-					-> index.html -> the only file in the project can type js in it & link this with style using file 'angular.json'
+					-> index.html -> the only file in the project can type js in it & link this with style using file 'main.jsx'
 					-> eslintrc.cjs -> in case of error give warning contain project setting
 					-> public -> contain static files which vite can`t edit it 
 					-> main.jsx -> convert code in 'app.jsx' to js code and add it to 'index.html'
+					-> app.jsx -> contain components selector to show  
+					-> app.css -> contain global style
 					
 - component -> name first letter must be capital letter 
+			-> to create component $[component_name.jsx] or can use extention 'react snippets'  $[rfc] 'react function component'
 			-> jsx file include export function return only one parent element '<React.Fragment></React.Fragment> | <></>' contain all code of component 'html, css, js' 
+			-> in oldest version react was class component but in latest version as 16.8 depend on function using HOOKS
 
 - project life cycle -> index / main.jsx / app.jsx
 
 - jsx -> js xml
 	  -> js extention allow write html in js file then render it to pure js
-	  
+
+ 
 - class is deserved word in js, so must use instead "className=''"
+- when use customer class must consider that in js can`t use special char expect [_ $] 
+- any html tag must be closed like <br />
 
-- can use extention 'react snipper' to create component $[rfc] 'react function component'
 
-- install tailwind -> 1. $[ npm install -D tailwindcss postcss autoprefixer ]
+- install tailwind -> 1. $[ npm i -D tailwindcss postcss autoprefixer ]
 				   -> 2. $[ npx tailwindcss init -p ]
-				   -> 3. Configure your template paths $ [ content: [ "./index.html","./src/**/*.{js,ts,jsx,tsx}",], ]
+				   -> 3. in file 'tailwind.config.js' Configure your template paths $ [ content: [ "./index.html","./src/**/*.{js,ts,jsx,tsx}"] ]
 				   -> 4. Add the Tailwind directives to your src/index.css $[ @tailwind base;@tailwind components;@tailwind utilities;]
 				   -> 5. $[ npm run dev]
 				   
 - to install bootstrap -> 1. $[ npm i bootstrap ]
-					   -> 2. in file 'main.jsx' link style $[ import node_modules/bootstrap/dist/css/bootstrap.min.css ] and scripts $[ import node_modules/bootstrap/dist/js/bootstrap.bundle.min.js ]
+					   -> 2. in file 'main.jsx' import style $[ import 'bootstrap/dist/css/bootstrap.min.css' ] and scripts $[ import 'bootstrap/dist/js/bootstrap.bundle.min.js' ]
 					   
-- to install fontAwsome -> 1. $[ npm i @fontawsome/fontawsome-free ]
+- to install fontAwsome -> 1. $[ npm i @fortawesome/fontawesome-free ]
 					    -> 2. in file 'main.jsx' link $[ import fontawsome/fontawsome-free/css/all.min.css ]
 					   
+------------------------- [ session 02, week 16.2 ] -------------------
+
+- to run any script in 'package.json' $[npm run ___]
+
+- 

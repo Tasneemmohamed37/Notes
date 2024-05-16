@@ -77,6 +77,8 @@ D => dependency inversion --> high level moduls shouldnt depend on low level mod
 - to controll member vars during create obj => ctor 
 - to controll member vars after create obj => prop || getter , setter
 
+- Properties are class members that encapsulate data and provide a way to read or write the value of that data
+
 - ctor used for => controll obj creation
 				=> initialize members
 				
