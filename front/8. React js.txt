@@ -20,7 +20,8 @@
 					-> app.css -> contain global style
 					
 - component -> name first letter must be capital letter 
-			-> to create component $[component_name.jsx] or can use extention 'react snippets'  $[rfc] 'react function component'
+			-> to create component -> 1. add folder with component name and inside it add jsx file $[component_name.jsx]
+								   -> 2. inside jsx file write $[rfc] 'react function component' which will generate component syntax extention 'es+7 react snippets'  
 			-> jsx file include export function return only one parent element '<React.Fragment></React.Fragment> | <></>' contain all code of component 'html, css, js' 
 			-> in oldest version react was class component but in latest version as 16.8 depend on function using HOOKS
 
@@ -51,4 +52,40 @@
 
 - to run any script in 'package.json' $[npm run ___]
 
-- 
+- to write js code inside jsx use curly brackets {}
+
+- to deal with static assets in react -> 1. import img_name from ''
+									  -> 2. use this img by {img_name}
+									  
+- to deal with dynamic assets in react -> $[ <img src={new URL(`../../imgs/${imageUrl}`,import.meta.url).href} /> ]
+									   -> import.meta.url -> used to get base url
+
+- in react every thing loged twice becouse in main.jsx $[<React.StrictMode> <App /> </React.StrictMode>]							
+
+- props -> arguments passed into React components via HTML attributes 
+		-> 1. in parent camponent pass your params to child component tag $[<Card title='iphone' category='samsung'/>]
+		-> 2. in child jsx accept 'props' param which is object contain all passing attributes and access them $[props.title]
+		-> 2. or using destruct $[ function Card({title, category})] and using them direct ${title}
+  
+		
+- HOOKS خطاف -> built-in functions react use it to solve 'stateless problem when use function camponent'
+			 -> must follow terms to use it -> all them at the top level in the body of a function component or custom Hook [inside component function direct can`t use inside if, loop, other function ]
+
+- State -> A Component's Memory and is isolated and private 'each component has his own state' 
+		-> function component 'stateless' have problems as [Changes to local variables won’t trigger renders & if re-render will back to initial var]
+		-> react solve these problems using built-in hook 'useState' which return object contain [var - function change value of var]
+		-> 1. let [counter, setCounter] = useState(0); --> let [var, 'as a naming convential setVar'] = useState(init_value);
+		-> function 'setCounter' each time call it will change counter state value so it allow us to re-render component function and sync between data & ui
+		-> commonly use to handle dark & light mood
+
+-> so in case u want when edit var يسمع in ui , make this var state not local 
+
+- conditional rendering -> you can conditionally render JSX using JavaScript syntax like if statements, &&, and ? : operators
+
+- recap -> dom is tree data structure , represent document object as a tree 
+
+- Real DOM -> React update the state changes in Virtual DOM first and then it syncs with Real DOM using 'diffing' algorithm
+
+
+- to ask -> loading screen with conditional rendering ???
+
