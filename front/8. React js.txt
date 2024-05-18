@@ -124,5 +124,24 @@
 - call api by axios -> highly recommended becouse more supported by browsers than fetch & more secure 
 					-> 1. $[ npm i axios]
 					-> 2. $[ const {data} = await axios.get('https://api.themoviedb.org/3/trending/movie/day?api_key=ac7e5c509c05c95a09ccc13bb434f9f4'); ]
+
+- recommended to use react dev tools to get more console features
 					
 					
+- uncontrolled element -> form elements DOM controll them not component
+					   -> so only apply validation when submit, to solve this must make this element controlled
+					   
+					   
+- controlled elements -> by it we can apply real time validation 
+					  -> 1. add state for each form element 'commonly used with input, textarea, select' $[ const [name, setName] = useState(''); ]
+					  -> 2. make element value equal state variable and onChange call state func passing to it current value $[
+																																 <input
+																																	type="email"
+																																	value={email}
+																																	onChange={(e) => {
+																																		setEmail(e.target.value);}}
+																																	/>
+																															   ]
+					  
+					  
+					  
