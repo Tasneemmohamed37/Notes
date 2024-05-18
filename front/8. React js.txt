@@ -75,6 +75,7 @@
 		-> function component 'stateless' have problems as [Changes to local variables won’t trigger renders & if re-render will back to initial var]
 		-> react solve these problems using built-in hook 'useState' which return object contain [var - function change value of var]
 		-> 1. let [counter, setCounter] = useState(0); --> let [var, 'as a naming convential setVar'] = useState(init_value);
+		-> 2. $[ function increaseCounter(){setCounter(++counter)} ]
 		-> function 'setCounter' each time call it will change counter state value so it allow us to re-render component function and sync between data & ui
 		-> commonly use to handle dark & light mood
 
@@ -87,5 +88,41 @@
 - Real DOM -> React update the state changes in Virtual DOM first and then it syncs with Real DOM using 'diffing' algorithm
 
 
-- to ask -> loading screen with conditional rendering ???
+------------------------- [ session 03, week 17.1 ] -------------------
 
+- component lifecycle -> 1. mounting phase -> occur when component render and insert in dom
+										   -> inside it [initailly set value of useState / render / useEffect(()=>{},[]) ]
+					  -> 2. updating phase -> occur when component is updated [state change | props change | parent re-render | context change]
+										   -> inside it  [ render / useEffect(()=>{},[dependency arr]) ] 
+					  -> 3. unmount phase  -> occur when component remove from dom 
+										   -> inside it useEffect(()=>{return ()=>{}},[])
+
+
+- Pure functions -> functions in js produce the same output for a particular input every time they are called. 
+- impure functions -> can have side effects and produce different outputs for the same input.
+
+- problem -> when has function fetch data from api will get into infinte loop becouse this function has side effect and it isn't pure function
+- solve -> hook 'useEffect()' to handle side effect
+
+- useEffect -> React Hook that lets you synchronize a component with an external system.
+			-> take 2 param (func, dependency arr) and depend on array will execute this function -> if arr is empty will execute in initial render only 'mounting phase' 
+																								  -> if arr contain data, will execute in initial render & change state data 'updating phase'
+																								  -> if arr is empty & func return other func, will execute in unmount phase
+			->  commonly used to call api in mounting phase 
+
+
+- call api by useState & useEffect -> 1. useState to trach apiResponse and initial it by null or empty array $[const [trendingMovies, setTrendingMovies] = useState(null);]
+								   -> 2. add function to fetch data and make useState variable value equal apiResponse $[ async function getTrendyMovies(){
+																															const response =await fetch('https://api.themoviedb.org/3/trending/movie/day?api_key=ac7e5c509c05c95a09ccc13bb434f9f4');
+																															const data = await response.json();
+																															setTrendingMovies(data.results);}
+																														]
+								   -> 3. useEffect to call function which fetch data $[ useEffect(()=>{getTrendyMovies()},[]); ]
+								   -> 4. in return chech useState variable if still null then show loading else display data $[{(trendingMovies == null)? <Loading/> : trendingMovies.map((m)=>{return <MovieCard movie={m}/>}) ]
+
+
+- call api by axios -> highly recommended becouse more supported by browsers than fetch & more secure 
+					-> 1. $[ npm i axios]
+					-> 2. $[ const {data} = await axios.get('https://api.themoviedb.org/3/trending/movie/day?api_key=ac7e5c509c05c95a09ccc13bb434f9f4'); ]
+					
+					
