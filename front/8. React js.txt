@@ -99,7 +99,7 @@
 
 
 - Pure functions -> functions in js produce the same output for a particular input every time they are called. 
-- impure functions -> can have side effects and produce different outputs for the same input.
+- impure functions -> can have side effects and produce different outputs for the same input. [usualy function depend on var outside it]
 
 - problem -> when has function fetch data from api will get into infinte loop becouse this function has side effect and it isn't pure function
 - solve -> hook 'useEffect()' to handle side effect
@@ -144,4 +144,63 @@
 																															   ]
 					  
 					  
+------------------------- [ session 04, week 17.2 ] -------------------
 					  
+- style in react -> 1. inline style, add style attribute style equal object $[ <div style={{color:"red", border:"5px solid red" }}></div> ]
+				 -> 2. global style, add style to file 'index.css' which linked with 'main.jsx'
+				 -> 3. module.css, style file for specific component -> 1. add file 'component_name.module.css'
+																	 -> 2. link it with component.jsx by $[import styles from 'url' ] 
+																	 -> 3. but classes names hashed so can access them by import file name $[ <div className=`${styles.container}`></div> ]
+																	 
+
+- Formik Essentials -> react library used to handle [getting values in & out of form state - validating and error messages - form submission] 
+					-> 1. $[npm i formik]
+					-> 2. create obj from formik hook passing to it obj contain init values and onSubmit $[ const formik = useFormik({
+																															initialValues:{
+																																email:"",
+																																password:""
+																															},
+																															onSubmit:handleSubmit
+																															});
+																											function handleSubmit(values){console.log(values);}
+																										   ]
+					-> 3. link form with formik using onSubmit $[ <form onSubmit={formik.handleSubmit}></form>]
+					-> 4. for each form element $[	name="email"
+													value={formik.values.email}
+													onChange={formik.handleChange}
+												 ]
+					
+- to apply customer validation using formik -> 1. add prop to formik obj $[validate: validateForm]
+											-> 2. function validateForm must return errors obj $[
+																									function validateForm(values) {
+																										const errors = {};
+																										if (!emailRegex.test(values.email))
+																											errors.email = 'Email is required, and must contain @';
+																										if (!passwordRegex.test(values.password))
+																											errors.password = 'Password is required, and must contain at least one capital letter and one special character';
+																										return errors;}
+																								] 
+											 -> 3. foreach input add attribute $[onBlur={formik.handleBlur}] to validate input only when touch it
+											 -> 4. display error details after input $[ {(formik.errors.email && formik.touched.email) ? (
+																							<div className="text-red-600 font-bold mt-3">
+																								* {formik.errors.email}
+																							</div>
+																							):("")}
+																					   ]
+																					   
+																					   
+- validation using yup -> 1. $[npm i yup]
+					   -> 2. $[import * as Yub from 'yup']
+					   -> 3. add prop to formik obj $[validationSchema: validateSchema]
+					   -> 4. create schema which is yup obj $[const validateSchema = Yup.object({
+														        email: Yup.string().required('Email is required').email('email must contain @'),
+																password: Yup.string().required('Password is required').matches(passwordRegex,'Password must contain at least one capital letter and one special character')
+																	});
+															 ]
+					   -> 5. foreach input add attribute $[onBlur={formik.handleBlur}] to validate input only when touch it
+					   -> 6. display error details after input $[ {(formik.errors.email && formik.touched.email) ? (
+																							<div className="text-red-600 font-bold mt-3">
+																								* {formik.errors.email}
+																							</div>
+																							):("")}
+																] 
