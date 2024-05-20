@@ -212,8 +212,9 @@
 										{path: "/", element: <MainLayout />, children: [
 											{index: true, element: <Home />},
 											{path:"home", element: <Home />},
+											{path:"movieDetails/:id", element: <MovieDetails />, loader: DetailsLoader},
 											{path: "/trending", element: <Trending />, children: [
-												{index: true, element: <h2 className="mt-20">movies</h2> },
+												{index: true, element: <Navigate replace to={'movies'}/> },
 												{path: "movies", element: <h2 className="mt-20">movies</h2>},
 												{ path: "people", element: <h2 className="mt-20">People</h2> },
 												{ path: "tv", element: <h2 className="mt-20">Tv</h2> },
@@ -238,14 +239,21 @@
 													<Footer />
 												</>
 											 ]
-		  -> 4. to navigate to specific path $[<NavLink to='' ><NavLink/>]
+		  -> 4. to navigate to specific path -> $[<NavLink to='' ><NavLink/>]
+											 -> $[navigate('')]
 		  -> 5. in navbar component handle class active using module.css -> 1. add file 'navbar.modle.css' inside it $[.nav :global(.active) {background-color: limegreen;}]
 																		 -> 2. in navbar.jsx -> 1. $[import styles from './Navbar.module.css']
 																							 -> 2. $[<navclassName={`${styles.nav}`}>]
+		  -> 6. to get params $[const params = useParams(); console.log(params.id);]
+		  -> 7. to get query params $[const [queryParams, setQueryParams] = useSearchParams(); console.log(queryParams.get("id"))]
+		  -> 8. loader -> will not execute router path until call function and return data -> 1. in component file add func loader outside component function scope $[export async function loader({ params }) {return data}]
+																						   -> 2. in component function recieve data from loader using hook 'useLoaderData' $[const details = useLoaderData();]
+																						   -> 3. in 'app.jsx' -> 1. $[ import MovieDetails, {loader as DetailsLoader} from ""; ]
+																											  -> 2. $[ {path:"movieDetails/:id", element: <MovieDetails />, loader: DetailsLoader} ]
 
 
 		  
 - 100% if write nestead route, will use <outlet/> 
 
 - to ask ? 1. auto importe when use component
-		   4. loader: homeLoader 
+		   4. when make home like trending/movies using navigate, still not active[want make it active by defualt and wher write /home]
