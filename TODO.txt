@@ -3,4 +3,4 @@
 - crystal reports 
 - big data git course
 - reflection 
-- .net frameworks [ telerik, dev express]
+- .net frameworks [ serenity, telerik, dev express]

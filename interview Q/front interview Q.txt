@@ -1,0 +1,112 @@
+------------------------- [ HTML ] -----------------------
+- tips useful for SEO -> 1. use attribute alt with img 
+					  -> 2. use tag <description> with table
+					  -> 3. 
+
+- DocType -> work standard mode not quirks mode
+
+------------------------- [ CSS ] -----------------------
+- style priority -> 1. inline Specificity (1000)
+				 ->	2. internal & external are the same but depend on [ which write at last 'cascade' & Specificity (Id, class, element) ]
+				 -> 3. * the universal selector Specificity is zero
+
+
+- html elements => inline -> a - span [w-fitContent | not start in new line | only mx]
+				=> block  -> h - p - div  [w-full | start in new line | can give width , hight , pading ,margin]
+				=> inline-block -> button [w-fitContent | not start in new line | can give width , hight , pading ,margin]
+				=> replaced element -> iframe + empty tags'img,input' [elements whose content is replaced by external resources]
+				=> non-replaced element -> a - p - h - div - span - button
+				=> inline replaced => img - iframe [can give width hight]
+
+- position [static VS relative VS absolute VS fixed VS stiky]
+
+- hide element => parent display none [مبتحجزش مكانها]
+			   => visibility hidden [حاجزه مكانها ] -> used in form validation
+			   => opacity 0 [can interact with element] [اقدر اعمل عليها transition]
+
+- defualt -> position static
+		  -> Z-index : auto
+		  -> flex align-items : 'stretch' -> full cross axis
+		  -> flex align-content : 'normal' 
+		  -> flex justify-content : 'flex-start' 
+
+- flex-flow -> defualt 'row no wrap' -> shourt hand for flex direction and wrap 
+
+
+
+
+------------------------- [ JS ] -----------------------
+- function types => declaretion function تبدأ بكلمه فانكشن  -> occure hoisting so can use it in line before line of function body
+		         => expression function -> var x = function(){} -> if you call var in line before line of function will get error 
+				 => IIFE 'imiddiatly invoke function expression' -> self invoke function ->> (function(){})()
+				 => arrow -> let myFunction = (a, b) => a * b;
+						  -> shorter syntax introduced in es6
+						  -> don`t contain keyworks 'this & arguments'
+				 
+- hoisting => JS compile code by collect all declard vars first , then execute code line by line
+		   => ex : console.log(x) ; x=10; --> undefinde 
+		   
+- window is base obj for all objs
+
+- DOM -> document object model , tree structure used for [ events - DOM traversing - DOM manpulation]
+
+- undefinde -> var declare and not initialized
+- null -> no value
+
+- function is first class citizen => can be assigned to a variable
+								  => can be stored inside object
+								  => can passed as an argument to another function 'callback' [$repeat(sayHello)]
+								  => can return another function
+								  
+- this keywork cases -> 1. global context -> window
+					 -> 2. inside function -> sloppy: window || strict: undefinde
+					 -> 3. inside function in addEventListener -> element fires event 
+					 -> 4. inside method -> owner function 
+
+- class inherite from other class useing keywork 'extend'
+				 
+- 1. Closures -> powerful JS feature enable functions to capture and use variables from their outer scope even after that scope has closed[execute outer func]
+
+- 2.      			  		 var   	      	VS					let    	 VS 	 	const 
+	 scope ->   	  		 func 		  						block 		 		block 	
+	 redeclaration -> 		 can								can`t				can`t
+	 update -> 		  		 can 								can 				can`t
+	 declare without init -> can 								can 				can`t
+	 access without init -> undefinde       					error				error
+	 hoisting ->        	hoist, init with defualt val 		hoist, not init		hoist, not init 
+	 
+- 3. Promises -> obj handle asynchronous operations in JS,avoid callback hell 
+			  -> var x = new promise(function (resolved, rejected){}
+			  -> can Chaining Promises using 'then'
+
+
+- 5. destrcuring rest and spread operator -> ...1,2,3 -> [1,2,3] rest pattern 'rest param'
+										  -> ...[1,2,3] -> 1,2,3 spread operator
+	
+  
+- 6. higher order function -> take function as a parameter or return function
+						-> array methods 'work on array'
+						-> map -> Applies function to each element of an array and creates a new array with the results
+						-> reduce -> Applies a function against an accumulator and each element in an array to reduce it to a single value.
+						-> filter -> Creates a new array containing only elements that pass a test implemented by a provided function
+						
+- 7. foreach -> Use to perform actions that do not require creating a new array and return undefined,
+	 map -> Use to transform data and return a new array, 
+
+- 8. js moods -> sloppy mood
+			  -> strict mood -> write at frist line in js file $'use strict' || use attribute 'type=module' in script tag 
+							 -> prevent many problems like -> 1. when intialize variable without declare it 'not use var keywork' $[x = 10] , js will add it to window obj so will be global scope
+														   -> 2. duplicate param name in function
+														   -> 3. call delete on identifier $[var age =10; delete age;]
+														   -> 4. name var with reserved words 
+															   
+- 9. promises VS async await -> in case chain asynchronous tasks 'async await' more readable, maintainable and easier to debug
+
+
+- 10. Modules -> separate related functionality in file 
+			  -> must use attribute 'type=module' in script tag 
+			  -> use export & import
+			  -> link entry js file with index.html
+		  
+- 11. event loop -> JS mechanism allow manage async operation in run time by check call stack first then callback queue
+------------------------- [ Angular ] -----------------------

@@ -27,7 +27,7 @@
 - H2.class => without space mean element it self
 
 - space -> inside the first selector
-- without space -> the same selector 
+- without space -> the selector it self 
 
 - don`t use fixed hight to avoid over flow  => prefer to use minimum hight so on case of no content the div still appear 
 - width don`t use pixel prefer use precentage
@@ -53,7 +53,7 @@
 
 ------------------------------------- [ Session 02 ] ---------------------------------------------
 
-- box model => contain [width , hight > pading > border > margin]
+- box model => contain [width , hight > pading > border]
 
 - width Auto => based on the element display type
 - width Fit Contenet => على قد المحتوي
@@ -66,8 +66,8 @@
 - margin-left : auto  => take all space from left so make div at right
 
 - ceneter div horizental افقي => margin-left : auto , margin-right : auto === margin-inline : auto
-							  =>
-							  =>
+							  => d-flex justify-content: center 
+							  => left : 50% && transform : translate-x (-50%)
 
 - margin collapsing => The top and bottom margins of blocks are sometimes combined (collapsed) into a single margin whose size is the largest of the individual margins
 					   problem happen when 1. two elements  Adjacent siblings
@@ -133,19 +133,19 @@
 					=> محافظ علي الفلو بتاعه بمعني لما بيتحرك محدش بيجي مكانة
 
 
-- position abslute => width by defualt fit content [can give width 100% || left:0 ; right:0 ]
-				   => بيسيب مكانه وبيطير
-				   => بيتحرك بالنسبة لاقرب بيرنت له واخد بوزيشن غير الاستاتيك ولو ملقاش يتحرك بناء علي الفيو بورت
-				   => if ele take custmized width -> top VS button -> top 
-												  -> left VS right -> depend on page dirction or lang 'left if en' 
-				   => else -> الدفاية فرشت والاربعه بيتطبقو وبياخد مساحة البيرنت بتاعة كامله 
+- position absolute => width by defualt fit content [can give width 100% || left:0 ; right:0 ]
+					=> بيسيب مكانه وبيطير
+					=> بيتحرك بالنسبة لاقرب بيرنت له واخد بوزيشن غير الاستاتيك ولو ملقاش يتحرك بناء علي الفيو بورت
+					=> if ele take custmized width -> top VS button -> top 
+													-> left VS right -> depend on page dirction or lang 'left if en' 
+					=> else -> الدفاية فرشت والاربعه بيتطبقو وبياخد مساحة البيرنت بتاعة كامله 
 
 
 - position fixed => width by defualt fit content [can give width 100% || left:0 ; right:0 ]
 				 => بيسيب مكانة وبيطير
 				 => في كل الاحوال يتحرك بالنسبة للفيو بورت 
 				 
-- position stiky => mix between abslute & fixed 
+- position stiky => mix between absolute & fixed 
 				 => يتحرك بالنسبة للفيو بورت لكن اول ما السكرول يجي عندة يثبت 
 				 
 
@@ -190,7 +190,7 @@
 
 
 - search -> image maps??
-		 -> back-ground linear-grider??
+		 -> back-ground linear-gradient??
 
 
 
@@ -367,8 +367,8 @@
 			  => grid line numbers = n + 1 [عدد الاعمدة او عدد الصفوف زائد واحد] 
 			  => grid container -> parent
 			  => grid items -> childes
-			  =>  grid cell -> space between two wrows or two columns [ بس لازم جمب بعض بالظبط]
-			  => grid area -> space between two wrows or two columns 
+			  => grid cell -> space between two rows or two columns [ بس لازم جمب بعض بالظبط]
+			  => grid area -> space between two rows or two columns 
 			  => grid track -> complete row , or complete column
 			  
 - fr => fraction [كل المساحة الباقية]
@@ -388,7 +388,7 @@
 
 - use div tool -> inspect /click grid keyword on html code/ layout / show columns name 
 
-- childs prop => grid-column : grid line numbers start/ grid line numbers grid line numbers end [عادي ياخد الرقم الموجب او السالب او حتي الاسم ]
+- childs prop => grid-column : grid line numbers start/ grid line numbers end [عادي ياخد الرقم الموجب او السالب او حتي الاسم ]
 			  => grid-row : grid line numbers start / grid line numbers end
 			  => grid-area -> row-start / column-start / row-end /column-end 
 			  
@@ -404,9 +404,9 @@
 
 - parent : grid-templete-columns : repeat(4 , minmax(200px,1fr)) ->  اربع اعمده وميضغروش ابدا عن متين لكن لو فيه مساحة زيادة يكبرو عادي 
 
-- - parent : grid-templete-columns : repeat(auto fill , minmax(200px,1fr)) -> هياخد الويدز يقسمة علي المين ويدز ويطلعلك عدد الاعمدة 
+- parent : grid-templete-columns : repeat(auto fill , minmax(200px,1fr)) -> هياخد الويدز يقسمة علي المين ويدز ويطلعلك عدد الاعمدة 
 
-- - parent : grid-templete-columns : repeat(auto fit , minmax(200px,1fr)) -> زيادة انه بعد ما يعمل الاعمدة الفاضي منهم هيحصله كولابس ومساحتة تتوزع بالتساوي علي باقي الاعمدة
+- parent : grid-templete-columns : repeat(auto fit , minmax(200px,1fr)) -> زيادة انه بعد ما يعمل الاعمدة الفاضي منهم هيحصله كولابس ومساحتة تتوزع بالتساوي علي باقي الاعمدة
 
 
 - امتي يزود عدد الاعمدة امبلسيتلي ؟؟؟ => لو خرجت عنصر من الجريد

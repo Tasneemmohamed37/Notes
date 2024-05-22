@@ -152,7 +152,7 @@
 							=> slice (startIndex , endIndex 'not included')
 							=> include -> return bool 
 							
-- RegEx -> can use 'RegEx vis' website ti understand specific regex
+- RegEx -> can use 'RegEx vis' website to understand specific regex
 		-> can use 'RegEx 101' website to test 
 		-> can use 'iHateRegEx' website to get regex 
 		-> $/[a-Z]/ -> one lowerCase char from a to z 
@@ -186,7 +186,7 @@
 							 
 - function is first class citizen => can be assigned to a variable
 								  => can be stored inside object
-								  => can passed as an argument to another function [$repeat(sayHello)]
+								  => can passed as an argument to another function 'callback' [$repeat(sayHello)]
 								  => can return another function
 								  
 - $repeat(sayHello) -> pass function as an argument
