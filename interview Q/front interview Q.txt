@@ -109,4 +109,5 @@
 			  -> link entry js file with index.html
 		  
 - 11. event loop -> JS mechanism allow manage async operation in run time by check call stack first then callback queue
+
 ------------------------- [ Angular ] -----------------------

@@ -1,0 +1,44 @@
+
+- instead of fixed hight -> give parent & child h-100
+
+- 1. can we customize padding & margine for select tag -> no, so best to use *ngSelect
+
+- 2. var VS let VS const ?
+	 - var hoisting is undefind 
+	 - let, const hoisting with consediring TDZ 'temperale data zone'
+	 
+- 3. Closures 
+	 what output of two given loops iterate from 1 to 4
+	 first only log i  -> declare iteration with var or let the output will be same '1 2 3 4'  
+	 second include set time out 'async task will execute in web api' -> with var 'func scope' will get '4 4 4 4'
+																	  -> with let 'block scope' get '1 2 3 4'
+																	  
+																	  
+- 4. array VS set 
+
+- 5. map Vs foreach
+
+- 6. optional chaining '?' to handle nullish values
+
+- 7. nullish values VS falsy values
+		commnly used with nullish coalescing operator
+
+- 8. strict equality operator VS loose
+		- loose commnly used for check id getted from route, becouse 100% id is num so it safe 
+		كومارشان؟؟؟
+
+- 9. shallow copy VS deep (spreed operators | json.stringfy)
+
+- 10. concurrency model, event loop, web api, call stack, callback queue, event queue, macro task, single thrid 
+
+- 11. observable VS promise
+
+- 12. component incapsulation -> emulated using uniqe attr
+							  -> shadow dom
+							  -> none 
+							  
+- 13. in case want to send data between not related components? use observable
+
+- 14. in case send obj from parent to child using @input & onChange, data not send why?? 
+		prob -> obj located in heap so with each chang will send obj ref which not changed so will not call onChange
+		solve -> deep copy for obj using spreed operators then send it 
