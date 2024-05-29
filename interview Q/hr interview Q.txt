@@ -1,43 +1,44 @@
-
-- small talk sentences -> nice to meet you mr. __
-					   -> it has been great experienc
-					   -> furthermore
+- small talk sentences -> good morning, may i come in
+					   -> it's my pleasure, nice to meet you mr. __
+					   -> i'm great thank you, and you?
+					   -> no i'm ok thank you 
+					   -> Brevity is the soul of wit
+					   -> as i mentioned before
 					   -> that`s quite impressive, i must admit
-					   -> i look forward to it
-					   -> which causes me 
-					   -> may i come in
 					   -> Can you clarify the question?
+					   -> I think this is premature. Let's go step by step
+					   -> i look forward to it
 
-- i have few question may i ask?
-  is that job full time or part, what are the hours, position, are there benefits like medical insurance, notice period, over time,  
+- i have few questions may i ask?
+  is that job full time or part, what are the hours, position, are there benefits like medical insurance, notice period, over time,
+  can you tell me alet about the team that i would be working with
 	
 	
-- 1. did you have any trouble finding the office ?
-	 no, the directions on the website are great!
+- 1. are you ready ?
+	 Yes, I'm ready! I'm very excited to see how I'll perform today and look forward to your feedback.
 	
 	
 - 2. introduce your self?
-	 well, I am Tasneem Elhussiny, a 23-year-old, fresh graduate of Faculty of Computer Science Minia University. 
-	 After my graduation, I completed an Intensive Code Camp program at the Information Technology Institute (ITI), 
+	 well, I am Tasneem Elhussiny/ a 23-year-old / fresh graduate of Faculty of Computer Science / Minia University. 
+	 After my graduation/ I completed an Intensive Code Camp program / at the Information Technology Institute (ITI) / 
 	 specializing in Full Stack Web Development using .NET.
 	 and I’m currently looking forward to start off my career
 
 	 
 - 3. what attracted you to our company?
-	 i can see that ___ has much future growth potential ,
-	 furthermore i would like to grow my career at a company that has great reputation For over 25 years like __
-	 
+	 because I am eager to grow my career at a company with great reputation For over 20 years like __
+	  Additionally, I have read excellent reviews on Glassdoor & don't work there , and that something i realy appreciate
 	 
 - 4. what are your points of strength? why should we hire you?
-	 I pride myself on my intelligence, discipline, hard work, and supportive nature towards others.
+	 I pride myself on my intelligence, discipline, hard work, and my communication skills.
 	 and i am always eager to learn new things,I believe that these qualities, combined with my technical skills,
 	 will enable me to make a positive impact on your Company.
 
 	 
 - 5. point of weakness?
-	 It can be challenging for me to maintain a healthy work-life balance, 
+	 donuts... just kidding, no my biggest weakness is maintain a healthy work-life balance, 
 	 especially with ambitious career goals. 
-	 There have been times when my study  hours have extended quite long,sometimes reaching up to 18 hours a day. 
+	 There have been times when my study hours in ITI sometimes reaching up to 18 hours a day. 
 	 However, I've recognized the importance of creating space in my schedule to focus on my personal life, 
 	 particularly spending quality time with my family. 
 
@@ -48,52 +49,188 @@
 	 
 	 
 - 7. where do you see yourself in 5 years?
-	 in 5 years i`d like to gain more experienc in software development and 
-	 i hope to be offered the chance to reach a senior position at good company like [NI, link dev, dsqueres, vois, atos, fang companies, big 4] 
+	 in 5 years / i`d like to gain more experienc in software development / and 
+	 i hope to be offered the chance / to reach a senior position at good company like [NI, link dev, dsqueres, vois, atos, fang companies, big 4] 
 
 	 
 - 8. how others would describe you?
-	 i`m not sure that every one likes me but they all know that they can trust me and depend on me no at any situation --> recommendation 
-	 My best friend would probably say that my three greatest strengths are my leadership capability, my communication skills and my organisational ability.
+	 I'm not sure if everyone likes me / but they all know they can trust and depend on me in any situation
+	 If you ask my best friend / she would probably say my three greatest strengths are / 
+	 my ability to learn quickly, my communication skills, and my organizational ability.
 
 	 
 - 9. how do you manage situations if you have alot of work ?  can you work well under pressure?
-	 In situations where I have a lot of work to manage, 
-	 I rely on my strong organizational skills to ensure everything gets done effectively and on time. 
-	 One of my strategies is to create a todo list, where I prioritize tasks based on their importance and deadlines. 
+	 In situations where I have a lot of work to manage / 
+	 I rely on my strong organizational skills/  to ensure everything gets done effectively and on time. 
+	 One of my strategies is to create a todo list / where I prioritize tasks based on their importance and deadlines. 
 
 	 
 - 10. what does success means for you?
-		Success means finding joy and satisfaction in what I do and It's about continuously striving to improve myself, 
-		whether it's in my professional skills, personal development, or relationships.
+		Success means finding joy and satisfaction in what I do. 
+		It's about continuously striving to improve myself,
+		whether in my professional skills, personal development, or relationships.
 
 		
 - 11. plan b in case rejected?
-	  first i will sad to lose chance to work at agood company like __
-	  Next, I would take this rejection as motivation to continue striving towards my goals. 
-	  I firmly believe that setbacks are a natural part of any journey towards success, and they only make eventual achievements even more rewarding
+	  First, I would be disappointed to lose the chance to work at a great company like __. 
+	  However, I would take this rejection as motivation to continue striving towards my goals.
+	  because I believe that setbacks are a natural part of any journey toward success .
+	  I would also seek to understand the reasons for the rejection to improve myself.
 
 		
-- 12. how do you make an importent decisions?
-	  i gather all infromation i can find and based on it i will come to best decision i can,
-	  and if i know someone was in a similar situation , i would ask to find out the results to make sure the decision is the best one  
+- 12. how do you make an important decisions?
+	  i gather all informations i can find / and based on it i will come to best decision i can /
+	  and if i know someone was in a similar situation / i would ask to find out the results to make sure the decision is the best one  
 
 	  
-- 13. expected salary? range of __ would be appropriate. 
+- 13. expected salary? 
+	  Considering the high cost of living in Cairo, 
+	  particularly with regard to housing, 
+	  my expected salary is 12000 egp. 
+	  this is avg range in the market However, I am open to negotiation
 
 - 14. What is your greatest failure, and what did you learn from it?
-	  One of my greatest failures was during my first semester of college when I received grade F in one of my courses. 
+	  One of my greatest failures was during my first semester of college when I failed a course. 
 	  It was a challenging experience, as it was unexpected and disappointing. 
 	  However, instead of letting it discourage me, I used it as a learning opportunity. 
 	  and In the following semester, I implemented a more disciplined study routine, 
-	  and  As a result of my efforts, I not only passed the course but achieved an A+.
+	  and As a result of my efforts, I not only passed the course but also achieved an A+.
 	  
 
 - 15. What motivates you?
-	  make my family prode of me 
-
-- 16. The most difficult situation you have ever been in ?
-	  The most challenging situation was when my final exam for a college course clashed  with an interview appointment at ITI. However, I trusted in my abilities and time management skills. 
-	  I successfully completed the exam in half the allotted time in order to make it to the interview on time.
-	  In the end, I received an A+ in the exam and was accepted into ITI.
+	  What motivates me is making my family proud by being successful in a great company like __.
 	  
+- 16. The most difficult situation you have ever been in ?
+	  The most challenging situation was when my final exam for a college course clashed with an interview appointment at ITI. 
+	  However, I trusted in my abilities and time management skills. 
+	  I successfully completed the exam in half the given time to make it to the interview on time.
+	  In the end, I received an A+ in the exam and was accepted into ITI.
+	 
+- 17. what you know about our company?
+	  digital commerce company that provides various payment solutions and services 
+	  -> 1. Point of Sale (POS) Solutions: A variety of payment methods[ credit and debit cards, mobile wallets ]
+	  -> 2. Secure online payment gateways
+	  -> 3. enable financial institutions and banks to [Card Issuance,Card Management Systems, Fraud Management]
+	  
+- 18. conflict with your manager?
+	  I would respectfully share my opinion with him and discuss with him to understand his viewpoint better. 
+	  If I'm not convinced / I would still respect my manager's decision because he has more experience than me
+	  
+	  
+- 19. your ideal work environment ?
+	  The ideal work environment for me is one that is well-organized, 
+	  with clear expectations and well defined tasks. 
+	  A quiet workspace is essential as it allows me to focus on my tasks.
+	  
+	  
+- 20. when you can start?
+	  I can start within a week, allowing me time to find suitable housing
+	  
+- iti
+  The ITI benefited me greatly / on a personal level before a technical one / but it took a lot of effort.
+  Despite that/ I love it very much / I think it's like Stockholm Syndrome
+  
+  
+- situations -> organisational  | time management => final & iti interview
+			 -> work harder => iti 18 h
+			 -> fast learner => I graduated from ITI in December as a back-end developer.
+								and Within just 5 months, I advanced to become a full-stack developer with 2 frameworks
+			 -> communication skills => I am proficient in communication and I have a strong professional network on LinkedIn, 
+										where multiple connections have recommended me to their companies, including Engineer Amr
+	  
+
+---------------------------------- [ speaking test ] ------------------------
+
+- your name meaning ? fountain in Paradise (Jannah) from which the righteous will drink.
+
+
+- My biggest wish ?
+  To have my own warm home / and a job that suits me. 
+  To do all the things I've dreamed of / To be fine, with a calm mind, free soul, peaceful heart, and eyes without tears. 
+  To just live a simple quiet life, nothing more
+
+  
+- 1.1 your family?
+	 My father is a mechanical engineer and was the head of the commercial sector at Minya Drinking Water Company. 
+	 My mother is a science teacher for middle school, and they are both retired now.
+	 I have five brothers: 
+	 the eldest is a restaurant manager, 
+	 the next is a doctor and an assistant professor at the Faculty of Medicine. 
+	 The third works in the tourism industry, 
+	 followed by a DevOps engineer. Then there's me, 
+	 and finally, the youngest is a university student.
+
+
+- 1.2 free time ?
+	  In my free time / I love watching K-drama and C-drama /I also spend quality time with my family, 
+	  especially playing with my brother’s children and having movie nights. 
+	  Making memories with them is very important to me. 
+	  Additionally, I enjoy going on walks with my friends and cooking together. 
+	  These activities bring joy to my life.
+	 
+- 1.3 weather today ?
+	  Today in Cairo, the weather is sunny and warm. 
+	  It was really nice in the morning, with clear skies and light winds. 
+	  As the day progresses, it becomes hotter but remains mostly sunny, 
+	  so it's better to avoid direct sunlight and drink plenty of water.
+
+
+- 2.1 describe pic [museum] 
+	  In the image, a young girl with blonde hair, around 3 or 4 years old, 
+	  is standing next to her mother or teacher in a museum. 
+	  They are looking at a glass display case that contains shells or other sea-related items. 
+	  The girl appears very intersted
+
+			 
+- 2.2 time you visit museum
+		When I was in 5th grade, my school organized a trip to Tuna el-Gebel and Beni Hassan in El Minya.
+		It was an incredible experience that allowed me to explore ancient Egyptian tombs and temples.
+		I remember being amazed by the beautiful writings and the stories they told.
+		This trip was not only educational but also a lot of fun.
+		I made wonderful memories with my friends and teachers as we explored and learned together.
+
+
+- 2.3 museum payed or free 
+	I believe museum visits should be free for everyone.
+	because Museums are important for education and cultural enrichment.
+	They allow people to learn about history, art, and science, regardless of their financial situation.
+	Free access encourages more people to visit and benefit from these resources.
+	However, if there are any fees, they should only be financial penalties for those who cause damage. 
+
+- 3.1 describe pic [basket - golf]
+		The left image shows a middle-aged man wearing a cap, playing golf on a sunny day. 
+		He is in a green area, dressed in a green t-shirt, beige pants, and sport shoes. 
+		Behind him, there is a woman who seems interested in watching his game. 
+		The right image depicts four young people playing basketball.
+		There are two teams, one in black t-shirts and the other in white.
+		The black team is close to scoring a goal.
+ 
+- 3.2 kind of people play these sports?
+	  Golf is often played by middle-aged and older adults who enjoy a relaxing and social outdoor activity.
+	  It is popular among business professionals and retirees.
+	  Basketball is usually played by younger people, including teenagers and young adults, 
+	  who enjoy a fast-paced, energetic game. It is popular in schools.
+
+
+- 3.3 which more diffecalt ? why?
+	in general  Both sports are hard in their own way, but in my opinion Basketball is more difficult than golf.
+	becouse Basketball requires a lot of physical activity, such as running, jumping, and quick movements. 
+	It also needs good teamwork and fast decision-making. 
+	Golf is also challenging but is more about individual skill  than physical activity.
+
+			   
+- 4.1 time when you were on your own ?
+	  The last time I was on my own was today during my trip from Minya to Cairo. 
+	  I traveled by myself, which gave me a lot of time to think.
+
+- 4.2 how do you feel about it?
+	  I felt a mix of emotions. On one hand, I was very excited about the new experiences that awaited me in Cairo.
+	  I was looking forward to exploring new places, meeting new people, and learning new things. 
+	  On the other hand, i afraid of rejection or disappointment.
+	  Starting something new is always challenging, but I try to stay hopeful and positive.
+	  and  I believe that everything will turn out well in the end.
+
+
+
+- 4.3 ways of passing time on your own
+	  I have many ways to pass time on my own. I can walk, take a car ride, do yoga, or clean the house.

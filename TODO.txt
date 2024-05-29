@@ -1,5 +1,6 @@
 - design patterns [ singilton | factory method | decorator | observer ]
-- localization / globalization 
+- localization / globalization
+- DDD, microservices 
 - crystal reports 
 - big data git course
 - reflection 
