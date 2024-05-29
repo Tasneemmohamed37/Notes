@@ -1,0 +1,39 @@
+
+- 1. oop concepts 
+
+- 2. solid
+
+- 3. interface
+
+- 4. unit of work ? 
+	 in case faild to save changes? will rollback from all repos changes 
+	 
+- 5. parse VS try parse 
+
+- 6. pass by val VS ref VS out
+
+- 7. stack VS heap 
+
+- 8. string VS string builder 
+
+- 9. eager load VS lazy 
+
+- 10. array VS list [search, insert]
+
+- 11. delegate
+
+- 12. break VS continue
+
+- 13. access modifiers
+
+- 14. clusterd VS non-clusterd
+
+- 15. view 
+
+- 16. drop VS delete 
+
+- 17. in case have arr contain 5 num , want to calc sum of largest 4 numbers 
+
+- 18. palindrome words
+
+- 19. angular pipes

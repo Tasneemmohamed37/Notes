@@ -1,0 +1,31 @@
+
+- 1. onion arch ?
+
+- 2. oop concepts & abstraction VS encapsulation
+
+- 3. solid
+		in case want to send otp, how to implement it ?
+
+- 4. virtual , sealed
+
+- 5. array VS list VS linked list [search, insert, delete]
+
+- 6. queue VS stack
+
+- 7. desgin patterns types
+
+- 8. how to handle case when read and write in same table on same time ?? read throw view
+
+- 9. explain steps from scratch to deploy project ? use case diagram - erd - decide struct - development - test - deploy
+
+- 10. when delete instace how to handle this relations 
+
+- 11. trigger
+
+- 12. middlewares
+
+- 13. authorization 'roles'
+
+- 14. custom error handle 
+
+- 15. DI
