@@ -239,7 +239,7 @@
 													<Footer />
 												</>
 											 ]
-		  -> 4. to navigate to specific path -> $[<NavLink to='' ><NavLink/>]
+		  -> 4. to navigate to specific path -> $[<NavLink to='' ><NavLink/>] but use link tag with logo 
 											 -> $[navigate('')]
 		  -> 5. in navbar component handle class active using module.css -> 1. add file 'navbar.modle.css' inside it $[.nav :global(.active) {background-color: limegreen;}]
 																		 -> 2. in navbar.jsx -> 1. $[import styles from './Navbar.module.css']
@@ -258,5 +258,7 @@
 - to ask ? 1. auto importe when use component
 		   2. when make home like trending/movies using navigate, still not active[want make it active by defualt and wher write /home]
 		   3. in case want to use css color var ?
+		   4. responsive container in small screen not work 
+		   5. when fix container with absolute and botton zero from div with id root the contetnt of outlet will be under it => pb-80 ? 
 		   
 		   

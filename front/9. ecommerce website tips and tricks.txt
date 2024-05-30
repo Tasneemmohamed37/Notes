@@ -21,3 +21,12 @@
 
 - to make footer in the end of page even it there isn't content -> 1. footer className='absolute left-0 right-0 botton-0'
 																-> 2. in index.html div with id root className='relative min-h-screen'
+																
+- in phone number input form use type='tel'
+
+- to use specific font in file index.css -> $[
+												@import url("https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@300&display=swap");
+												body{
+													font-family: "Encode Sans Expanded", sans-serif;
+												}
+											 ] 
