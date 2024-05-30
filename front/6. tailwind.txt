@@ -57,7 +57,17 @@
 - container -> is tailwind component 
 			-> by default w-full 
 			-> to solve this $[ <div class="max-w-screen-xl mx-auto"> <div class="container mx-auto"></div> </div> ]
-
+			-> or in file 'tailwind.config.js' extend theme $[container: {
+																			center: true,
+																			screens: {
+																				sm: "600px",
+																				md: "700px",
+																				lg: "980px",
+																				xl: "1200px",
+																				"2xl": "1450px",
+																			},},
+																			]
+								
 - inset -> shorthand correspons to position props top rigth bottom left 
 
 - hidden -> d-none

@@ -1,0 +1,23 @@
+------------------------- [ session 05, week 18.1 ] -------------------
+
+- in case have style which repeated can make class contain it then call that class -> 1. in file 'index.css' $[
+																												@layer components {
+																													.form-control {
+																														@apply outline-none border-2 border-gray-200 px-3 py-1 rounded-lg
+																													}
+																												}
+																												]
+																					-> add customer classes in component layer so can override it by utilities
+																					
+- to add global var colors -> 1. in file tailwind.config.js extend $[
+																		extend: {
+																			colors:{
+																				mainColor: '#0aad0a',
+																				lightColor: '#f0f3f2',
+																				ratingColor: '#ffc908',
+																			}
+																			},
+																	]
+
+- to make footer in the end of page even it there isn't content -> 1. footer className='absolute left-0 right-0 botton-0'
+																-> 2. in index.html div with id root className='relative min-h-screen'

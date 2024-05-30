@@ -46,7 +46,7 @@
 					   -> 2. in file 'main.jsx' import style $[ import 'bootstrap/dist/css/bootstrap.min.css' ] and scripts $[ import 'bootstrap/dist/js/bootstrap.bundle.min.js' ]
 					   
 - to install fontAwsome -> 1. $[ npm i @fortawesome/fontawesome-free ]
-					    -> 2. in file 'main.jsx' link $[ import fontawsome/fontawsome-free/css/all.min.css ]
+					    -> 2. in file 'main.jsx' befor link index.css link $[ import '@fortawesome/fontawesome-free/css/all.min.css' ]
 					   
 ------------------------- [ session 02, week 16.2 ] -------------------
 
@@ -258,3 +258,5 @@
 - to ask ? 1. auto importe when use component
 		   2. when make home like trending/movies using navigate, still not active[want make it active by defualt and wher write /home]
 		   3. in case want to use css color var ?
+		   
+		   
