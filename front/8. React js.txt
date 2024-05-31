@@ -205,6 +205,17 @@
 																							):("")}
 																] 
 																
+
+- will not execute onSubmit only if obj formik.errors is empty 
+
+- what happen when write any char on form input -> 1. formik will call onChange which will see name attribute on input then access values object make it equal to which written
+												-> 2. test current value with validation schema 
+																
+- after validation want to inform user with submition result if success or not -> 1. $[npm install react-hot-toast]
+																			   -> 2. in app.jsx inside return add $[<Toaster/>]
+																			   -> 3. then use it $[let loadingId = toast.loading('your msg')]
+																			   -> 4. to remove it $[toast.dismiss(loadingId)]
+																
 																
 - routing -> 1. $[npm i react-router-dom]
 		  -> 2. in file app.jsx $[
@@ -257,8 +268,6 @@
 
 - to ask ? 1. auto importe when use component
 		   2. when make home like trending/movies using navigate, still not active[want make it active by defualt and wher write /home]
-		   3. in case want to use css color var ?
 		   4. responsive container in small screen not work 
-		   5. when fix container with absolute and botton zero from div with id root the contetnt of outlet will be under it => pb-80 ? 
-		   
+		   6. want to make backend baseUrl global var 
 		   

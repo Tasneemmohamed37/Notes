@@ -30,3 +30,7 @@
 													font-family: "Encode Sans Expanded", sans-serif;
 												}
 											 ] 
+											 
+- to validate repassword with password on registeration using yup $[.oneof([yub.ref('password')])] 
+
+- onSubmit function in case success want to navigate to login but can't use hook inside func -> solve it by locate hook in var and use this var inside func $[const navigate = navigate()]
