@@ -34,3 +34,50 @@
 - to validate repassword with password on registeration using yup $[.oneof([yub.ref('password')])] 
 
 - onSubmit function in case success want to navigate to login but can't use hook inside func -> solve it by locate hook in var and use this var inside func $[const navigate = navigate()]
+
+
+------------------------- [ session 06, week 18.2 ] -------------------
+
+- can handle class active using tailwind instead of modules -> for each navLink $[ className = { ({isActive})=>{return `${isActive?'bg-lime-500':''}`} } ]
+
+- static assets while will not import it usualy store in public folder like logo img 
+
+- to make cards same hight and solve prob of long text using tailwind $[lime-clamp-2]
+
+- for slider can use library 'wipper.js' -> 1. npm install swiper
+										 -> 2. inside main.jsx $[
+																	import { register } from 'swiper/element/bundle';
+																	register();
+																]
+																
+- to handle auth -> 1. add component authGard $[export default function AuthGard({ children }) {
+													let user = true;
+														if (user){
+															return children 
+														}
+														else{
+															return <Navigate to='auth/login' />
+														}
+												}] 
+				 -> 2. handle your auth layout
+				 -> 3. in app.jsx $[
+									 const routes = createBrowserRouter([
+										{path: "/", element:
+										<AuthGard>
+											<MainLayout />
+										</AuthGard>, 
+										children: [
+										{index: true, element: <Home />},
+										{path:"home", element: <Home />},
+										{ path: "*", element: <NotFound /> },
+										]
+										},
+										{path: "auth", element:
+											<AuthLayout />, 
+										children: [
+										{ path: "login", element: <Login /> },
+										{ path: "signUp", element: <SignUp /> }
+										]
+										},
+									]);
+													]
