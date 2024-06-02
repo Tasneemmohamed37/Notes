@@ -266,8 +266,7 @@
 		  
 - 100% if write nestead route, will use <outlet/> 
 
+
 - to ask ? 1. footer 
-		   2. when make home like trending/movies using navigate, still not active[want make it active by defualt and wher write /home]
 		   4. responsive container in small screen not work 
-		   6. want to make backend baseUrl global var 
 		   

@@ -50,18 +50,31 @@
 																	register();
 																]
 																
-- to handle auth -> 1. add component authGard $[export default function AuthGard({ children }) {
-													let user = true;
-														if (user){
-															return children 
+- to handle auth -> 1. add file 'user.context.jsx' $[
+														export const userContext = createContext(''); // return obj 
+														export default function UserProvider({children}){
+															const [token, setToken] = useState(localStorage.getItem('token'));
+															function logOut(){
+																setToken(null)
+																localStorage.removeItem('token')
+															}
+															return <userContext.Provider value={{token, setToken, logOut}}>
+																	{children}
+															</userContext.Provider>
 														}
-														else{
-															return <Navigate to='auth/login' />
-														}
-												}] 
+													]
+				 -> 2. add component authGard $[export default function AuthGard({ children }) {
+												const {token} = useContext(userContext);
+													if (token){
+														return children 
+													}
+													else{
+														return <Navigate to='auth/login' />
+													}
+											}] 
 				 -> 2. handle your auth layout
 				 -> 3. in app.jsx $[
-									 const routes = createBrowserRouter([
+									   const routes = createBrowserRouter([
 										{path: "/", element:
 										<AuthGard>
 											<MainLayout />
@@ -80,4 +93,38 @@
 										]
 										},
 									]);
+									
+									return (
+										<>
+										<UserProvider>
+										<RouterProvider router={routes}></RouterProvider>
+										<Toaster/>
+										</UserProvider>
+										</>
+									)
 													]
+				-> 4. in login component before navigate to home $[localStorage.setItem('token',data.token)
+																   setToken(data.token)
+																  ]
+			    -> 5. in vav bar using conditional rendering handle apperence and logOut
+			
+- component interactions -> only can send data from paren to child using props... what about send from child to parent or child to child???
+						 -> handle this using 'left state up' -> add state in parent component then pass it to childes 
+						 
+- anti paterns -> commonly-used process, structure or pattern of action that, despite initially appearing to be an appropriate and effective response to a problem, has more bad consequences than good ones. Another solution exists to the problem the anti-pattern is attempting to address.													
+			   -> example: props drilling -> same data is being sent at almost every level due to requirements in the final level
+
+-  to solve this use contextProvider -> commly used to contain some thing all website need it like token 
+									 -> ببساطه بعمل كومبوننت يكون بيرنت لكل الباقي ولو حد محتاج المعلومه دي يطلع وياخدها
+									 -> 1. add file 'counter.context.jsx' $[
+																			import { createContext, useState } from "react";
+																			export const counterContext = createContext(0); // return obj 
+																			export default function CounterProvider({children}){
+																				const [counter, setCounter] = useState(0);
+																				return <counterContext.Provider value={{counter, setCounter}}>
+																						{children}
+																						</counterContext.Provider>
+																			}
+																			]
+									 -> 2. in file app.jsx return $[<CounterProvider> other components </CounterProvider>] 'name of exported func'
+									 -> 3. in any component $[const {counter, setCounter} = useContext(counterContext)] 'name of obj'
