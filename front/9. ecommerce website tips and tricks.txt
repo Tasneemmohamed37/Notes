@@ -38,6 +38,12 @@
 
 ------------------------- [ session 06, week 18.2 ] -------------------
 
+- brefer to make overlay on product img only so user can select and copy product card info 'UX'
+
+- make wild card path inside layout so user can back to home using navbar 'UX'
+
+- make product card link so when user press at any place navigate to product detailes page
+
 - can handle class active using tailwind instead of modules -> for each navLink $[ className = { ({isActive})=>{return `${isActive?'bg-lime-500':''}`} } ]
 
 - static assets while will not import it usualy store in public folder like logo img 
@@ -114,7 +120,7 @@
 - anti paterns -> commonly-used process, structure or pattern of action that, despite initially appearing to be an appropriate and effective response to a problem, has more bad consequences than good ones. Another solution exists to the problem the anti-pattern is attempting to address.													
 			   -> example: props drilling -> same data is being sent at almost every level due to requirements in the final level
 
--  to solve this use contextProvider -> commly used to contain some thing all website need it like token 
+-  to solve this use contextProvider -> commly used to contain some thing all website need it like [token - theme - cart] 
 									 -> ببساطه بعمل كومبوننت يكون بيرنت لكل الباقي ولو حد محتاج المعلومه دي يطلع وياخدها
 									 -> 1. add file 'counter.context.jsx' $[
 																			import { createContext, useState } from "react";
@@ -128,3 +134,22 @@
 																			]
 									 -> 2. in file app.jsx return $[<CounterProvider> other components </CounterProvider>] 'name of exported func'
 									 -> 3. in any component $[const {counter, setCounter} = useContext(counterContext)] 'name of obj'
+									 
+
+------------------------- [ session 07, week 19.1 ] -------------------
+
+- to hnadle product details gallary can use library 'react.image.gallery' -> 1. $[npm i]
+																		  -> 2. in main.js $[import "react-image-gallery/styles/css/image-gallery.css"]
+																		  -> 3. create arr of object $[ const imageItems = product?.images.map((i)=>{
+																															return {
+																																original: i ,
+																																thumbnail: i
+																															}
+																														})]
+																		  -> 4. $[ <ReactImageGallery items={imageItems} className='w-full'/> ]
+									 
+- todo ? 1. pagination - search - sort 
+		 2. baseUrl
+		 3. navbar responseve
+		 4. in case want to test send expired token when add to card, get un auth and app not work how can i handle it 
+		 

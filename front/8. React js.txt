@@ -267,6 +267,5 @@
 - 100% if write nestead route, will use <outlet/> 
 
 
-- to ask ? 1. footer 
-		   4. responsive container in small screen not work 
+
 		   
