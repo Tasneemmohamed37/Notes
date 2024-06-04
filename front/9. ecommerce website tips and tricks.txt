@@ -147,9 +147,14 @@
 																															}
 																														})]
 																		  -> 4. $[ <ReactImageGallery items={imageItems} className='w-full'/> ]
+
+
+- onClick =(func()) -> will cuase prob becouse will pass return from func not func it self 
+				    -> solve -> onClick(func)
+							 -> onClick(()=>{func(param)})
 									 
-- todo ? 1. pagination - search - sort 
+- todo ? 1. pagination - search - sort - external login - forget pass - out of stock
 		 2. baseUrl
 		 3. navbar responseve
 		 4. in case want to test send expired token when add to card, get un auth and app not work how can i handle it 
-		 
+		   
