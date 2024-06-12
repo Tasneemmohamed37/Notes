@@ -3,7 +3,7 @@ https://www.youtube.com/playlist?list=PLesfn4TAj57WJFn86KXOInQAsCdJlp6vl
 --------------------- [ session 01 ] ---------------------
 
 - angular -> front-end framework
-		  -> SPA
+		  -> SPA [ only one html file ]
 		  -> component based [ page contain of components ]
 		  -> use MVC arch pattern 
 		  -> 1. install npm
@@ -252,3 +252,18 @@ https://www.youtube.com/playlist?list=PLesfn4TAj57WJFn86KXOInQAsCdJlp6vl
 																						};
 																					]
 								 -> 2. pass this obj as a parameter to HttpClientModule methods
+								 
+								 
+- Generic serviecs -> used to avoid repeat on code  
+				   -> 1. in serviecs folder $[ng g s GenericApiHandler] 
+				   -> 2. inject httpClient in ctor and implement [ handle error func - crud methods ]
+				   -> 3. crud must return generic DT $[ng g i APIResponseVM]
+				   
+- interceptors -> classes that implement the HttpInterceptor interface, 
+				  used to perform various tasks related to HTTP requests and responses 'layer that any request or response بيعدي عليها'
+				  such as adding headers, handling errors, modifying the request or response data, logging, authentication, etc.
+				   
+
+- prefer to use ngSubmit with forms -> prevents the default action (submit then reload the page), but only if the form does not contain action, data-action, or x-action attributes. 
+
+- driven forms -> 

@@ -26,10 +26,13 @@
 
 - to use specific font in file index.css -> $[
 												@import url("https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@300&display=swap");
+											 ]
+										 -> then add it to body in index.css  
 												body{
 													font-family: "Encode Sans Expanded", sans-serif;
 												}
-											 ] 
+										 -> or extend tailwind in tailwind.config.js $[extend: {fontFamily:{cairo:'"Cairo", sans-serif'}}]
+
 											 
 - to validate repassword with password on registeration using yup $[.oneof([yub.ref('password')])] 
 
@@ -158,3 +161,45 @@
 		 3. navbar responseve
 		 4. in case want to test send expired token when add to card, get un auth and app not work how can i handle it 
 		   
+- to ask -> 1. why use window.location.href instead of ancor
+
+------------------------- [ session 08, week 19.2 ] -------------------
+
+- to extract payload from token -> 1. [npm i jwt-decode]
+								-> 2. const payloads = jwtDecode(token);
+								
+- react query 'tanstack query' -> library used for cashing 
+							   -> 1. $[npm i @tanstack/react-query]
+							   -> 2. in app.jsx $[
+													const myClient = new QueryClient();
+													<QueryClientProvider  client={myClient}>
+															<UserProvider>
+																<CartProvider>
+																	<RouterProvider router={routes}></RouterProvider>
+																	<Toaster />
+																</CartProvider>
+															</UserProvider>
+													</QueryClientProvider>
+							   ]
+							   -> 3. when call api $[
+														let {data, isLoading} = useQuery({
+																queryKey: ['products'], // array contain query key name
+																queryFn:getAllProducts // func which call api
+																						})
+													
+													if(isLoading){
+														return <Loading/>
+													}
+													
+													return (<div>data.data</div>)
+							   ]
+							   -> 4. to trace cashed data $[npm i @tanstack/react-query-devtools]
+							   -> 5. in app.jsx inside return $[<ReactQueryDevtools></ReactQueryDevtools>]
+							   
+
+- to custmize page title -> 1. $[npm i react-helmet]
+						 -> 2. in any page return $[
+													<Helmet>
+														<title>Orders</title>
+													</Helmet>
+													]
