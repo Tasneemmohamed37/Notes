@@ -266,4 +266,19 @@ https://www.youtube.com/playlist?list=PLesfn4TAj57WJFn86KXOInQAsCdJlp6vl
 
 - prefer to use ngSubmit with forms -> prevents the default action (submit then reload the page), but only if the form does not contain action, data-action, or x-action attributes. 
 
-- driven forms -> 
+-  $[<input #prdNameInp="ngModel"> ]use Template Reference Variable with ngModel to [ Access to Form Control Properties and Methods - Validation - Error Handling ]
+
+--------------------- [ session 07 ] ---------------------
+
+- reactive forms -> data flow from ts to html 
+				 -> commonly used with complex logic forms 
+				 -> 1. add reactive forms in app.ts in importents
+				 -> 2. in form ts file craete form group inside it create form control for each input 'control name must be same as prop in api end point' 
+				 -> 3. at html file inside form tag $[ [formGroup] = 'FormGroupNameInTsFile' ] 
+				 -> 4. inside each input field $[formControlName='']
+				 -> more easier to handle dynamic form 'like accept more than one phone number so number of inputs is dynamic'
+				 
+				 
+- validation -> 1. conditional 'dynamic' -> which added in run time based on specific condition 
+			 -> 2. cross faield
+			 -> 3. custom validation
