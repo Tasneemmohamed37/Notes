@@ -280,5 +280,17 @@ https://www.youtube.com/playlist?list=PLesfn4TAj57WJFn86KXOInQAsCdJlp6vl
 				 
 				 
 - validation -> 1. conditional 'dynamic' -> which added in run time based on specific condition 
-			 -> 2. cross faield
-			 -> 3. custom validation
+			 -> 2. normal validation -> using form group and pass array of validators $[ fb.group({fullName: ['', [Validators.required, Validators.pattern('[A-Za-z]{3,}')]]}) ] 
+			 -> 2. custom validation, high order func must return 'ValidatorFn' -> 1. one field 
+																				-> 2. cross field -> more than feild like 'confirm password', apply on form it self
+			 
+			 
+
+- lazy loading modules 'async routing' -> prob : in file 'app.modules.ts' in imports include all components in project so will load all of them
+										  solve : collect related components in module 
+										  
+- deploy angular project -> $[ ng build --configration=production ]
+						  
+- for localization 'website support multi languages' can use library 'i18n '
+
+- angular universal library -> solve prob of all SPA which search engine not found process of server side rendering 'SSR' 
