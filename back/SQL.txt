@@ -34,7 +34,7 @@
 				  
 - Distinct -> لو عندى اكتر من حاجة مكررة هستخدم ديستنكت لتفادى التكرار
 
-- joins -> 1. Cross join (Cartisian Product)
+- joins -> 1. Cross join (Cartisian Product) -> commonly used to generate as we can to test
 		-> 2. Inner Join (Equi Join) 'two parts musn't be null' 
 		-> 3. Outer Join -> 3.1 Left Outer Join 'select all data in left table which is not null'
 						 -> 3.2 Right Outer Join

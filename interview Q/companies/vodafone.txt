@@ -1,0 +1,38 @@
+
+- 1. OOP meaning, principiels
+
+- 2. SOLID
+
+- 3. design patterns
+
+- 4. .net core VS framework 
+
+- 5. delegate
+
+- 6. abstract class VS interface
+
+- 7. access modifiers
+
+- 8. signalR
+
+- 9. JWT
+
+- 10. local storage VS session VS cookies
+
+- 11. ORM [EF, dapper]
+
+- 12. linq
+
+- 13. eager VS lazy loading
+
+- 14. stored procedure VS  function VS view
+
+- 15. delete VS trancate VS drop 
+
+- 16. bootsrap VS tailwind
+
+- 17. angular VS react 
+
+- 18. angular 'app component' 
+
+- 19. enum 

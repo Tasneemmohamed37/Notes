@@ -3,13 +3,11 @@
 
 --------------- [ Day 1] ----------------------------
 
-- object is physical representation of class 
-
-- class is logical representation 
+- object is physical representation of class ,class is logical representation 
 
 - obj1 == obj2 [compare the address of two reference like function equals in class obj , if you want compare valuse use opereator overloading]
 
-- if you want tot create obj from class [abstract || static || private ctor]
+- if you want to create obj from class [abstract || static || private ctor]
 
 ----------------------------
 principles:
@@ -121,7 +119,7 @@ D => dependency inversion --> high level moduls shouldnt depend on low level mod
 - static function => نتيجتها ثابته علي كل الاوبجكتس
 					لان في الامبليمنتيشن بتاعها مش بعتمد علي اي ميمبر فاريبال جوا الكلاس اللي هي فيه
 				  => must be **public**
-				  => static function using class name
+				  => access static function using class name
 				  => work with only static members [becouse there is no keyword this inside it & static load first in memory
 													ف لما تنفذها انت مش متاكد انه فيه اوبجكتس اتكريتت في الميموري ولا لسه  ]
 				  => can`t be vertial or override it [ لان الاصل في الاوفرريد اني بعمل اوبجكت من الكلاس واشاور عليه بريفيرينس من البيرنت ودا مش متاح هنا] 
